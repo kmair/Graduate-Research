@@ -86,11 +86,13 @@ class BCD():
         
         return self.var_order
     
-    def modelData(self, x_new, up, low, scalingFactor, x_block, Numpoints, Evalpoint = None):
+    def modelData(self, up, low, scalingFactor, x_block, Numpoints, Evalpoint = None):
         '''
         Numpoints : The # of points to generate data from. It gives us flexibility to choose how many
         Evalpoints : If self.Numpoints was 5 & didn't gave satisfactory results, then on increasing Numpoints to 10, we'll not re-calculate points 0-5
         '''
+
+        x_new = np.repeat(self.x_sp, Numpoints, axis=0)
 
         '''The block_data obj contains variable data for specific axes only'''
         # Below block data can be used to be passed as an argument to create tighter boundaries for data collection
@@ -121,7 +123,7 @@ class BCD():
             self.fnCalls += 1
             print('# of compilations done = ', self.fnCalls)
         
-        print(y_data)
+        # print(y_data)
 
         return block_pts, y_data
 
@@ -150,9 +152,9 @@ class BCD():
         scalingFactor = np.array(scalingFactor)
         x_block = np.array([x_block])      # Part of x_sp with concerned axes having a shape of (1,n_attr)
         print('x_block', x_block)
-        x_new = np.repeat(self.x_sp, self.Numpoints, axis=0)
+        # x_new = np.repeat(self.x_sp, self.Numpoints, axis=0)
 
-        block_pts, y_data = self.modelData(x_new, up, low, scalingFactor, x_block, self.Numpoints)
+        block_pts, y_data = self.modelData(up, low, scalingFactor, x_block, self.Numpoints)
 
         '''Minimizing the data to get best point along selected axis'''
         
