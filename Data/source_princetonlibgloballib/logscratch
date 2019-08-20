@@ -1,0 +1,18 @@
+ ***************************************************************************
+ ALAMO version 2019.1.26. Built: WIN-64 Sat Jan 26 22:11:34 EST 2019
+
+ If you use this software, please cite:
+ Cozad, A., N. V. Sahinidis and D. C. Miller,
+ Automatic Learning of Algebraic Models for Optimization,
+ AIChE Journal, 60, 2211-2227, 2014.
+
+ ALAMO is powered by the BARON software from http://www.minlp.com/
+ ***************************************************************************
+ Licensee: Muyi Song at Carnegie Mellon University, muyis@andrew.cmu.edu.
+ ***************************************************************************
+ Reading input data
+ Disallowed character "[" found in input file (line 9 column 6)
+ 
+ ALAMO terminated with termination code 86 
+ Syntax error in input file.
+ ***************************************************************************

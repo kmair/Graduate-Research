@@ -1,0 +1,4 @@
+	makefile
+	ar ru ../libport.a *.o
+	rm -f *.o
+	touch done

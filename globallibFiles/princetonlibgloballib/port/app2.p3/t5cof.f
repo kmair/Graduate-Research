@@ -1,0 +1,35 @@
+      SUBROUTINE T5COF(X, A, B, DEG, XX)
+      INTEGER DEG
+      REAL X, A, B, XX(2)
+      INTEGER I
+      REAL TWOXX
+C    PROCEDURE T5COF  COMPUTES THE DEG+1 TCHEBYCHEFF
+C    COEFFICIENTS OF THE POINT X.
+      CALL ENTER(1)
+C/6S
+C     IF (DEG .LT. 0) CALL SETERR(21HT5COF -INVALID DEGREE, 21, 1, 2)
+C/7S
+      IF (DEG .LT. 0) CALL SETERR('T5COF -INVALID DEGREE', 21, 1, 2)
+C/
+      XX(1) = 1.0E0
+      IF (DEG .LE. 0) GOTO 3
+         IF (B .GT. A) GOTO 1
+C/6S
+C           CALL SETERR(23HT5COF -INVALID INTERVAL, 23, 2, 2)
+C/7S
+            CALL SETERR('T5COF -INVALID INTERVAL', 23, 2, 2)
+C/
+            GOTO  2
+   1        XX(2) = 2.0E0*(X-(A+B)/2.0E0)/(B-A)
+CSCALE X TO THE INTERVAL (-1.0E0,1.0E0)
+   2  CONTINUE
+   3  IF (DEG .GT. 1) TWOXX = 2.0E0*XX(2)
+      I = 3
+         GOTO  5
+   4     I = I+1
+   5     IF (I .GT. DEG+1) GOTO  6
+         XX(I) = TWOXX*XX(I-1)-XX(I-2)
+         GOTO  4
+   6  CALL LEAVE
+      RETURN
+      END

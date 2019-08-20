@@ -1,0 +1,137 @@
+This directory contains examples for many of the top-level PORT3
+subroutines, as shown in the table below.  In many cases, you can
+get output file xxxx.out corresponding to example file xxxx.f by
+saying
+
+	make xxxx.out
+
+Some examples, denoted with # below, are not complete programs.
+Others, denoted with * below, require input (that is not supplied here).
+Directory sgi contains output obtained by running the remaining
+(self-standing) examples on an SGI computer (running IRIX 5.3, with
+compilation by f2c + cc).  Other systems will give slightly different
+results on many of the examples, due, e.g., to differences in
+computations of transcendental functions.
+
+File.f	Routine(s)	for
+
+apnr	APRNTx		printing
+bura	BURAM		best uniform rational approximation
+burb	BURM1		best uniform rational approx. with initial guess
+cdex	CDEXP		double complex exponential function
+cdlg	CDLOG		double complex log function
+cpla	CPOLY		roots of polynomials with complex coefficients
+cspa	CSPQU		integral of function defined on a mesh
+cspe	CSPDI		first derivatives using a spline approximation
+cspg	CSPIN		interpolate using a spline approximation
+cspq	CSPFE		evaluate cubic spline
+ddea	IODE		stiff ODEs
+desa	ODES		ordinary differential equations
+ebea	EEBSF		estimate error in B-spline fit
+errk	STKDMP		dump the PORT3 stack
+evaa	EIGEN		all eigenvalues and eigenvectors of a matrix
+extr	EXTRMR		find extrema of a function defined on a mesh
+ffta	FFTR		mixed-radix fast Fourier transform, real data
+fftc	FFTC		mixed-radix fast Fourier transform, complex data
+fmtr	FRMATT		determine format specifications for printing
+lbaa	BASS		solve banded linear systems, give condition est.
+lbab	BACE		factor and condition-estimate banded linear systems
+lbaf	BALE		solve banded linear systems
+lbaj #	BADC		factor banded matrix with partial pivoting
+lbak	BANM		infinity norm of banded matrix
+lbal #	BALU		factor banded matrix; called by BACE and BADC
+lban	BABS		solve upper triangular linear system
+lbap	BAML		multiply vector by banded matrix
+lgea *	GESS		solve and condition-estimate general linear system
+lgeb *	GECE		factor and condition-estimate general linear system
+lgef	GELE		solve general dense linear system
+lgeh	GENM		compute 1-norm of general dense matrix
+lgej #	GELU		factor general dense matrix
+lgel	GEBS		general matrix back-solve (after GELU)
+lgem	GEML		multiply general dense matrix by vector
+llza *	LZ		solve generalized eigenvalue problem
+lnab	LSTSQ		linear least squares
+lpsa	BPSS		solve banded symmetric pos. def. system, cond. est.
+lpsb	BPCE		factor and cond.-est. banded symmetric psd matrix
+lpsf	BPLE		solve banded symmetric pos. def. linear system
+lpsg	BPDC		factor banded symmetric pos. def. linear system
+lpsj #	BPLD		factor banded sym. pos. def. system with threshold
+lpsk	BPFS		solve Lx = b, L from BPDC, BPLD, or BPCE
+lpsm	BPML		multiply packed sym. pos. def. matrix by vector
+lrpa	LINPR		dense linear programming
+lrpb	LINPA		variant of LINPR with function input
+lrpe	FEAS		find feasible point in dense linear system
+lrpf	FEASA		variant of FEAS with function input
+lrpg	LINPA		2nd example for LINPA
+lsfa	L2SFF		compute B-spline expansion of a function
+lyma	SYSS		solve general symmetric linear system, cond. est.
+lymb *	SYCE		factor + cond. est. general symmetric matrix
+lymk	SYNM		compute 1-norm of packed symmetric matrix
+lymp	SYML		multiply packed symmetric matrix by a vector
+mfte	MFTCC		FFT of multiple complex vectors
+mftf	MFTRC		FFT of multiple real vectors
+mftg	MFTCR		inverse of MFTRC
+mllr	MULLR		find root of scalar function by Muller's method
+mnna	FMIN		Brent's method for 1-dimensional minimization
+nlsa	MNF, MNG, MNH	unconstrained minimization, several variables	
+nlsb	MNFB, MNGB, MNHB minimization subject to simple-bound constraints
+nlsj	N2F, N2G	nonlinear least squares	
+nlsk	N2FB, N2GB	nonlinear least squares with simple bounds	
+nlsp	N2PB		variant of N2GB with input in "pieces"
+nlsr	NSG, NSF	separable nonlinear least squares
+nmsk	NSGB, NSFB	separable nonlinear least squares with simple bounds	
+np2a	SN2F		"simplified" driver for N2F
+np2b	SN2FB		"simplified" driver for N2FB
+np2e	SN2G		"simplified" driver for N2G
+np2f	SN2GB		"simplified" driver for N2GB
+nsfa	NSF1		separable nonlinear least squares, 1 nonlinear variable
+nsnm	SMNSX		Nelder-Mead minimization (no derivatives used)
+ntle	SMNFB		"simplified" driver for MNFB
+ntlf	SMNG		"simplified" driver for MNG
+ntlh	SMNGB		"simplified" driver for MNGB
+ntlk	SMNH		"simplified" driver for MNH
+ntlm	SMNHB		"simplified" driver for MNHB
+ntlp	SNSF		"simplified" driver for NSF
+ntlr	SNSG		"simplified" driver for NSG
+ntlt	SNSFB		"simplified" driver for NSFB
+ntlu	SNSGB		"simplified" driver for NSGB
+pdea	POST		solve PDEs, possibly coupled to ODEs
+pdew	POSTU		coordinate mapping for POST
+prea *	SPFOR		minimum-degree ordering for a sparse matrix
+prma *	SPMSF		symbolic factorization of sparse matrix
+prs1	SPMML		multiply sparse matrix by a vector
+prs3 #	SPMNF		numeric factorization of a sparse matrix
+prsa *	SPMLE		solve sparse linear system of equations
+prsf *	SPFLE		variant of SPMLE with subroutine input
+prsj *	SPMCE		factor and condition-estimate sparse matrix
+prsm #	SPFCE		variant of SPMCE with subroutine input
+prsp #	SPMLU		factor spares matrix with singularity threshold
+prst #	SPFLU		variant of SPFLU with subroutine input
+prsy #	SPFNF		factor sparse matrix
+prsz	SPFML		variant of SPFNF with subroutine input
+qbla	RQUAD		adaptive quadrature, mix of abs. and rel. error
+qblc	BQUAD		adaptive Romberg integration of piecewise-smooth funcs
+qblg	QUAD		adaptive quadrature
+qgsg	GQ1		compute abscissae, weights for Gauss-Legendre quad.
+qgsh	GQEX		variant of GQ1 weighted by exp(-x)
+qgsj	GQEX2		variant of GQ1 weighted by exp(-x**2)
+qgsm	GQEXA		variant of GQ1 weighted by (x**alpha)*exp(-x)
+qgsp	GQLOG		variant of GQ1 weighted by log(1/x)
+qgsr	GQXA		abscissae, wts for Gauss-Jacobi quad., weight x**alpha
+qgst	GQXAB		variant of GQXA, weight (1-x)**alpha * (1+x)**beta
+qodd	DODEQ		integrate several functions over the same interval
+qpra	IQP		local dense quadratic programming
+ranc	RANBYT		uniform pseudo-random numbers in [0,1)
+rnrm	RNORM		normal(0,1) psuedo-random numbers
+rpad	DRPOLY		zeros of a polynomial with real coefficients
+sdba	DL2SF		least-squares B-spline fit to discrete data
+splf	SPLNI		integrate B-spline expansion of a function
+vdsa	VDSS1		compute value and derivative of quadratic B-spline
+vdsb	VDSS2		value, deriv. of variation-dimin. spline on 2-D data
+vdse	VDSS3		value, deriv. of variation-dimin. spline on 3-D data
+xkhd	DXKTH		return k-th smallest element of a double-prec vector
+xkhi	IXKTH		return k-th smallest element of an integer vector
+xkth	XKTH		return k-th smallest element of a real vector
+zera	ZERO		root of scalar function in specified interval
+zona	ZONE		solve system of nonlin. eqs (dense Jacobian by diffs)
+zonb	ZONEJ		variant of ZONE with Jacobian supplied by subroutine

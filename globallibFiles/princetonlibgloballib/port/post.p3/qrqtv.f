@@ -1,0 +1,60 @@
+      SUBROUTINE QRQTV(M, N, QR, ALFA, NB, B)
+      INTEGER M, N, NB
+      REAL QR(M, N), ALFA(N), B(M, NB)
+      INTEGER MIN0, I, J, JB
+      REAL SDOT, GAMMA
+      INTEGER TEMP
+C TO FORM Q*B.
+C MNEMONIC - QR FACTOR Q TIMES A VECTOR.
+C INPUT -
+C   M    - THE NUMBER OF ROWS IN THE MATRIX.
+C   N    - THE NUMBER OF COLUMNS IN THE MATRIX.
+C   QR   - THE QR FACTORIZATION, AS DESCRIBED IN  QRD.
+C   ALFA - THE DIAGONAL OF R, AS DESCRIBED IN  QRD.
+C   NB   - THE NUMBER OF RIGHT-HAND-SIDES.
+C   B    - THE RIGHT-HAND-SIDES.
+C OUTPUT -
+C   B - B = Q*B.
+C SCRATCH SPACE ALLOCATED - NONE.
+C ERROR STATES -
+C   1 - M.LT.1.
+C   2 - N.LT.1.
+C   3 - NB.LT.1.
+C   4 - ALFA(J)=0.
+C   5 - QR(J,J)=0.
+C ALFA(MIN(M,N)).
+C CHECK THE INPUT FOR ERRORS.
+C/6S
+C     IF (M .LT. 1) CALL SETERR(15H QRQTV - M.LT.1, 15, 1, 2)
+C     IF (N .LT. 1) CALL SETERR(15H QRQTV - N.LT.1, 15, 2, 2)
+C     IF (NB .LT. 1) CALL SETERR(16H QRQTV - NB.LT.1, 16, 3, 2)
+C/7S
+      IF (M .LT. 1) CALL SETERR(' QRQTV - M.LT.1', 15, 1, 2)
+      IF (N .LT. 1) CALL SETERR(' QRQTV - N.LT.1', 15, 2, 2)
+      IF (NB .LT. 1) CALL SETERR(' QRQTV - NB.LT.1', 16, 3, 2)
+C/
+C MULTIPLY ALL THE VECTORS.
+      DO  3 JB = 1, NB
+C APPLY THE J-TH TRANSFORMATION.
+         TEMP = MIN0(M, N)
+         DO  2 J = 1, TEMP
+C/6S
+C           IF (ALFA(J) .EQ. 0.) CALL SETERR(18H QRQTV - ALFA(J)=0, 18
+C    1         , 4, 2)
+C           IF (QR(J, J) .EQ. 0.) CALL SETERR(18H QRQTV - QR(J,J)=0, 18,
+C    1         5, 2)
+C/7S
+            IF (ALFA(J) .EQ. 0.) CALL SETERR(' QRQTV - ALFA(J)=0', 18
+     1         , 4, 2)
+            IF (QR(J, J) .EQ. 0.) CALL SETERR(' QRQTV - QR(J,J)=0', 18,
+     1         5, 2)
+C/
+            GAMMA = SDOT(M-J+1, QR(J, J), 1, B(J, JB), 1)/(ALFA(J)*QR(J,
+     1         J))
+            DO  1 I = J, M
+               B(I, JB) = B(I, JB)+GAMMA*QR(I, J)
+   1           CONTINUE
+   2        CONTINUE
+   3     CONTINUE
+      RETURN
+      END

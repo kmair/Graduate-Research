@@ -1,0 +1,71 @@
+      INTEGER FUNCTION INTRVD(N, D, DD)
+      INTEGER N
+      DOUBLE PRECISION D(N), DD
+      INTEGER LEFT, RIGHT, DELTA, NEW, MIN0, MAX0
+      DATA LEFT/1/
+C IN THE FOLLOWING *LB* IS USED FOR LEFT BRACKET, AND *RB* FOR RIGHT
+C THE ARRAY *LB* D(1), D(2), ..., D(N) *RB* DIVIDES THE
+C INTERVAL *LB* D(1), D(2) *RB*
+C INTO NON-EMPTY SUB-INTERVALS.  THE D-VALUES NEED NOT BE DISTINCT,
+C BUT IN MOST APPLICATIONS D WILL BE MONOTONE INCREASING.
+C RETURN INTRVD=LEFT, WHERE
+C    D(LEFT) .LE. DD .LT. D(LEFT+1) .LE. D(N)
+C OR
+C    D(LEFT) .LT.  DD = D(LEFT+1) = ... = D(N)
+C EXCEPT
+C    RETURN 0   IF DD.LT.D(1)
+C    RETURN N   IF DD>D(N)
+C/6S
+C     IF (N .LE. 1) CALL SETERR(17HINTRVD - N .LE. 1, 17, 1, 2)
+C     IF (D(1) .GE. D(N)) CALL SETERR(23HINTRVD - D(1) .GE. D(N), 23, 2,
+C    1   2)
+C/7S
+      IF (N .LE. 1) CALL SETERR('INTRVD - N .LE. 1', 17, 1, 2)
+      IF (D(1) .GE. D(N)) CALL SETERR('INTRVD - D(1) .GE. D(N)', 23, 2,
+     1   2)
+C/
+      IF (DD .GE. D(1)) GOTO 1
+         INTRVD = 0
+         RETURN
+   1  IF (DD .LT. D(N)) GOTO 6
+         IF (DD .LE. D(N)) GOTO 2
+            INTRVD = N
+            GOTO  5
+   2        LEFT = N-1
+   3        IF (D(LEFT) .LT. D(LEFT+1)) GOTO  4
+               LEFT = LEFT-1
+               GOTO  3
+   4        INTRVD = LEFT
+   5     RETURN
+C FIND A STARTING INTERVAL OF WIDTH 1.
+C (IF LEFT IS LEFT-OVER FROM LAST TIME, THE STARTING INTERVAL
+C  IS LIKELY TO BE CLOSE.)
+   6  RIGHT = LEFT+1
+      IF (RIGHT .LE. N) GOTO 7
+         LEFT = N-1
+         RIGHT = N
+   7  DELTA = 1
+   8  IF (DD .LT. D(RIGHT)) GOTO  9
+C EXPLODE RIGHT IF NECESSARY.
+         LEFT = RIGHT
+         RIGHT = MIN0(N, RIGHT+DELTA)
+         DELTA = 2*DELTA
+         GOTO  8
+   9  IF (DD .GE. D(LEFT)) GOTO  10
+C EXPLODE LEFT IF NECESSARY.
+         RIGHT = LEFT
+         LEFT = MAX0(1, LEFT-DELTA)
+         DELTA = 2*DELTA
+         GOTO  9
+  10  IF (RIGHT-LEFT .LE. 1) GOTO  13
+C IF EXPLODED, BISECT.
+         NEW = (LEFT+RIGHT)/2
+         IF (D(NEW) .GT. DD) GOTO 11
+            LEFT = NEW
+            GOTO  12
+  11        RIGHT = NEW
+  12     CONTINUE
+         GOTO  10
+  13  INTRVD = LEFT
+      RETURN
+      END

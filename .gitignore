@@ -1,0 +1,15 @@
+# Folders
+
+exercises_w_soln/
+Shell scripting/
+testdir/
+Temp/
+
+*.dat
+*.tar
+/*.py
+*.bar
+*.exe
+/*.txt
+
+/Readings/Pyomo-Workshop-Summer-2018.pdf

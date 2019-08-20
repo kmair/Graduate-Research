@@ -1,0 +1,98 @@
+      SUBROUTINE DCL2SD(MDIM,M,N,AR,AI,D)
+C
+C  TO OBTAIN THE Q*U DECOMPOSITION OF A COMPLEX MATRIX A.
+C
+C  METHOD - HOUSEHOLDER TRANSFORMATIONS.
+C
+C  INPUT
+C
+C    MDIM - THE DIMENSIONED COLUMN SIZE OF AR AND AI.
+C    M    - THE NUMBER OF ROWS IN A.
+C    N    - THE NUMBER OF COLUMNS IN A. N.LE.M IS ASSUMED.
+C    AR   - THE REAL PART OF THE MATRIX A.
+C    AI   - THE IMAGINARY PART OF THE MATRIX A.
+C
+C  OUTPUT
+C
+C    AR   - THE REAL PART OF THE DECOMPOSED MATRIX A.
+C    AI   - THE IMAGINARY PART OF THE DECOMPOSED MATRIX A.
+C           LET V(J)(I)=0      FOR I=1,...,J-1
+C           AND V(J)(I)=A(I,J) FOR I=J,...,M, THEN
+C
+C           Q = PRODUCT(J=1,...,N)(I-BETA(J)*V(J)*V(J)-TRANSPOSE)
+C
+C           WHERE BETA(J)=1/(D(J)*ABS(A(J,J)))
+C           A(I,J) FOR I.LT.J GIVES THE OFF-DIAGONAL ELEMENTS OF U.
+C    D    - THE DIAGONAL ENTRIES OF U ARE GIVEN BY
+C           U(I,I)=-D(I)*A(I,I)/CABS(A(I,I)), FOR I=1,...,N.
+C
+C  SCRATCH SPACE ALLOCATED - NONE.
+C
+C  ERROR STATES -
+C
+C    1 - MDIM.LT.M.
+C    2 - N.LT.1.
+C    3 - M.LT.N.
+C    4 - A IS RANK-DEFICIENT. (RECOVERABLE)
+C
+C  P.A. BUSINGER, NUM. MATH. 7, 269-276(1965).
+C
+      DOUBLE PRECISION AR(MDIM,N),AI(MDIM,N),D(N)
+C
+      DOUBLE PRECISION QR,QI,Z,W,DSQRT
+C
+C ... CHECK THE INPUT.
+C
+C/6S
+C     IF (MDIM.LT.M) CALL SETERR(18HDCL2SD - MDIM.LT.M,18,1,2)
+C     IF (N.LT.1) CALL SETERR(15HDCL2SD - N.LT.1,15,2,2)
+C     IF (M.LT.N) CALL SETERR(15HDCL2SD - M.LT.N,15,3,2)
+C/7S
+      IF (MDIM.LT.M) CALL SETERR('DCL2SD - MDIM.LT.M',18,1,2)
+      IF (N.LT.1) CALL SETERR('DCL2SD - N.LT.1',15,2,2)
+      IF (M.LT.N) CALL SETERR('DCL2SD - M.LT.N',15,3,2)
+C/
+C
+      DO 60 L=1,N
+         Z=0.D0
+         DO 10 I=L,M
+   10       Z=Z+AR(I,L)**2+AI(I,L)**2
+         Z=DSQRT(Z)
+         IF (Z.EQ.0.0D0) GO TO 70
+         D(L)=Z
+         W=DSQRT(AR(L,L)**2+AI(L,L)**2)
+         QR=1.D0
+         QI=0.D0
+         IF(W.EQ.0.D0)GOTO 20
+         QR=AR(L,L)/W
+         QI=AI(L,L)/W
+   20    AR(L,L)=QR*(Z+W)
+         AI(L,L)=QI*(Z+W)
+         IF (L.EQ.N) GO TO 60
+         LP1=L+1
+         DO 50 J=LP1,N
+            QR=0.D0
+            QI=0.D0
+            DO 30 I=L,M
+               QR=QR+AR(I,L)*AR(I,J)+AI(I,L)*AI(I,J)
+   30          QI=QI+AR(I,L)*AI(I,J)-AI(I,L)*AR(I,J)
+            QR=QR/(Z*(Z+W))
+            QI=QI/(Z*(Z+W))
+            DO 40 I=L,M
+               AR(I,J)=AR(I,J)-QR*AR(I,L)+QI*AI(I,L)
+   40          AI(I,J)=AI(I,J)-QR*AI(I,L)-QI*AR(I,L)
+   50       CONTINUE
+   60    CONTINUE
+      GO TO 80
+C
+C ... HERE FOR A RANK-DEFICIENT MATRIX A.
+C
+C/6S
+C  70 CALL SETERR(28HDCL2SD - A IS RANK-DEFICIENT,28,4,1)
+C/7S
+   70 CALL SETERR('DCL2SD - A IS RANK-DEFICIENT',28,4,1)
+C/
+C
+   80 RETURN
+C
+      END

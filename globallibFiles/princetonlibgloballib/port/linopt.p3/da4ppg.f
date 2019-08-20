@@ -1,0 +1,100 @@
+      SUBROUTINE DA4PPG(A,M,N,IA,KK,Q,IQ,LT,AG,AS,E,IPTG,IPTS,W,
+     1   SCALE, XNRM,  AMAN, EPS, TMP, P,IPRINT, RHS,INDX2, V, JDEPG,
+     2   IHIT,INVHIT,ISTRIK,DVECG)
+C
+C THIS SUBROUTINE DETERMINES WHETHER A GENERAL CONSTRAINT
+C SHOULD BE ADDED TO THE ACTIVE CONSTRAINT LIST AND
+C CALLS DA4GQR TO UPDATE THE LQ DECOMPOSTION IF ONE SHOULD
+C
+      INTEGER M, N, AGPE
+      EXTERNAL AMAN
+      INTEGER KK, AG, AS, E, IPTG(1), IPTS(1),DVECG(1)
+      DOUBLE PRECISION A(N),Q(IQ,1),LT( 1),W(N),SCALE(N),EPS,RHS(N)
+      INTEGER NCT, NMS, AGP1, ASP1, I, IA(1)
+      INTEGER II, IHIT(M),INVHIT(M)
+      DOUBLE PRECISION TMP(1), P(1),  PNRM, XNRM, DNRM2, T1, V(M), VV
+      ASP1 = AS+1
+      NMS = N-AS
+      IF(NMS.LE.0)RETURN
+      AGP1 = AG+E+1
+      ISGE=AS+AGP1
+      II = JDEPG+1
+      NH=0
+      DO 5 I=1,M
+ 5      INVHIT(I)=0
+      IF (INDX2.LT.0)II=II+1
+         GOTO  20
+ 10      II = II+1
+ 20      IF (II .GT. M) GOTO  25
+          IF(IPTG(II).LT.0) GO TO 10
+         I = IPTG(II)
+         IF (DABS(W(I)) .GT. (EPS)*SCALE(I)*XNRM) GOTO  10
+          IF (V(I).GE.0.0D0.AND.ISTRIK.NE.I) GO TO 10
+         JH=0
+         V(I)=DABS(V(I))/SCALE(I)
+         VV=V(I)
+ 21      JH=JH+1
+         IF (JH.GT.NH) GO TO 23
+           J2=IHIT(JH)
+           IF(VV.LT.V(J2)) GO TO 21
+           MNH=NH+1
+           DO 22 MH=JH,NH
+              IHIT(MNH)=IHIT(MNH-1)
+              MNH=MNH-1
+ 22        CONTINUE
+           NH=NH+1
+           IHIT(JH)=II
+           GO TO 10
+ 23      NH=NH+1
+         IHIT(NH)=II
+         GO TO 10
+ 25   IF (NH.EQ.0) GO TO 40
+       DO 26 I2=1,NH
+          I3=IHIT(I2)
+ 26    INVHIT(I3)=I2
+       DO 37 I2=1,NH
+          II=IHIT(I2)
+          I=IPTG(II)
+      AGP1 = AG+E+1
+C
+C A CONSTRAINT HAS BEEN HIT.
+C TEST IF IT LINEAR INDEPENDENT OF OTHERS
+C
+         CALL AMAN(.FALSE., A, IA, N, I, TMP, T1)
+       DO 30 JJ=ASP1,N
+          J=IPTS(JJ)
+          JAS = JJ - AS
+          P(JAS) = TMP(J)
+ 30       CONTINUE
+       CALL DM5TOP (IQ,N,Q,1,NMS,1,NMS,P,1,P)
+         NCT=N-ISGE+1
+         PNRM = DNRM2(NCT, P(AGP1), 1)
+C
+C CONSTRAINT IS INDEPENDEDNT OF OTHER CONSTRAINTS , SO
+C ADD IT BY INTERCHANGING ELEMENTS IN IPTG AND
+C UPDATING DECOMPOSTION
+C
+         JDEPG1=JDEPG+1
+         IPTG(II) = IPTG(JDEPG1)
+         IPTG(JDEPG1) = IPTG(AGP1)
+         IPTG(AGP1)=I
+         IDV =DVECG(II)
+         DVECG(II)=DVECG(JDEPG1)
+         DVECG(JDEPG1)=DVECG(AGP1)
+         DVECG(AGP1)=IDV
+         IN1=INVHIT(JDEPG1)
+         IN2=INVHIT(AGP1)
+         IF (IN2.NE.0) IHIT(IN2)=JDEPG1
+         IF(IN1.NE.0)IHIT(IN1)=II
+         INVHIT(JDEPG1)=IN2
+         INVHIT(II)=IN1
+         AGPE = AG + E
+         JDEPG=JDEPG+1
+         IF (PNRM .LE. EPS*SCALE(I)) GOTO 37
+         CALL DA4GQR(IQ, NMS, AGPE, Q, LT, P, RHS)
+         ISGE=ISGE+1
+         AG = AG + 1
+         KK = KK + 1
+ 37      CONTINUE
+ 40   RETURN
+      END

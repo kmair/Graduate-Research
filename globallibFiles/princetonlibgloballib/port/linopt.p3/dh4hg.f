@@ -1,0 +1,22 @@
+      SUBROUTINE DH4HG(N,U,H,G,K)
+C
+C THIS SUBROUTINE GENERATES A HOUSEHOLD TRANSFORMATION
+C
+       DOUBLE PRECISION G,U(N)
+       DOUBLE PRECISION H,S,DASUM,SCALE,DSQRT
+        IF (N.LT.1)RETURN
+       SCALE=DASUM(N,U,1)
+       S=0.0D0
+       H=1.0D0
+       IF (SCALE.EQ.0.0D0)RETURN
+        DO 10 I=1,N
+          U(I)=U(I)/SCALE
+          S=S+U(I)*U(I)
+ 10    CONTINUE
+       G=DSQRT(S)
+       IF(U(K).GT.0.0D0)G=-G
+       H=-(S-G*U(K))
+       U(K)=U(K)-G
+       G=G*SCALE
+       RETURN
+       END

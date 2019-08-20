@@ -1,0 +1,21 @@
+C source code for Princetonlib and Globallib models
+Collected by Luis M Rios lmrios@gmail.com, September 2009
+
+The following C source files were produced from AMPL models using a custom
+AMPL solver that uses the 'nlc' program from AMPL/solvers/nlc.
+
+The C source files can be regenerated using the script generate_codes.sh
+The script compiles the custom AMPL solver 'modtocode' that converts an AMPL
+.mod model into C source code.
+'generate_codes.sh' compiles the port library and the nlc program used by
+'modtocode'.
+
+AMPL .mod files are stored in the mod_models directory.
+'generate_codes.sh' calls the script convert2source at mod_models, which
+converts each AMPL model from the Princetonlib and Globallib collections.
+'convert2source' writes an AMPL script, calls modtocode through AMPL and produces
+the source.
+
+A binary version of AMPL is included in the mod_models directory.
+Check if AMPL is appropriate for the current machine architecture.
+AMPL can be obtained at http://www.ampl.com/

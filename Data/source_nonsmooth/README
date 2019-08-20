@@ -1,0 +1,19 @@
+FORTRAN source code for Luksan and Vlcek collection of nonsmooth models
+Collected by Luis M Rios, lmrios@gmail
+September 2009
+
+The following files provide source to compile standalone executable programs
+of the nonsmooth models defined by Luksan and Vlcek in:
+http://www3.cs.cas.cz/ics/reports/v798-00.ps
+
+The Makefile provided will compile all models when issuing the command 'make'.
+If necessary, change the fortran compiler (The default is g77).
+The resulting 49 executable programs read the input from the file 'input.in'
+and returns the objective function value in the file 'output.out'.
+The input file must have each variable's value in each line. 
+
+Source files 'test06.f', 'test19.f' and 'TEST19.DAT' were obtained from:
+http://www.cs.cas.cz/luksan/test.html
+
+The remaining FORTRAN files provide each model's definition and calls the
+relevant functions from other files.

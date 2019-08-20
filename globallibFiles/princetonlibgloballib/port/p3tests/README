@@ -1,0 +1,55 @@
+This directory contains test programs for some of the top-level PORT3
+subroutines.  The installation procedure runs a few of these tests
+(thyp, mach, err1, err2, err3, stk1, stk2, and errk); the others are
+listed in the table below.  In general, you can get output file xxxx.out
+corresponding to test file xxxx.f by saying
+
+	make xxxx.out
+
+Directory sgi contains output obtained by running the tests on an SGI
+computer (running IRIX 5.3, with compilation by f2c + cc); the absurdly
+large output for plya is omitted).  Other systems will give slightly
+different results on many of the tests, because, e.g., of differences
+in computations of transcendental functions.
+
+errk	STKDMP: dump of PORT stack
+extr	EXTRMR: extrema of a function defined on a mesh
+gama	GAMMA: gamma function
+gmad	DGAMMA: gamma function (double precision)
+lgac	CGECE, etc.: factor complex matrices
+lgad	DGECE, etc.: factor double-precision matrices
+lgea	GECE, etc.: factor single-precision matrices
+llza	LZ: generalized eigenvalues
+lrad	DLINPR, etc.: linear programming, double precision
+lrpa	LINPR: linear programming, single precision
+ltqd	DLTSQ and DLSTSQ: linear least squares (double precision)
+ltsq	LTSQ and LSTSQ: linear least squares
+lyad	DSYCE, etc.: factor, cond. est. for symmetric matrices (dbl prec)
+lyma	SYCE, etc.: factor, cond. est. for symmetric matrices
+lyrc	CHECE, etc.: symmetric condition estimation
+lysc	CHECE, etc., 2nd test
+mach	[IRD]1MACH (machine constants)
+mntb	monotonicity routines
+plya	trigonometric polynomial routines
+plyc	orthogonal polynomial routines
+prac	complex sparse matrix package
+prad	double precision sparse matrix package
+prsa	sparse matrix package
+qbgd	DQUAD: double-precison quadrature routines
+qblg	QUAD: quadrature routines
+qggd	Gauss quadrature (double precision)
+qgsg	Gauss quadrature
+qpad	DIQP: quadratic programming (double precision)
+qpra	IQP: quadratic programming
+rnrm	RNORM: normal(0,1) pseudo-random numbers
+sdba	DL2SF: least-squares B-spline fit to discrete data
+sple	SPLNE: evaluate B-splines
+svad	DSVD: singular value decomposition (double precision)
+svbd	DSVD, 2nd test
+svcd	DSVDLS: singular values and least-squares solution (dbl prec)
+svda	SVD: singular value decomposition
+svdb	SVD, 2nd test
+svdc	SVDLS: singular values and least-squares solution
+vdad	DVDSS1: value and derivative of quadratic B-spline
+vdbd	DVDSS2: value, deriv. of variation-dimin. spline on 2-D data
+vded	DVDSS3: value, deriv. of variation-dimin. spline on 3-D data

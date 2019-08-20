@@ -1,0 +1,449 @@
+1  PORT  TESTER, CGE**, CSP**
+ THIS VERSION DATED 03/11/78.
+
+ EPSILON     =  1.19209E-07
+ 
+ KASE  1   HILBERT SLICE   
+ N =   3
+ NORM(A)     =  2.00000E+00
+ 
+   .5000     -.5000      .4000     -.2000      .3000     -.1000    
+   .4000     -.2000      .3000     -.1000      .2353     -.5882E-01
+   .3000     -.1000      .2353     -.5882E-01  .1923     -.3846E-01
+ 
+ NO DISAGREEMENT IN ORDERING
+ CONDITION ESTIMATION
+    GENERAL        SPARSE M       SPARSE F
+      .70863E+03     .98848E+03     .98848E+03
+ ACTUAL COND =  1.28000E+03
+ COND FROM AINV*A M     .12800E+04
+ COND FROM AINV*A F     .12800E+04
+ ERRORS IN SOLUTION -ABSOLUTE
+                GENERAL SPMN     SPFN       SPMLE   SPFLE
+ PROBLEM  1     .11966E-04     .35107E-04     .35107E-04     .35107E-04     .35107E-04
+ PROBLEM  2     .31948E-04     .52750E-04     .52750E-04     .52750E-04     .52750E-04
+ 
+ TEST RATIOS.. E = EPSILON
+ 
+    COND  COND(M)  ACTUAL  ACTUAL  ERROR ERROR(M) ERROR(M2) A*AI-I A*AI-I(M)
+   -----   -----   -----   -----   -----   -----   -----   -----   -----
+    ACTUAL ACTUAL   COND  COND(M) E*COND*X E*CONDX E*COND*X E*COND E*COND
+ 
+     .55     .77    1.81    1.29     .02     .06     .06     .04     .18
+ 
+ NO SUSPICIOUS RATIOS
+ 
+
+ *************
+
+ KASE  2   HILBERT SLICE   
+ N =   6
+ NORM(A)     =  2.00000E+00
+ NO DISAGREEMENT IN ORDERING
+ CONDITION ESTIMATION
+    GENERAL        SPARSE M       SPARSE F
+      .27070E+02     .26844E+02     .26844E+02
+ ACTUAL COND =  6.37797E+01
+ COND FROM AINV*A M     .63780E+02
+ COND FROM AINV*A F     .63780E+02
+ ERRORS IN SOLUTION -ABSOLUTE
+                GENERAL SPMN     SPFN       SPMLE   SPFLE
+ PROBLEM  1     .75806E-06     .22476E-03     .22476E-03     .34061E-05     .34061E-05
+ PROBLEM  2     .23246E-05     .11551E-03     .11551E-03     .56624E-05     .56624E-05
+ 
+ TEST RATIOS.. E = EPSILON
+ 
+    COND  COND(M)  ACTUAL  ACTUAL  ERROR ERROR(M) ERROR(M2) A*AI-I A*AI-I(M)
+   -----   -----   -----   -----   -----   -----   -----   -----   -----
+    ACTUAL ACTUAL   COND  COND(M) E*COND*X E*CONDX E*COND*X E*COND E*COND
+ 
+     .42     .42    2.36    2.38     .02    4.93     .07     .08     .12
+ 
+ NO SUSPICIOUS RATIOS
+ 
+
+ *************
+
+ KASE  3   HILBERT SLICE   
+ N =   9
+ NORM(A)     =  2.00000E+00
+ NO DISAGREEMENT IN ORDERING
+ CONDITION ESTIMATION
+    GENERAL        SPARSE M       SPARSE F
+      .30993E+04     .47243E+04     .47492E+04
+ ACTUAL COND =  6.84904E+03
+ COND FROM AINV*A M     .68490E+04
+ COND FROM AINV*A F     .68490E+04
+ ERRORS IN SOLUTION -ABSOLUTE
+                GENERAL SPMN     SPFN       SPMLE   SPFLE
+ PROBLEM  1     .86418E-05     .43773E-01     .43773E-01     .17477E-03     .17477E-03
+ PROBLEM  2     .11045E-03     .73947E-01     .73947E-01     .11915E-03     .11915E-03
+ 
+ TEST RATIOS.. E = EPSILON
+ 
+    COND  COND(M)  ACTUAL  ACTUAL  ERROR ERROR(M) ERROR(M2) A*AI-I A*AI-I(M)
+   -----   -----   -----   -----   -----   -----   -----   -----   -----
+    ACTUAL ACTUAL   COND  COND(M) E*COND*X E*CONDX E*COND*X E*COND E*COND
+ 
+     .45     .69    2.21    1.45     .00    5.36     .02     .05     .12
+ 
+ NO SUSPICIOUS RATIOS
+ 
+
+ *************
+
+ KASE  4   MONOELEMENTAL   
+ N =   1
+ NORM(A)     =  4.00000E+00
+ 
+   3.000      1.000    
+ 
+ NO DISAGREEMENT IN ORDERING
+ CONDITION ESTIMATION
+    GENERAL        SPARSE M       SPARSE F
+      .79057E+00     .10000E+01     .10000E+01
+ ACTUAL COND =  1.60000E+00
+ COND FROM AINV*A M     .16000E+01
+ COND FROM AINV*A F     .16000E+01
+ ERRORS IN SOLUTION -ABSOLUTE
+                GENERAL SPMN     SPFN       SPMLE   SPFLE
+ PROBLEM  1     .00000E+00     .00000E+00     .00000E+00     .00000E+00     .00000E+00
+ PROBLEM  2     .00000E+00     .00000E+00     .00000E+00     .00000E+00     .00000E+00
+ 
+ TEST RATIOS.. E = EPSILON
+ 
+    COND  COND(M)  ACTUAL  ACTUAL  ERROR ERROR(M) ERROR(M2) A*AI-I A*AI-I(M)
+   -----   -----   -----   -----   -----   -----   -----   -----   -----
+    ACTUAL ACTUAL   COND  COND(M) E*COND*X E*CONDX E*COND*X E*COND E*COND
+ 
+     .49     .62    2.02    1.60     .00     .00     .00     .00     .00
+ 
+       0         0         1         0         0         0         0         0         0
+ 
+
+ *************
+
+ KASE  5   MONOELEMENTAL   
+ N =   1
+ NORM(A)     =   .00000E+00
+ 
+    .000       .000    
+ 
+ NO DISAGREEMENT IN ORDERING
+ CONDITION ESTIMATION
+    GENERAL        SPARSE M       SPARSE F
+      .34028E+39     .10000E+01     .10000E+01
+ INE, INM,INF   10   13   13
+
+ EXACT SINGULARITY.
+
+
+ *************
+
+ KASE  6   TRIDIAGONAL     
+ N =  15
+ NORM(A)     =  6.00000E+00
+ NO DISAGREEMENT IN ORDERING
+ CONDITION ESTIMATION
+    GENERAL        SPARSE M       SPARSE F
+      .28786E+01     .23905E+01     .23905E+01
+ ACTUAL COND =  2.99984E+00
+ COND FROM AINV*A M     .29998E+01
+ COND FROM AINV*A F     .29998E+01
+ ERRORS IN SOLUTION -ABSOLUTE
+                GENERAL SPMN     SPFN       SPMLE   SPFLE
+ PROBLEM  1     .00000E+00     .00000E+00     .00000E+00     .00000E+00     .00000E+00
+ PROBLEM  2     .35763E-06     .35763E-06     .35763E-06     .35763E-06     .35763E-06
+ 
+ TEST RATIOS.. E = EPSILON
+ 
+    COND  COND(M)  ACTUAL  ACTUAL  ERROR ERROR(M) ERROR(M2) A*AI-I A*AI-I(M)
+   -----   -----   -----   -----   -----   -----   -----   -----   -----
+    ACTUAL ACTUAL   COND  COND(M) E*COND*X E*CONDX E*COND*X E*COND E*COND
+ 
+     .96     .80    1.04    1.25     .00     .00     .00     .22     .33
+ 
+ NO SUSPICIOUS RATIOS
+ 
+
+ *************
+
+ KASE  7   TRIDIAGONAL     
+ N =  15
+ NORM(A)     =  2.05000E+02
+ NO DISAGREEMENT IN ORDERING
+ CONDITION ESTIMATION
+    GENERAL        SPARSE M       SPARSE F
+      .77550E+16     .13075E+17     .14052E+17
+ ACTUAL COND =  1.89294E+16
+ COND FROM AINV*A M     .18929E+17
+ COND FROM AINV*A F     .18929E+17
+ ERRORS IN SOLUTION -ABSOLUTE
+                GENERAL SPMN     SPFN       SPMLE   SPFLE
+ PROBLEM  1     .45666E+02     .53051E+06     .53051E+06     .53051E+06     .53051E+06
+ PROBLEM  2     .60943E+08     .49718E+07     .49718E+07     .49718E+07     .49718E+07
+ 
+ TEST RATIOS.. E = EPSILON
+ 
+    COND  COND(M)  ACTUAL  ACTUAL  ERROR ERROR(M) ERROR(M2) A*AI-I A*AI-I(M)
+   -----   -----   -----   -----   -----   -----   -----   -----   -----
+    ACTUAL ACTUAL   COND  COND(M) E*COND*X E*CONDX E*COND*X E*COND E*COND
+ 
+     .41     .69    2.44    1.45     .00     .00     .00     .00     .06
+ 
+ NO SUSPICIOUS RATIOS
+ 
+
+ *************
+
+ KASE  8   TRIDIAGONAL     
+ N =  15
+ NORM(A)     =  2.05000E+02
+ NO DISAGREEMENT IN ORDERING
+ CONDITION ESTIMATION
+    GENERAL        SPARSE M       SPARSE F
+      .81234E+16     .10865E+17     .10875E+17
+ ACTUAL COND =  1.89294E+16
+ COND FROM AINV*A M     .18929E+17
+ COND FROM AINV*A F     .18929E+17
+ NUMERICALLY SINGULAR- IMNF,IFNF,IMLE,IFLE    0    0   69   69
+
+ *************
+
+ KASE  9   RANK ONE        
+ N =   5
+ NORM(A)     =  1.11110E+04
+ NO DISAGREEMENT IN ORDERING
+ CONDITION ESTIMATION
+    GENERAL        SPARSE M       SPARSE F
+      .34028E+39     .10865E+17     .10875E+17
+ INE, INM,INF   12   27   27
+
+ EXACT SINGULARITY.
+
+
+ *************
+
+ KASE 10   ZERO COLUMN     
+ N =   4
+ NORM(A)     =  4.16667E+00
+ NO DISAGREEMENT IN ORDERING
+ CONDITION ESTIMATION
+    GENERAL        SPARSE M       SPARSE F
+      .34028E+39     .10865E+17     .10875E+17
+ INE, INM,INF   11   23   23
+
+ EXACT SINGULARITY.
+
+
+ *************
+
+ KASE 11   TEST COND       
+ N =   5
+ NORM(A)     =  9.00000E+00
+ NO DISAGREEMENT IN ORDERING
+ CONDITION ESTIMATION
+    GENERAL        SPARSE M       SPARSE F
+      .10400E+04     .10390E+04     .10390E+04
+ ACTUAL COND =  1.53900E+03
+ COND FROM AINV*A M     .15390E+04
+ COND FROM AINV*A F     .15390E+04
+ ERRORS IN SOLUTION -ABSOLUTE
+                GENERAL SPMN     SPFN       SPMLE   SPFLE
+ PROBLEM  1     .00000E+00     .00000E+00     .00000E+00     .00000E+00     .00000E+00
+ PROBLEM  2     .00000E+00     .00000E+00     .00000E+00     .00000E+00     .00000E+00
+ 
+ TEST RATIOS.. E = EPSILON
+ 
+    COND  COND(M)  ACTUAL  ACTUAL  ERROR ERROR(M) ERROR(M2) A*AI-I A*AI-I(M)
+   -----   -----   -----   -----   -----   -----   -----   -----   -----
+    ACTUAL ACTUAL   COND  COND(M) E*COND*X E*CONDX E*COND*X E*COND E*COND
+ 
+     .68     .68    1.48    1.48     .00     .00     .00     .00     .00
+ 
+ NO SUSPICIOUS RATIOS
+ 
+
+ *************
+
+ KASE 12   IDENTITY        
+ N =   3
+ NORM(A)     =  1.00000E+00
+ 
+   1.000       .000       .000       .000       .000       .000    
+    .000       .000      1.000       .000       .000       .000    
+    .000       .000       .000       .000      1.000       .000    
+ 
+ NO DISAGREEMENT IN ORDERING
+ CONDITION ESTIMATION
+    GENERAL        SPARSE M       SPARSE F
+      .10000E+01     .10000E+01     .10000E+01
+ ACTUAL COND =  1.00000E+00
+ COND FROM AINV*A M     .10000E+01
+ COND FROM AINV*A F     .10000E+01
+ ERRORS IN SOLUTION -ABSOLUTE
+                GENERAL SPMN     SPFN       SPMLE   SPFLE
+ PROBLEM  1     .00000E+00     .00000E+00     .00000E+00     .00000E+00     .00000E+00
+ PROBLEM  2     .00000E+00     .00000E+00     .00000E+00     .00000E+00     .00000E+00
+ 
+ TEST RATIOS.. E = EPSILON
+ 
+    COND  COND(M)  ACTUAL  ACTUAL  ERROR ERROR(M) ERROR(M2) A*AI-I A*AI-I(M)
+   -----   -----   -----   -----   -----   -----   -----   -----   -----
+    ACTUAL ACTUAL   COND  COND(M) E*COND*X E*CONDX E*COND*X E*COND E*COND
+ 
+    1.00    1.00    1.00    1.00     .00     .00     .00     .00     .00
+ 
+ NO SUSPICIOUS RATIOS
+ 
+
+ *************
+
+ KASE 13   UPPER TRIANGULAR
+ N =   6
+ NORM(A)     =  3.60000E+01
+ NO DISAGREEMENT IN ORDERING
+ CONDITION ESTIMATION
+    GENERAL        SPARSE M       SPARSE F
+      .19101E+03     .23572E+03     .13282E+03
+ ACTUAL COND =  4.32000E+02
+ COND FROM AINV*A M     .43200E+03
+ COND FROM AINV*A F     .43200E+03
+ ERRORS IN SOLUTION -ABSOLUTE
+                GENERAL SPMN     SPFN       SPMLE   SPFLE
+ PROBLEM  1     .00000E+00     .00000E+00     .00000E+00     .00000E+00     .00000E+00
+ PROBLEM  2     .00000E+00     .00000E+00     .00000E+00     .00000E+00     .00000E+00
+ 
+ TEST RATIOS.. E = EPSILON
+ 
+    COND  COND(M)  ACTUAL  ACTUAL  ERROR ERROR(M) ERROR(M2) A*AI-I A*AI-I(M)
+   -----   -----   -----   -----   -----   -----   -----   -----   -----
+    ACTUAL ACTUAL   COND  COND(M) E*COND*X E*CONDX E*COND*X E*COND E*COND
+ 
+     .44     .55    2.26    1.83     .00     .00     .00     .00     .03
+ 
+ NO SUSPICIOUS RATIOS
+ 
+
+ *************
+
+ KASE 14   LOWER TRIANGULAR
+ N =   6
+ NORM(A)     =  2.70000E+01
+ NO DISAGREEMENT IN ORDERING
+ CONDITION ESTIMATION
+    GENERAL        SPARSE M       SPARSE F
+      .35238E+02     .48725E+02     .46735E+02
+ ACTUAL COND =  9.78750E+01
+ COND FROM AINV*A M     .97875E+02
+ COND FROM AINV*A F     .97875E+02
+ ERRORS IN SOLUTION -ABSOLUTE
+                GENERAL SPMN     SPFN       SPMLE   SPFLE
+ PROBLEM  1     .23994E-05     .00000E+00     .00000E+00     .00000E+00     .00000E+00
+ PROBLEM  2     .47684E-05     .00000E+00     .00000E+00     .00000E+00     .00000E+00
+ 
+ TEST RATIOS.. E = EPSILON
+ 
+    COND  COND(M)  ACTUAL  ACTUAL  ERROR ERROR(M) ERROR(M2) A*AI-I A*AI-I(M)
+   -----   -----   -----   -----   -----   -----   -----   -----   -----
+    ACTUAL ACTUAL   COND  COND(M) E*COND*X E*CONDX E*COND*X E*COND E*COND
+ 
+     .36     .50    2.78    2.01     .03     .00     .00     .19     .06
+ 
+ NO SUSPICIOUS RATIOS
+ 
+
+ *************
+
+ KASE 15   NEAR UNDERFLOW  
+ N =   5
+ TINY        =  5.42101E-18
+ NORM(A)     =  2.71051E-17
+ NO DISAGREEMENT IN ORDERING
+ CONDITION ESTIMATION
+    GENERAL        SPARSE M       SPARSE F
+      .58469E+02     .58469E+02     .58469E+02
+ ACTUAL COND =  8.00000E+01
+ COND FROM AINV*A M     .80000E+02
+ COND FROM AINV*A F     .80000E+02
+ ERRORS IN SOLUTION -ABSOLUTE
+                GENERAL SPMN     SPFN       SPMLE   SPFLE
+ PROBLEM  1     .78201E-06     .14305E-05     .14305E-05     .14305E-05     .14305E-05
+ PROBLEM  2     .23842E-06     .19073E-05     .19073E-05     .19073E-05     .19073E-05
+ 
+ TEST RATIOS.. E = EPSILON
+ 
+    COND  COND(M)  ACTUAL  ACTUAL  ERROR ERROR(M) ERROR(M2) A*AI-I A*AI-I(M)
+   -----   -----   -----   -----   -----   -----   -----   -----   -----
+    ACTUAL ACTUAL   COND  COND(M) E*COND*X E*CONDX E*COND*X E*COND E*COND
+ 
+     .73     .73    1.37    1.37     .01     .02     .02     .03     .08
+ 
+ NO SUSPICIOUS RATIOS
+ 
+
+ *************
+
+ KASE 16   NEAR OVERFLOW   
+ N =   5
+ HUGE        =  3.68935E+15
+ NORM(A)     =  1.84467E+16
+ NO DISAGREEMENT IN ORDERING
+ CONDITION ESTIMATION
+    GENERAL        SPARSE M       SPARSE F
+      .58469E+02     .58469E+02     .58469E+02
+ ACTUAL COND =  8.00000E+01
+ COND FROM AINV*A M     .80000E+02
+ COND FROM AINV*A F     .80000E+02
+ ERRORS IN SOLUTION -ABSOLUTE
+                GENERAL SPMN     SPFN       SPMLE   SPFLE
+ PROBLEM  1     .11781E-05     .00000E+00     .00000E+00     .00000E+00     .00000E+00
+ PROBLEM  2     .69141E-05     .12398E-04     .12398E-04     .12398E-04     .12398E-04
+ 
+ TEST RATIOS.. E = EPSILON
+ 
+    COND  COND(M)  ACTUAL  ACTUAL  ERROR ERROR(M) ERROR(M2) A*AI-I A*AI-I(M)
+   -----   -----   -----   -----   -----   -----   -----   -----   -----
+    ACTUAL ACTUAL   COND  COND(M) E*COND*X E*CONDX E*COND*X E*COND E*COND
+ 
+     .73     .73    1.37    1.37     .02     .00     .00     .09     .20
+ 
+ NO SUSPICIOUS RATIOS
+ 
+
+ *************
+
+ KASE 17 RANDOM SPARSE
+ N =   5
+ NORM(A)     =  5.17713E+00
+ NO DISAGREEMENT IN ORDERING
+ CONDITION ESTIMATION
+    GENERAL        SPARSE M       SPARSE F
+      .17029E+02     .19266E+02     .22445E+02
+ ACTUAL COND =  3.99085E+01
+ COND FROM AINV*A M     .39908E+02
+ COND FROM AINV*A F     .39908E+02
+ ERRORS IN SOLUTION -ABSOLUTE
+                GENERAL SPMN     SPFN       SPMLE   SPFLE
+ PROBLEM  1     .15548E-05     .22948E-05     .22948E-05     .22948E-05     .22948E-05
+ PROBLEM  2     .66757E-05     .47088E-05     .47088E-05     .47088E-05     .47088E-05
+ 
+ TEST RATIOS.. E = EPSILON
+ 
+    COND  COND(M)  ACTUAL  ACTUAL  ERROR ERROR(M) ERROR(M2) A*AI-I A*AI-I(M)
+   -----   -----   -----   -----   -----   -----   -----   -----   -----
+    ACTUAL ACTUAL   COND  COND(M) E*COND*X E*CONDX E*COND*X E*COND E*COND
+ 
+     .43     .48    2.34    2.07     .05     .08     .08     .23     .20
+ 
+ NO SUSPICIOUS RATIOS
+ 
+
+ *************
+
+1SUMMARY
+ NUMBER OF TESTS =  17
+ NUMBER OF SINGULAR MATRICES =   3
+ NUMBER OF SUSPICIOUS RATIOS =   0   0   1   0   0   0   0   0
+
+ END OF TEST

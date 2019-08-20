@@ -1,0 +1,23 @@
+      SUBROUTINE Z1MV(N, QT, R, X, AUX, Y)
+      INTEGER N
+      REAL QT(N, N), R(N, N), X(N), AUX(N), Y(N)
+      INTEGER J
+      REAL SDOT
+C MULTIPLY MATRIX A TIMES VECTOR X = VECTOR Y
+C N BY N MATRIX A = Q*R
+C Q IS ORTHOGONAL, TRANSPOSE STORED IN QT
+C R IS UPPER TRIANGULAR
+C SCRATCH SPACE AUX
+C/6S
+C     IF (N .LT. 1) CALL SETERR(14H Z1MV - N.LT.1, 15, 1, 2)
+C/7S
+      IF (N .LT. 1) CALL SETERR(' Z1MV - N.LT.1', 15, 1, 2)
+C/
+      DO  1 J = 1, N
+         AUX(J) = SDOT(N+1-J, R(J, J), N, X(J), 1)
+   1     CONTINUE
+      DO  2 J = 1, N
+         Y(J) = SDOT(N, AUX(1), 1, QT(1, J), 1)
+   2     CONTINUE
+      RETURN
+      END

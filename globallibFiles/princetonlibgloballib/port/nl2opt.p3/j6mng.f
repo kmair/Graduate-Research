@@ -1,0 +1,69 @@
+      SUBROUTINE  J6MNG(N, D, X, CALCF, CALCG, IV, LIV, LV, V)
+C
+C  ***  MINIMIZE GENERAL UNCONSTRAINED OBJECTIVE FUNCTION USING   ***
+C  ***  ANALYTIC GRADIENT AND HESSIAN APPROX. FROM SECANT UPDATE  ***
+C
+      INTEGER N, LIV, LV
+      INTEGER IV(LIV)
+      REAL D(N), X(N), V(LV)
+C     DIMENSION V(71 + N*(N+15)/2), UIPARM(*), URPARM(*)
+      EXTERNAL CALCF,CALCG
+C
+C----------------------------  DECLARATIONS  ---------------------------
+C
+      EXTERNAL IVSET,  RMNG
+C
+C IVSET... SUPPLIES DEFAULT IV AND V INPUT COMPONENTS.
+C  RMNG... REVERSE-COMMUNICATION ROUTINE THAT CARRIES OUT  J6MNG ALGO-
+C             RITHM.
+C
+      INTEGER G1, IV1, NF
+      REAL F
+C
+C  ***  SUBSCRIPTS FOR IV   ***
+C
+      INTEGER NEXTV, NFCALL, NFGCAL, G, TOOBIG, VNEED
+C
+C/6
+C     DATA NEXTV/47/, NFCALL/6/, NFGCAL/7/, G/28/, TOOBIG/2/, VNEED/4/
+C/7
+      PARAMETER (NEXTV=47, NFCALL=6, NFGCAL=7, G=28, TOOBIG=2, VNEED=4)
+C/
+C
+C+++++++++++++++++++++++++++++++  BODY  ++++++++++++++++++++++++++++++++
+C
+      IF (IV(1) .EQ. 0) CALL IVSET(2, IV, LIV, LV, V)
+      IV1 = IV(1)
+      IF (IV1 .EQ. 12 .OR. IV1 .EQ. 13) IV(VNEED) = IV(VNEED) + N
+      IF (IV1 .EQ. 14) GO TO 10
+      IF (IV1 .GT. 2 .AND. IV1 .LT. 12) GO TO 10
+      G1 = 1
+      IF (IV1 .EQ. 12) IV(1) = 13
+      GO TO 20
+C
+ 10   G1 = IV(G)
+C
+ 20   CALL  RMNG(D, F, V(G1), IV, LIV, LV, N, V, X)
+      IF (IV(1) - 2) 30, 40, 50
+C
+ 30   NF = IV(NFCALL)
+      CALL CALCF(N, X, NF, F)
+      IF (NF .LE. 0) IV(TOOBIG) = 1
+      GO TO 20
+C
+ 40   NF = IV(NFGCAL)
+      CALL CALCG(N, X, NF, V(G1))
+      IF (NF .LE. 0) IV(TOOBIG) = 1
+      GO TO 20
+C
+ 50   IF (IV(1) .NE. 14) GO TO 60
+C
+C  ***  STORAGE ALLOCATION
+C
+      IV(G) = IV(NEXTV)
+      IV(NEXTV) = IV(G) + N
+      IF (IV1 .NE. 13) GO TO 10
+C
+ 60   RETURN
+C  ***  LAST CARD OF  J6MNG FOLLOWS  ***
+      END

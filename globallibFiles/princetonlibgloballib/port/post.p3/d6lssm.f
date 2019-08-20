@@ -1,0 +1,103 @@
+      SUBROUTINE D6LSSM(ALFA, BETA, GAMMA, NU, NRHS, AA, BB,
+     1   SGAMMA, BC, A, B, G, EM, NMEQS, PIVOT, DIAG)
+      INTEGER NRHS, NU, NMEQS
+      INTEGER BC(NU), EM(NU), PIVOT(NU)
+      DOUBLE PRECISION ALFA(NU, NU), BETA(NU, NU), GAMMA(NU, NRHS), AA(
+     1   NU, NU), BB(NU, NU), SGAMMA(NU, NRHS)
+      DOUBLE PRECISION A(NMEQS, NU), B(NMEQS, NU), G(NMEQS, NRHS), DIAG(
+     1   NU)
+      COMMON /CSTAK/ DS
+      DOUBLE PRECISION DS(500)
+      INTEGER ISTKGT, NERROR, IPIVOT, I, J, NERR
+      INTEGER IS(1000), NMVAR
+      REAL RS(1000)
+      LOGICAL LS(1000)
+      DOUBLE PRECISION WS(500)
+      INTEGER TEMP, TEMP1
+      EQUIVALENCE (DS(1), WS(1), RS(1), IS(1), LS(1))
+C SCRATCH SPACE ALLOCATED - S(D6LSSM) <= NU LONG REAL WORDS +
+C                                        NU INTEGER WORDS.
+      CALL ENTER(1)
+C COPY ALFA, BETA AND GAMMA INTO
+      DO  3 I = 1, NMEQS
+C PROPERLY DIMENSIONED ARRAYS.
+         DO  1 J = 1, NU
+            TEMP1 = EM(I)
+            A(I, J) = ALFA(TEMP1, J)
+            TEMP1 = EM(I)
+            B(I, J) = BETA(TEMP1, J)
+   1        CONTINUE
+         DO  2 J = 1, NRHS
+            TEMP1 = EM(I)
+            G(I, J) = GAMMA(TEMP1, J)
+   2        CONTINUE
+   3     CONTINUE
+      NMVAR = 0
+C COUNT THE VARIABLES.
+      DO  7 J = 1, NU
+         DO  5 I = 1, NMEQS
+            IF (B(I, J) .EQ. 0D0) GOTO 4
+               NMVAR = NMVAR+1
+               GOTO  6
+   4        CONTINUE
+   5        CONTINUE
+   6     CONTINUE
+   7     CONTINUE
+      IF (NMVAR .GE. NMEQS) GOTO 8
+C/6S
+C        CALL SETERR(
+C    1      53HDGLSSB - MIXED BOUNDARY CONDITIONS ARE OVERDETERMINED,
+C    2      53, 3, 1)
+C/7S
+         CALL SETERR(
+     1      'DGLSSB - MIXED BOUNDARY CONDITIONS ARE OVERDETERMINED',
+     2      53, 3, 1)
+C/
+         CALL LEAVE
+         RETURN
+C GET THE QR DECOMPOSITION OF B.
+   8  CALL DQRD(NMEQS, NU, B, DIAG, PIVOT)
+      IF (NERROR(NERR) .EQ. 0) GOTO 9
+         CALL ERROFF
+C/6S
+C        CALL SETERR(33HDGLSSB - SINGULAR MIXED SUBSYSTEM, 33, 5, 1)
+C/7S
+         CALL SETERR('DGLSSB - SINGULAR MIXED SUBSYSTEM', 33, 5, 1)
+C/
+         CALL LEAVE
+         RETURN
+C FORM G = Q*G.
+   9  CALL DQRQTV(NMEQS, NU, B, DIAG, NRHS, G)
+C FORM Q*A.
+      CALL DQRQTV(NMEQS, NU, B, DIAG, NU, A)
+C FORM PHONY PIVOT(I) = I.
+      IPIVOT = ISTKGT(NMEQS, 2)
+      DO  10 I = 1, NMEQS
+         TEMP1 = IPIVOT-1+I
+         IS(TEMP1) = I
+  10     CONTINUE
+      CALL DQRBS(NMEQS, NMEQS, B, DIAG, IS(IPIVOT), NRHS, G, G)
+      CALL DQRBS(NMEQS, NMEQS, B, DIAG, IS(IPIVOT), NU, A, A)
+      IF (NMEQS .LT. NU) CALL DQRBS(NMEQS, NMEQS, B, DIAG, IS(IPIVOT),
+     1   NU-NMEQS, B(1, NMEQS+1), B(1, NMEQS+1))
+C PUT THE STANDARD FORM INTO AA,BB,SGAMMA AND BC.
+      DO  14 I = 1, NMEQS
+         DO  12 J = 1, NU
+            TEMP1 = PIVOT(I)
+            AA(TEMP1, J) = -A(I, J)
+            IF (J .LE. NMEQS) GOTO 11
+               TEMP1 = PIVOT(I)
+               TEMP = PIVOT(J)
+               BB(TEMP1, TEMP) = -B(I, J)
+  11        CONTINUE
+  12        CONTINUE
+         DO  13 J = 1, NRHS
+            TEMP = PIVOT(I)
+            SGAMMA(TEMP, J) = G(I, J)
+  13        CONTINUE
+         TEMP = PIVOT(I)
+         BC(TEMP) = 1
+  14     CONTINUE
+      CALL LEAVE
+      RETURN
+      END

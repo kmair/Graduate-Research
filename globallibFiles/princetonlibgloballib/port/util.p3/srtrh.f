@@ -1,0 +1,67 @@
+      SUBROUTINE SRTRH ( A, L, SA, P, SP, N )
+C
+C     SRTRH REARRANGES THE N HOLLERITH DATA ITEMS, EACH
+C     L WORDS IN LENGTH, AT A(1), A(SA+1), ..., A((N-1)*SA+1)
+C     ACCORDING TO PERMUTATION OF INTEGERS 1 TO N STORED
+C     IN P(1), P(SP+1), ..., P((N-1)*SP+1)
+C
+      COMMON /CSTAK/ DSTAK(500)
+C
+      INTEGER SA, SP, P(SP, 1)
+      INTEGER A(SA, 1)
+      INTEGER ISTAK(1000)
+      DOUBLE PRECISION DSTAK
+C
+      EQUIVALENCE (DSTAK(1), ISTAK(1))
+C
+C     CHECK INPUT PARAMETERS
+C
+      CALL I1SRT( SA, SP, N )
+C/6S
+C     IF ( L .GT. SA  .OR.  L .LT. 1 )
+C    1   CALL SETERR( 26HSRTRH - ILLEGAL VALUE OF L, 26, 4, 2 )
+C/7S
+      IF ( L .GT. SA  .OR.  L .LT. 1 )
+     1   CALL SETERR( 'SRTRH - ILLEGAL VALUE OF L', 26, 4, 2 )
+C/
+C
+C     CHECK IF SORTING NECESSARY
+C
+      IF ( N .LE. 1 ) RETURN
+C
+C     FETCH TEMPORARY STORAGE FROM STACK FOR FIRST ELEMENT
+C     IN EACH CYCLE
+C
+      IBR = ISTKGT( L, 2 )
+      I = 0
+C
+C       CHECK IF HAVE COMPLETED PERMUTATION
+C
+ 10     I = I + 1
+        IF ( I .GT. N ) GOTO 40
+        IF ( P(1, I) .LE. 0 ) GOTO 10
+C
+C       REARRANGE A ACCORDING TO CYCLE STARTING AT I
+C
+        CALL MOVEFI ( L, A(1, I), ISTAK(IBR) )
+C
+ 20       LL = I
+          I = P(1, I)
+          P(1, LL) = -P(1, LL)
+          IF ( P(1, I) .LE. 0 ) GOTO 30
+          CALL MOVEFI ( L, A(1, I), A(1, LL) )
+          GOTO 20
+C
+ 30     CALL MOVEFI ( L, ISTAK(IBR), A(1, LL) )
+C
+        GOTO 10
+C
+C     RESTORE P ARRAY
+C
+ 40   DO 50 I = 1, N
+ 50     P(1, I) = - P(1, I)
+C
+      CALL ISTKRL(1)
+      RETURN
+C
+      END

@@ -1,0 +1,53 @@
+      INTEGER FUNCTION I3MMD(IMESH, MESH, NMESH, P, MP)
+      INTEGER NMESH
+      INTEGER IMESH, MP
+      DOUBLE PRECISION MESH(NMESH), P
+      INTEGER I, ISTKMD, IP, MPT
+      INTEGER TEMP
+C MAKE SURE THE MESH IS MONOTONE INCREASING.
+      I = 1
+         GOTO  2
+   1     I = I+1
+   2     IF (I .GE. NMESH) GOTO  3
+C/6S
+C        IF (MESH(I) .GT. MESH(I+1)) CALL SETERR(
+C    1      36HIMMMD - MESH NOT MONOTONE INCREASING, 36, 7, 2)
+C/7S
+         IF (MESH(I) .GT. MESH(I+1)) CALL SETERR(
+     1      'IMMMD - MESH NOT MONOTONE INCREASING', 36, 7, 2)
+C/
+         GOTO  1
+C FIND IP, THE INDEX IN MESH OF P. THE FOLLOWING RULES APPLY -
+C   IF ( P < MESH(1) ) { IP = 1 }
+C   ELSE IF ( P > MESH(NMESH) ) { IP = NMESH+1 }
+C   ELSE IF ( MESH(I-1) < P < MESH(I) ) { IP = I }
+C   ELSE { MESH(IP) = P }
+   3  IP = 1
+         GOTO  5
+   4     IP = IP+1
+   5     IF (IP .GT. NMESH) GOTO  6
+         IF (P .EQ. MESH(IP)) GOTO  6
+         IF (P .LT. MESH(IP)) GOTO  6
+         GOTO  4
+C GET MPT, THE INPUT MULTIPLICITY OF P IN MESH.
+   6  MPT = 0
+      I = IP
+         GOTO  8
+   7     I = I+1
+   8     IF (I .GT. NMESH) GOTO  9
+         IF (MESH(I) .EQ. P) MPT = MPT+1
+         GOTO  7
+   9  IF (MP .LE. MPT) GOTO 10
+         IMESH = ISTKMD(NMESH+MP-MPT)
+         TEMP = IP+MP-MPT
+         CALL MOVEBD(NMESH+1-IP, MESH(IP), MESH(TEMP))
+         CALL SETD(MP-MPT, P, MESH(IP))
+         GOTO  12
+  10     IF (MP .GE. MPT) GOTO 11
+            TEMP = IP+MPT-MP
+            CALL MOVEFD(NMESH-IP+MP-MPT+1, MESH(TEMP), MESH(IP))
+            IMESH = ISTKMD(NMESH+MP-MPT)
+  11  CONTINUE
+  12  I3MMD = NMESH+MP-MPT
+      RETURN
+      END

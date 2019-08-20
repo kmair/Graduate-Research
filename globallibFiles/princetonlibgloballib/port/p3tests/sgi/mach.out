@@ -1,0 +1,73 @@
+
+
+ FORMAT CONVERSION FOR INTEGERS IS - I12
+ INTEGER CONSTANTS FOLLOW
+
+
+
+ THE STANDARD INPUT UNIT
++                                                              5
+ THE STANDARD OUTPUT UNIT
++                                                              6
+ THE STANDARD PUNCH UNIT
++                                                              7
+ THE STANDARD ERROR MESSAGE UNIT
++                                                              6
+ THE NUMBER OF BITS PER WORD
++                                                             32
+ THE NUMBER OF CHARACTERS PER WORD
++                                                              1
+ A, THE BASE OF AN S-DIGIT INTEGER
++                                                              2
+ S, THE NUMBER OF BASE-A DIGITS
++                                                             31
+ A**S - 1, THE LARGEST MAGNITUDE
++                                                     2147483647
+ B, THE BASE OF A T-DIGIT FLOATING-POINT NUMBER
++                                                              2
+ T, THE NUMBER OF BASE-B DIGITS IN SINGLE-PRECISION
++                                                             24
+ EMIN, THE SMALLEST SINGLE-PRECISION EXPONENT
++                                                           -125
+ EMAX, THE LARGEST SINGLE-PRECISION EXPONENT
++                                                            128
+ T, THE NUMBER OF BASE-B DIGITS IN DOUBLE-PRECISION
++                                                             53
+ EMIN, THE SMALLEST DOUBLE-PRECISION EXPONENT
++                                                          -1021
+ EMAX, THE LARGEST DOUBLE-PRECISION EXPONENT
++                                                           1024
+
+
+ FORMAT CONVERSION FOR SINGLE-PRECISION IS - E16.08
+ SINGLE-PRECISION CONSTANTS FOLLOW
+
+
+
+ THE SMALLEST POSITIVE MAGNITUDE
++                                   .11754944E-37
+ THE LARGEST MAGNITUDE
++                                   .34028235E+39
+ THE SMALLEST RELATIVE SPACING
++                                   .59604645E-07
+ THE LARGEST RELATIVE SPACING
++                                   .11920929E-06
+ LOG10 OF THE BASE
++                                   .30103001E+00
+
+
+ FORMAT CONVERSION FOR DOUBLE-PRECISION IS - D25.16
+ DOUBLE-PRECISION CONSTANTS FOLLOW
+
+
+
+ THE SMALLEST POSITIVE MAGNITUDE
++                                    .2225073858507201-307
+ THE LARGEST MAGNITUDE
++                                    .1797693134862316+309
+ THE SMALLEST RELATIVE SPACING
++                                    .1110223024625157E-15
+ THE LARGEST RELATIVE SPACING
++                                    .2220446049250313E-15
+ LOG10 OF THE BASE
++                                    .3010299956639812E+00

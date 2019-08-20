@@ -1,0 +1,44 @@
+{
+    "Problem": [
+        {
+            "Lower bound": 0.666666666667,
+            "Name": "problem",
+            "Number of constraints": 2,
+            "Number of objectives": 1,
+            "Number of variables": 3,
+            "Sense": "unknown",
+            "Upper bound": 0.666666666667
+        }
+    ],
+    "Solution": [
+        {
+            "number of solutions": 1,
+            "number of solutions displayed": 1
+        },
+        {
+            "Constraint": "No values",
+            "Gap": 0.0,
+            "Message": null,
+            "Objective": {
+                "OBJ": {
+                    "Value": 0.6666666666666666
+                }
+            },
+            "Problem": {},
+            "Status": "optimal",
+            "Variable": {
+                "x[1]": {
+                    "Value": 0.3333333333333333
+                }
+            }
+        }
+    ],
+    "Solver": [
+        {
+            "Error rc": 0,
+            "Status": "ok",
+            "Termination condition": "optimal",
+            "Time": 0.10092592239379883
+        }
+    ]
+}

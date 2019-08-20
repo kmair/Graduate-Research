@@ -1,0 +1,19 @@
+       SUBROUTINE GEML(N,A,IA,X,B)
+C GENERAL MATRIX BY VECTOR MULTIPLICATION
+C
+         REAL A(IA,N),X(N),B(N)
+C/6S
+C        IF(N.LT.1) CALL SETERR(12H GEML-N.LT.1,12,1,2)
+C        IF (IA.LT.N) CALL SETERR(13H GEML-IA.LT.N,13,2,2)
+C/7S
+         IF(N.LT.1) CALL SETERR(' GEML-N.LT.1',12,1,2)
+         IF (IA.LT.N) CALL SETERR(' GEML-IA.LT.N',13,2,2)
+C/
+         DO 10 I=1,N
+             B(I)=0.0
+  10     CONTINUE
+         DO 20 I=1,N
+            CALL SAXPY(N,X(I),A(1,I),1,B,1)
+ 20      CONTINUE
+         RETURN
+         END

@@ -1,0 +1,72 @@
+      SUBROUTINE DM66FT(N,IFX)
+C
+C   THIS SUBROUTINE FACTORS AN INTEGER N INTO FACTORS OF 2,3,5 AND
+C   GENERAL PRIME FACTORS (GREATER THAN 5). ON EXIT, THE CONTENTS OF
+C   INTEGER ARRAY IFX() ARE
+C
+C               IFX(1) = N
+C               IFX(2) = M THE NUMBER OF FACTORS
+C               IFX(3) THROUGH IFX(M+2) ARE THE FACTORS
+C
+C   FOR EXAMPLE, IF N = 30 - IFX(1) = 30, IFX(2) = 3, IFX(3) = 2,
+C   IFX(4) = 3, AND IFX(5) = 5.
+C
+C   THIS IS A LOW LEVEL ROUTINE WITH NO ERROR CONDITIONS.
+C
+C/6S
+C     INTEGER IFX(1)
+C/7S
+      INTEGER IFX(*)
+C/
+      INTEGER I,II,IL,IT,K,L,N,NL,NN
+C
+      NN=N
+      IFX(1)=NN
+      IF (NN .LE. 1) GO TO 100
+      K=2
+C  FACTORS OF 2
+ 10   IF (MOD(NN,2).NE.0) GO TO 20
+         K=K+1
+         IFX(K)=2
+         NN=NN/2
+      IF (NN.EQ.1) GO TO 60
+         GO TO 10
+C  FACTORS OF 3
+ 20   IF (MOD(NN,3).NE.0) GO TO 30
+         K=K+1
+         IFX(K)=3
+         NN=NN/3
+      IF (NN.EQ.1) GO TO 60
+         GO TO 20
+C  REMAINING ODD FACTORS
+ 30   L=5
+      I=2
+C  I IS ALTERNATELY 2 OR 4
+ 40   IF (MOD(NN,L).NE.0) GO TO 50
+         K=K+1
+         IFX(K)=L
+         NN=NN/L
+      IF (NN.EQ.1) GO TO 60
+         GO TO 40
+ 50   L=L+I
+      I=6-I
+         GO TO 40
+ 60   IFX(2)=K-2
+C  NFAX IS SET TO THE NUMBER OF FACTORS
+      NL=K-2
+C  SORT FACTORS IN ASCENDING ORDER
+      IF (NL.EQ.1) GO TO 90
+      DO 80 II=2,NL
+         IL=NL+3-II
+         DO 70 I=3,IL
+            IF (IFX(I+1).GE.IFX(I)) GO TO 70
+            IT=IFX(I)
+            IFX(I)=IFX(I+1)
+            IFX(I+1)=IT
+ 70      CONTINUE
+ 80   CONTINUE
+ 90   CONTINUE
+      GO TO 999
+ 100  IFX(2) = 0
+ 999  RETURN
+      END

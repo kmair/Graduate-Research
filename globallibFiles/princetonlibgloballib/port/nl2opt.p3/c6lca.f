@@ -1,0 +1,7 @@
+      SUBROUTINE C6LCA(N,P,L,X,NF,A,IU,UR,UF)
+      INTEGER N,P,IU
+      REAL X(P),A(N,L),UR
+      EXTERNAL UF
+      CALL UF(N,P,L,X,NF,A)
+      RETURN
+      END

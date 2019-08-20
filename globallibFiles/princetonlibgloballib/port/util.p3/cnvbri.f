@@ -1,0 +1,17 @@
+      SUBROUTINE CNVBRI(N,A,B)
+C
+C     CNVBRI CONVERTS THE N REAL ITEMS IN A
+C     TO INTEGER ITEMS PUTTING THE RESULT IN B.
+C     A BACKWARDS DO LOOP IS USED.
+C
+      REAL A(1)
+      INTEGER B(1)
+C
+      I = N
+C
+ 10   IF(I .LE. 0) RETURN
+        B(I) = A(I)
+        I = I - 1
+        GO TO 10
+C
+      END

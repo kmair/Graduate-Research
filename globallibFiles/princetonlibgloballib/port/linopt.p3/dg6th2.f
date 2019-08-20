@@ -1,0 +1,18 @@
+      SUBROUTINE DG6TH2(A, B, V1, V2, U2, C)
+      DOUBLE PRECISION A, B, V1, V2, U2, C
+      DOUBLE PRECISION RN, SS, DSQRT, U1
+C
+C THIS SUBROUTINE GENERATES A HOUSEHOLDER TRANSFORMATIONS
+C WHICH ZEROES THE ELEMENT B
+C
+      SS = DABS(A)+DABS(B)
+      U1 = A/SS
+      U2 = B/SS
+      RN = DSQRT(U1*U1+U2*U2)
+      IF (U1 .LT. 0.D0) RN = -RN
+      V1 = (-(U1+RN))/RN
+      V2 = (-U2)/RN
+      U2 = V2/V1
+      C = (-RN)*SS
+      RETURN
+      END

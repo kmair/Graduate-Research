@@ -1,0 +1,37 @@
+The following comma-separated files contain detailed results from the application
+of DFO solvers to the problems solved in the working paper:
+``Derivative-free optimization: A review of algorithms and comparison of software
+implementations'' by Luis Miguel Rios and Nikolaos V. Sahinidis.
+
+Results from two types of runs are provided:
+
+1) Problems solved over the entire feasible space.
+Ten instances were solved from randomly generated starting points.
+(A few solvers discard the starting point and hence provide identical results
+in all 10 runs.)
+
+2) Problems solved over a small box in the neighborhood of the global solution.
+These instances were solved from a single starting point (near-global solution).
+The results are in file names ending in '_local'.
+
+For both types of runs, the following format is used for the results files:
+Column 1 'problem' contains the name of the test problem solved
+Column 2 'solver' contains the name of the solver used
+Column 3 'time' contains the cpu time taken by the solver
+Column 4 'solution' contains the best solution found by the solver
+Column 5 'calls' contains the number of function calls used by the solver
+Column 6 'best call' contains the iteration counter when the best solution was found by the solver
+Columns 7-56 contain the best objective function value found by the solver every 50 function calls. 
+
+Random starting points:
+File 'starting_points.xls' contains the information to generate the starting points.
+These starting points were generated using a matrix of [0,1] randomly generated elements.
+The matrix can be found in the sheet 'random.numbers'.  Each column of the matrix is used
+to generate a starting point. That is, the 10 instances used the first 10 columns of the matrix.
+Elements in rows are used to generate each of the starting variable's values.
+The starting point for variable x_i is obtained using the formula:
+	x_i = lb_i + y_i (ub_i - lb_i)
+where
+	lb_i, ub_i are the lower and upper bounds for the variable x_i
+	y_i is the [0,1] randomly generated number at the i^th row
+Lower and upper bounds for the variables can be found in the respective problemdata files.

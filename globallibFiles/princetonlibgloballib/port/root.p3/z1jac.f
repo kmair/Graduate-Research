@@ -1,0 +1,77 @@
+      SUBROUTINE Z1JAC(FUNC, N, X, F, DFDX, JUSED)
+      INTEGER N
+      EXTERNAL FUNC
+      INTEGER JUSED
+      REAL X(N), F(N), DFDX(N, N)
+      COMMON /Z1COM/ P2, G2, XP, XG, RATSAV, XGMAX, X2, DX2OLD, DXTRY,
+     1   RELERR, F2PREV, F2BEST, F2LAST, F2NORM, F2DMAX, JMAX, JCALL,
+     2   ISLOW, JPRINT, NUMUPD, N2BIG, SMALL, SING, GFLAG, VFLAG
+      INTEGER JMAX, JCALL, ISLOW, JPRINT, NUMUPD, N2BIG
+      REAL P2, G2, XP, XG, RATSAV, XGMAX
+      REAL X2, DX2OLD, DXTRY, RELERR, F2PREV, F2BEST
+      REAL F2LAST, F2NORM, F2DMAX
+      LOGICAL SMALL, SING, GFLAG, VFLAG
+      INTEGER K, NERROR, NERR, J
+      REAL R1MACH, RSMALL, RELACC, RLARGE, XSAVE, DXSM
+      REAL DXBIG, DX, DF2NRM, SNRM2, AMAX1, ABS
+      REAL AMIN1
+C NUMERICAL APPROXIMATION TO JACOBIAN OF FUNC AT X
+C INPUTS
+C N = NUMBER OF COMPONENTS
+C N-VECTORS X, AND F = VALUE OF FUNC AT X
+C OUTPUTS
+C JACOBIAN MATRIX DFDX
+C JUSED = NUMBER OF CALLS TO FUNC USED
+      RSMALL = R1MACH(1)
+      RLARGE = R1MACH(2)
+      RELACC = 100.0E0*R1MACH(4)
+      JUSED = 0
+      DO  11 K = 1, N
+         DXSM = AMAX1(RSMALL, RELACC*ABS(X(K)))
+         DXBIG = RLARGE
+         XSAVE = X(K)
+         DX = AMAX1(DXTRY, DXSM)
+   1        IF (JCALL+JUSED+N-K .LT. JMAX) GOTO 2
+C/6S
+C              CALL SETERR(15H Z1JAC - FAILED, 15, 1, 1)
+C/7S
+               CALL SETERR(' Z1JAC - FAILED', 15, 1, 1)
+C/
+               RETURN
+   2        X(K) = XSAVE+DX
+            JUSED = JUSED+1
+            CALL FUNC(N, X, DFDX(1, K))
+            IF (NERROR(NERR) .EQ. 0) GOTO 3
+               CALL ERROFF
+               DF2NRM = 2.0E0*F2NORM
+               GOTO  5
+   3           DO  4 J = 1, N
+                  DFDX(J, K) = DFDX(J, K)-F(J)
+   4              CONTINUE
+               DF2NRM = SNRM2(N, DFDX(1, K), 1)
+C     IF (DF2NRM.LT.RELACC*F2NORM)      DX TOO SMALL
+C        DXSM=AMAX1(DX,DXSM), DX=10.0E0*DX
+C     ELSE
+   5        IF (DF2NRM .LE. F2NORM) GOTO 6
+               DXBIG = AMIN1(DX, DXBIG)
+C DX TOO LARGE
+               DX = DX*AMIN1(0.5E0, AMAX1(0.01E0, 0.5E0*F2NORM/DF2NRM))
+               GOTO  8
+   6           DO  7 J = 1, N
+                  DFDX(J, K) = DFDX(J, K)/DX
+   7              CONTINUE
+               X(K) = XSAVE
+               GOTO  10
+   8        IF (DXBIG .GT. DXSM) GOTO 9
+C/6S
+C              CALL SETERR(15H Z1JAC - FAILED, 15, 2, 1)
+C/7S
+               CALL SETERR(' Z1JAC - FAILED', 15, 2, 1)
+C/
+               RETURN
+   9        DX = AMIN1(DXBIG, AMAX1(DX, DXSM))
+            GOTO  1
+  10     CONTINUE
+  11     CONTINUE
+      RETURN
+      END

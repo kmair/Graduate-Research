@@ -1,0 +1,97 @@
+      SUBROUTINE C1SPFT(X,Y,N,B,YP,YPP,H,U,V,D)
+       DIMENSION X(N),Y(N),YP(N),YPP(N),H(N),U(N),V(N),D(N),B(6)
+C
+C FIT CUBIC SPLINE TO N DATA PAIRS (X,Y).
+C OUTPUTS ARE ARRAYS YP AND YPP, FITTED VALUES OF FIRST AND
+C SECOND DERIVATIVES AT THE DATA POINTS.
+C ARRAYS H,U,V,D ARE USED FOR SCRATCH WORK.
+C
+C
+C GENERATE MESH SPACINGS
+C
+       N1=N-1
+       DO 10 J=1,N1
+   10  H(J)=X(J+1)-X(J)
+       DY=(Y(2)-Y(1))/H(1)
+C
+C FILL TRIDIAGONAL MATRIX
+C
+       IF (N1.LT.2)   GOTO 30
+       DO 20 J=2,N1
+       U(J)=H(J-1)
+       V(J)=H(J)
+       D(J)=2.0*(H(J-1)+H(J))
+       DYP=(Y(J+1)-Y(J))/H(J)
+       YPP(J)=6.0*(DYP-DY)
+       DY=DYP
+   20  CONTINUE
+C
+C BOUNDARY CONDITIONS AT X(1)
+C
+   30  U(1)=0.
+       V(1)=-H(1)*B(1)
+       D(1)=6.0*B(2)+2.0*V(1)
+       YPP(1)=6.0*(B(3)-B(1)*(Y(2)-Y(1))/H(1))
+C
+C BOUNDARY CONDITIONS AT X(N)
+C
+       V(N)=0.
+       U(N)=H(N1)*B(4)
+       D(N)=6.0*B(5)+2.0*U(N)
+       YPP(N)=6.0*(B(6)-B(4)*(Y(N)-Y(N1))/H(N1))
+C
+C USE GIVENS ROTATIONS TO ELIMINATE U S
+C BELOW THE DIAGONAL.
+C THIS PUTS ANOTHER NONZERO
+C ROW ABOVE DIAGONAL.
+C
+       DO 50 J=1,N1
+       ROOT=SQRT(D(J)**2+U(J+1)**2)
+       IF (ROOT.GT.0.0)   GOTO 40
+C/6S
+C      CALL SETERR(
+C    1     38HC1SPFT - SINGULAR MATRIX. CHECK INPUTS,38,1,1)
+C/7S
+       CALL SETERR(
+     1     'C1SPFT - SINGULAR MATRIX. CHECK INPUTS',38,1,1)
+C/
+       RETURN
+C
+   40  C=D(J)/ROOT
+       S=-U(J+1)/ROOT
+       D(J)=ROOT
+       TEMP1=C*V(J)-S*D(J+1)
+C
+       TEMP2=S*V(J)+C*D(J+1)
+       V(J)=TEMP1
+       D(J+1)=TEMP2
+C
+C USE U FOR THE NEW NONZERO ROW
+C
+       U(J)=-S*V(J+1)
+       V(J+1)=C*V(J+1)
+       TEMP1=C*YPP(J)-S*YPP(J+1)
+       TEMP2=S*YPP(J)+C*YPP(J+1)
+       YPP(J)=TEMP1
+       YPP(J+1)=TEMP2
+   50  CONTINUE
+C
+C BACK SUBSTITUTE
+C
+       YPP(N)=YPP(N)/D(N)
+       YPP(N1)=(YPP(N1)-V(N1)*YPP(N))/D(N1)
+C
+       IF (N.LE.2) GOTO 70
+C
+       DO 60 JJ=3,N
+       J=1+N-JJ
+   60  YPP(J)=(YPP(J)-V(J)*YPP(J+1)-U(J)*YPP(J+2))/D(J)
+C
+C EVALUATE FIRST DERIVATIVES
+C
+   70  DO 80 J=1,N1
+   80  YP(J)=(Y(J+1)-Y(J))/H(J)-H(J)*(2.0*YPP(J)+YPP(J+1))/6.0
+       YP(N)=YP(N1)+0.5*H(N1)*(YPP(N1)+YPP(N))
+C
+       RETURN
+       END

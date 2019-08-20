@@ -1,0 +1,411 @@
+Copyright 1999 Lucent Technologies Inc.  All Rights Reserved.
+
+The above copyright notice applies to everything in port3.tar except
+the publicly available files listed at the end of this README file.
+
+Much of the PORT3 library was created by and is owned by Lucent
+Technologies, but some of the software routines are publicly available.
+A list of the publicly available software source files appears at the
+end of this README file.  Lucent Technologies is providing the publicly
+available software listed below to facilitate your use of the PORT3
+software.  Lucent Technologies has no obligation to support the publicly
+available software identified herein.  To the extent permitted under
+applicable law, Lucent Technologies is providing the publicly available
+software "AS IS", WITH NO EXPRESS OR IMPLIED WARRANTIES OF ANY KIND,
+INCLUDING, BUT NOT LIMITED TO, ANY IMPLIED WARRANTIES OF MERCHANTABILITY
+OR FITNESS FOR ANY PARTICULAR PURPOSE OR WARRANTIES AGAINST INFRINGEMENT
+OF ANY PROPRIETARY RIGHTS OF A THIRD PARTY.  Lucent Technologies WILL
+NOT BE LIABLE FOR ANY CONSEQUENTIAL, INCIDENTAL, OR SPECIAL DAMAGES, OR
+ANY OTHER RELIEF, OR FOR ANY CLAIM BY ANY THIRD PARTY, ARISING FROM YOUR
+USE OF THE publicly available software.  Some States and other
+jurisdictions do not allow for the exclusion or limitation of implied
+warranties so the above exclusions or limitations may not apply to you.
+This warranty gives you specific legal rights and you may also have
+other rights which vary from State to State.
+
+Should you desire ONLY to procure copies of the publicly available
+software listed below (i.e., not agreeing and entering into Lucent's
+Limited-Use Software License herein), you may obtain the publicly
+available software in source form from the port directory of netlib.
+For more information on netlib, send the two-word E-mail message "send
+readme" to netlib@netlib.bell-labs.com or to netlib@ornl.org, or point
+your web browser to http://netlib.bell-labs.com/netlib or to
+http://www.netlib.org/ .
+
+The publicly available files consist of files derived from code
+published in ACM Transactions on Mathematical Software (the PORT
+framework and some of the optimization routines) and a few others.
+To quote the Introduction to PORT3,
+
+	In a few cases programs from the public domain have been
+	adapted to PORT for the benefit of our users.  The
+	adaptations have always been done only with the concurrence
+	of the original authors, and include the PORT routines EIGEN
+	(which calls on three EISPACK routines), Richard Brent's
+	FMIN and ZERO routines, the Jenkins-Traub polynomial root
+	finders, Richard Singleton's Fast Fourier Transform and
+	David Sookne's Bessel function routines.  Detailed
+	references are provided in the program reference sheets for
+	these programs.
+
+This directory and its *.p3 subdirectories contain Fortran 77 source
+and makefiles for compiling the PORT3 subroutine library.  The
+makefile in this directory should work "out of the box" on most Unix
+and Linux systems.  On some systems, you may need to adjust the FFLAGS
+or F77 assignments in makefile.top (which is used to generate
+makefiles in the *.p3 directories) and in p3*/makefile.
+
+Directory frame.p3 contains three system-dependent files, d1mach.f,
+i1mach.f, and r1mach.f.  On machines with IEEE, VAX (D_floating), and
+IBM-mainframe arithmetic, these routines should automatically
+determine the machine type and thus work correctly as distributed.  On
+other systems, you may need to uncomment the appropriate constants in
+these files.  The makefile starts by compiling the source files in
+directory frame.p3, then running tests on them.  If the tests succeed,
+the makefile will proceed to compile all the rest of the PORT3
+library, creating libport.a, a library form of the PORT3 library.  If
+you install this file in a standard place (such as /usr/local/lib,
+/usr/lib, or /lib -- the choice is system-dependent), then you should
+be able to use a trailing "-lport" flag to your compiler invocation
+to link against the PORT3 library, as in
+
+	f77 *.f -lport
+
+The tests run by the makefile (in directory p3tests) should succeed on
+machines with IEEE arithmetic.  Some of the comparisons involving
+details of machine arithmetic (in files *.sgi, for output obtained on
+an SGI computer running IRIX 5.3) will fail on non-IEEE machines, and
+you will need to decide manually whether the results are OK. [At the
+time of this writing, Sept.  1997, it is no longer easy for me -- dmg
+-- to obtain output on machines with VAX and IBM-mainframe arithmetic.]
+The errk test might fail on some systems that offer IEEE-format
+floating-point arithmetic, but do not properly support denormalized
+numbers.  On such systems, just say "touch p3tests/machtest; make" to
+continue compiling the PORT3 library.
+
+Fortunately, most current machines offer arithmetic close enough to
+IEEE arithmetic to pass the tests run by the makefile; these tests
+ignore details of IEEE arithmetic that some computers bungle.
+
+Postscript for the PORT3 manual appears in the port3doc directory (and
+its subdirectories), which is distributed separately from the PORT3
+source.
+
+Directory p3examps contains example programs that call many of the
+top-level PORT3 subroutines.
+
+You may send questions about PORT3 to dmg@bell-labs.com
+(David M. Gay).
+
+Here is a list of the publicly available files:
+
+blas.p3/drot.f
+blas.p3/drotg.f
+blas.p3/srot.f
+blas.p3/srot2.f
+blas.p3/srotg.f
+fft.p3/df1ft.f
+fft.p3/dfft.f
+fft.p3/drltr.f
+fft.p3/f1ft.f
+fft.p3/fft.f
+fft.p3/rltr.f
+frame.p3/a9rntc.f
+frame.p3/a9rntd.f
+frame.p3/a9rnti.f
+frame.p3/a9rntl.f
+frame.p3/a9rntr.f
+frame.p3/d1mach.f
+frame.p3/e9rint.f
+frame.p3/enter.f
+frame.p3/entsrc.f
+frame.p3/eprint.f
+frame.p3/erroff.f
+frame.p3/fdump.f
+frame.p3/frmatd.f
+frame.p3/frmati.f
+frame.p3/frmatr.f
+frame.p3/i0tk00.f
+frame.p3/i10wid.f
+frame.p3/i1mach.f
+frame.p3/i8save.f
+frame.p3/i8tsel.f
+frame.p3/iceil.f
+frame.p3/iflr.f
+frame.p3/istkgt.f
+frame.p3/istkin.f
+frame.p3/istkmd.f
+frame.p3/istkqu.f
+frame.p3/istkrl.f
+frame.p3/istkst.f
+frame.p3/leave.f
+frame.p3/nerror.f
+frame.p3/r1mach.f
+frame.p3/retsrc.f
+frame.p3/s1mach.f
+frame.p3/s2mach.f
+frame.p3/s3mach.f
+frame.p3/s88fmt.f
+frame.p3/sdump.f
+frame.p3/seterr.f
+frame.p3/stkdmp.f
+frame.p3/u9dmp.f
+lin.p3/deigen.f
+lin.p3/dhqr2.f
+lin.p3/dorthe.f
+lin.p3/dortra.f
+lin.p3/eigen.f
+lin.p3/hqr2.f
+lin.p3/orthe.f
+lin.p3/ortra.f
+linopt.p3/d4sqr.f
+linopt.p3/dd4sqr.f
+linopt.p3/dfmin.f
+linopt.p3/ds4rot.f
+linopt.p3/fmin.f
+nl2opt.p3/a7sst.f
+nl2opt.p3/c7vfn.f
+nl2opt.p3/d7dgb.f
+nl2opt.p3/d7dog.f
+nl2opt.p3/d7dup.f
+nl2opt.p3/d7upd.f
+nl2opt.p3/g7itb.f
+nl2opt.p3/g7lit.f
+nl2opt.p3/g7qsb.f
+nl2opt.p3/g7qts.f
+nl2opt.p3/itsum.f
+nl2opt.p3/l7msb.f
+nl2opt.p3/mnf.f
+nl2opt.p3/mnfb.f
+nl2opt.p3/mng.f
+nl2opt.p3/mngb.f
+nl2opt.p3/mnh.f
+nl2opt.p3/mnhb.f
+nl2opt.p3/n2f.f
+nl2opt.p3/n2fb.f
+nl2opt.p3/n2g.f
+nl2opt.p3/n2gb.f
+nl2opt.p3/n2p.f
+nl2opt.p3/n2pb.f
+nl2opt.p3/n2rdp.f
+nl2opt.p3/nsf.f
+nl2opt.p3/nsfb.f
+nl2opt.p3/nsg.f
+nl2opt.p3/nsgb.f
+nl2opt.p3/rmnf.f
+nl2opt.p3/rmnfb.f
+nl2opt.p3/rmng.f
+nl2opt.p3/rmngb.f
+nl2opt.p3/rmnh.f
+nl2opt.p3/rmnhb.f
+nl2opt.p3/rn2g.f
+nl2opt.p3/rn2gb.f
+nl2opt.p3/rnsg.f
+nl2opt.p3/rnsgb.f
+nl2opt.p3/s3grd.f
+nl2opt.p3/s7bqn.f
+nl2opt.p3/s7cpr.f
+nl2opt.p3/s7grd.f
+nl2opt.p3/s7ipr.f
+nl2opt.p3/v7ipr.f
+nl2opt.p3/v7prm.f
+nl2opt.p3/v7vmp.f
+nl2opt.p3/w7zbf.f
+nl3opt.p3/d7mlp.f
+nl3opt.p3/d7tpr.f
+nl3opt.p3/dmnf.f
+nl3opt.p3/dmnfb.f
+nl3opt.p3/dmng.f
+nl3opt.p3/dmngb.f
+nl3opt.p3/dmnh.f
+nl3opt.p3/dmnhb.f
+nl3opt.p3/dn2f.f
+nl3opt.p3/dn2fb.f
+nl3opt.p3/dn2g.f
+nl3opt.p3/dn2gb.f
+nl3opt.p3/dn2p.f
+nl3opt.p3/dn2pb.f
+nl3opt.p3/dn2rdp.f
+nl3opt.p3/dnsf.f
+nl3opt.p3/dnsfb.f
+nl3opt.p3/dnsg.f
+nl3opt.p3/dnsgb.f
+nl3opt.p3/drmnf.f
+nl3opt.p3/drmnfb.f
+nl3opt.p3/drmng.f
+nl3opt.p3/drmngb.f
+nl3opt.p3/drmnh.f
+nl3opt.p3/drmnhb.f
+nl3opt.p3/drn2g.f
+nl3opt.p3/drnsg.f
+nl3opt.p3/drnsgb.f
+nl3opt.p3/ds3grd.f
+nl3opt.p3/ds7grd.f
+nl3opt.p3/dw7zbf.f
+nl3opt.p3/f7dhb.f
+nl3opt.p3/f7hes.f
+nl3opt.p3/h2rfa.f
+nl3opt.p3/h2rfg.f
+nl3opt.p3/ivset.f
+nl3opt.p3/l7itv.f
+nl3opt.p3/l7ivm.f
+nl3opt.p3/l7mst.f
+nl3opt.p3/l7nvr.f
+nl3opt.p3/l7sqr.f
+nl3opt.p3/l7srt.f
+nl3opt.p3/l7svn.f
+nl3opt.p3/l7svx.f
+nl3opt.p3/l7tsq.f
+nl3opt.p3/l7tvm.f
+nl3opt.p3/l7upd.f
+nl3opt.p3/l7vml.f
+nl3opt.p3/n2cvp.f
+nl3opt.p3/n2lrd.f
+nl3opt.p3/o7prd.f
+nl3opt.p3/parck.f
+nl3opt.p3/q7apl.f
+nl3opt.p3/q7rad.f
+nl3opt.p3/q7rfh.f
+nl3opt.p3/q7rsh.f
+nl3opt.p3/r7mdc.f
+nl3opt.p3/r7tvm.f
+nl3opt.p3/rldst.f
+nl3opt.p3/s7dmp.f
+nl3opt.p3/s7lup.f
+nl3opt.p3/s7lvm.f
+nl3opt.p3/v2axy.f
+nl3opt.p3/v2nrm.f
+nl3opt.p3/v7cpy.f
+nl3opt.p3/v7dfl.f
+nl3opt.p3/v7scl.f
+nl3opt.p3/v7scp.f
+nl3opt.p3/v7shf.f
+nl3opt.p3/v7swp.f
+nl4opt.p3/d7egr.f
+nl4opt.p3/da7sst.f
+nl4opt.p3/dc7vfn.f
+nl4opt.p3/dd7dgb.f
+nl4opt.p3/dd7dog.f
+nl4opt.p3/dd7dup.f
+nl4opt.p3/dd7mlp.f
+nl4opt.p3/dd7tpr.f
+nl4opt.p3/dd7upd.f
+nl4opt.p3/df7dhb.f
+nl4opt.p3/df7hes.f
+nl4opt.p3/dg7itb.f
+nl4opt.p3/dg7lit.f
+nl4opt.p3/dg7qsb.f
+nl4opt.p3/dg7qts.f
+nl4opt.p3/dh2rfa.f
+nl4opt.p3/dh2rfg.f
+nl4opt.p3/ditsum.f
+nl4opt.p3/divset.f
+nl4opt.p3/dl7itv.f
+nl4opt.p3/dl7ivm.f
+nl4opt.p3/dl7msb.f
+nl4opt.p3/dl7mst.f
+nl4opt.p3/dl7nvr.f
+nl4opt.p3/dl7sqr.f
+nl4opt.p3/dl7srt.f
+nl4opt.p3/dl7svn.f
+nl4opt.p3/dl7svx.f
+nl4opt.p3/dl7tsq.f
+nl4opt.p3/dl7tvm.f
+nl4opt.p3/dl7upd.f
+nl4opt.p3/dl7vml.f
+nl4opt.p3/dn2cvp.f
+nl4opt.p3/dn2lrd.f
+nl4opt.p3/do7prd.f
+nl4opt.p3/dparck.f
+nl4opt.p3/dq7apl.f
+nl4opt.p3/dq7rad.f
+nl4opt.p3/dq7rfh.f
+nl4opt.p3/dq7rsh.f
+nl4opt.p3/dr7mdc.f
+nl4opt.p3/dr7tvm.f
+nl4opt.p3/drldst.f
+nl4opt.p3/drn2gb.f
+nl4opt.p3/ds7bqn.f
+nl4opt.p3/ds7cpr.f
+nl4opt.p3/ds7dmp.f
+nl4opt.p3/ds7ipr.f
+nl4opt.p3/ds7lup.f
+nl4opt.p3/ds7lvm.f
+nl4opt.p3/dsm.f
+nl4opt.p3/dv2axy.f
+nl4opt.p3/dv2nrm.f
+nl4opt.p3/dv7cpy.f
+nl4opt.p3/dv7dfl.f
+nl4opt.p3/dv7ipr.f
+nl4opt.p3/dv7prm.f
+nl4opt.p3/dv7scl.f
+nl4opt.p3/dv7scp.f
+nl4opt.p3/dv7shf.f
+nl4opt.p3/dv7swp.f
+nl4opt.p3/dv7vmp.f
+nl4opt.p3/i7copy.f
+nl4opt.p3/i7do.f
+nl4opt.p3/i7mdcn.f
+nl4opt.p3/i7pnvr.f
+nl4opt.p3/i7shft.f
+nl4opt.p3/m7seq.f
+nl4opt.p3/m7slo.f
+nl4opt.p3/n7msrt.f
+nl4opt.p3/s7etr.f
+nl4opt.p3/s7rtdt.f
+nl4opt.p3/stopx.f
+root.p3/d1rply.f
+root.p3/d2rply.f
+root.p3/d3rply.f
+root.p3/d4rply.f
+root.p3/d5rply.f
+root.p3/d6rply.f
+root.p3/d7rply.f
+root.p3/d8rply.f
+root.p3/d9rply.f
+root.p3/drpoly.f
+root.p3/dzero.f
+root.p3/r1rply.f
+root.p3/r2rply.f
+root.p3/r3rply.f
+root.p3/r4rply.f
+root.p3/r5rply.f
+root.p3/r6rply.f
+root.p3/r7rply.f
+root.p3/r8rply.f
+root.p3/r9rply.f
+root.p3/rpoly.f
+root.p3/zero.f
+spfns.p3/b1slc.f
+spfns.p3/b1slr.f
+spfns.p3/besci.f
+spfns.p3/bescj.f
+spfns.p3/besri.f
+spfns.p3/besrj.f
+spfns.p3/db1slc.f
+spfns.p3/db1slr.f
+spfns.p3/dbesci.f
+spfns.p3/dbescj.f
+spfns.p3/dbesri.f
+spfns.p3/dbesrj.f
+util.p3/aprntc.f
+util.p3/aprntd.f
+util.p3/aprnti.f
+util.p3/aprntl.f
+util.p3/aprntr.f
+util.p3/cddiv.f
+util.p3/movebc.f
+util.p3/movebd.f
+util.p3/movebi.f
+util.p3/movebl.f
+util.p3/movebr.f
+util.p3/movefc.f
+util.p3/movefd.f
+util.p3/movefi.f
+util.p3/movefl.f
+util.p3/movefr.f
+util.p3/setc.f
+util.p3/setd.f
+util.p3/seti.f
+util.p3/setl.f
+util.p3/setr.f

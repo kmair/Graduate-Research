@@ -1,0 +1,1555 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"basis_cons",
+				"basis_constraint_list"
+			],
+			[
+				"basis",
+				"basis_constraint_list"
+			],
+			[
+				"type",
+				"type_of_function"
+			],
+			[
+				"Ratio",
+				"ratio"
+			],
+			[
+				"extra",
+				"extrapxmax"
+			],
+			[
+				"kwags",
+				"kwargs"
+			],
+			[
+				"constra",
+				"constraint_list"
+			],
+			[
+				"set",
+				"set_ylim"
+			],
+			[
+				"dtrd",
+				"dtrdt"
+			],
+			[
+				"dtrdt",
+				"dtrdtRes"
+			],
+			[
+				"Pa-",
+				"Pa-PlaceHolder"
+			],
+			[
+				"New",
+				"NewValues"
+			],
+			[
+				"y",
+				"y"
+			],
+			[
+				"PVT",
+				"PVTValues"
+			],
+			[
+				"GAMS",
+				"GAMSTerms"
+			],
+			[
+				"Comin",
+				"Combination"
+			],
+			[
+				"mixRed",
+				"mixRedTau"
+			],
+			[
+				"Red",
+				"redRho"
+			],
+			[
+				"impo",
+				"importData"
+			],
+			[
+				"li",
+				"list_of_components"
+			],
+			[
+				"Helm",
+				"HelmholtzMixture"
+			],
+			[
+				"CP",
+				"CP"
+			],
+			[
+				"t",
+				"t"
+			],
+			[
+				"Gams",
+				"GAMSTerms"
+			],
+			[
+				"SatLi",
+				"SatLiqDens"
+			],
+			[
+				"Vap",
+				"Sat_Vap_Density"
+			],
+			[
+				"fa",
+				"False"
+			],
+			[
+				"d",
+				"dr2ddt"
+			],
+			[
+				"d3",
+				"d3rdRes"
+			],
+			[
+				"Ga",
+				"GAMSTerms"
+			],
+			[
+				"d2",
+				"d2rdRes"
+			],
+			[
+				"cu",
+				"formCustomBasis"
+			],
+			[
+				"xl",
+				"set_xlabel"
+			],
+			[
+				"fun",
+				"FuncEval"
+			],
+			[
+				"sat",
+				"inSat"
+			],
+			[
+				"inS",
+				"InSat"
+			],
+			[
+				"inSa",
+				"InSatValues"
+			],
+			[
+				"SNDva",
+				"SNDValues"
+			],
+			[
+				"cac",
+				"calc_a"
+			],
+			[
+				"calc",
+				"calc_alpha"
+			],
+			[
+				"Place",
+				"PlaceHolder"
+			],
+			[
+				"wri",
+				"writeEquationIndexes"
+			],
+			[
+				"text",
+				"textFile"
+			],
+			[
+				"Bound",
+				"BoundCombo3"
+			],
+			[
+				"n",
+				"n"
+			],
+			[
+				"Crit",
+				"CritPressureCalc"
+			],
+			[
+				"Antoin",
+				"AntoineTable"
+			],
+			[
+				"YLe",
+				"YLemmon"
+			],
+			[
+				"Placeholder",
+				"PlaceHolderLemmon"
+			],
+			[
+				"Placehol",
+				"PlaceHolderLemmon"
+			],
+			[
+				"Save",
+				"saveFig"
+			],
+			[
+				"no",
+				"noGamsStartPoint"
+			],
+			[
+				"Multip",
+				"MultiOptions"
+			],
+			[
+				"writeN",
+				"writeNewCPEquations"
+			],
+			[
+				"Tn",
+				"Tn"
+			],
+			[
+				"C",
+				"CVIndexes"
+			],
+			[
+				"data",
+				"data_name"
+			],
+			[
+				"Data",
+				"DataToWrite"
+			],
+			[
+				"f",
+				"f"
+			],
+			[
+				"gAM",
+				"GAMSWrite"
+			],
+			[
+				"SND",
+				"SND"
+			],
+			[
+				"la",
+				"lambda2"
+			],
+			[
+				"Dat",
+				"DataImport"
+			],
+			[
+				"LD",
+				"LD"
+			],
+			[
+				"CVC",
+				"CVC"
+			],
+			[
+				"Tan",
+				"TanDataToWrite"
+			],
+			[
+				"W",
+				"W_mea_vals"
+			],
+			[
+				"alamo",
+				"alamo_model"
+			],
+			[
+				"build",
+				"build_alamo_model"
+			],
+			[
+				"num",
+				"num_rows"
+			],
+			[
+				"L",
+				"L"
+			],
+			[
+				"G",
+				"G"
+			],
+			[
+				"for",
+				"formCustomBasis"
+			],
+			[
+				"w",
+				"w"
+			],
+			[
+				"CVV",
+				"CVValuesn"
+			],
+			[
+				"Sat_",
+				"Sat_Liq_Density"
+			],
+			[
+				"Sat",
+				"Sat_Vap_Density"
+			],
+			[
+				"X",
+				"X"
+			],
+			[
+				"T",
+				"T"
+			],
+			[
+				"rtt",
+				"rtt"
+			],
+			[
+				"cr",
+				"critT"
+			],
+			[
+				"numpoint",
+				"num_points"
+			],
+			[
+				"CV",
+				"CV"
+			],
+			[
+				"beta",
+				"beta"
+			],
+			[
+				"a_",
+				"a_H2O"
+			],
+			[
+				"aM",
+				"a_mea"
+			],
+			[
+				"u_",
+				"u_H2O_init"
+			],
+			[
+				"I",
+				"I"
+			],
+			[
+				"P",
+				"PieceCnt"
+			],
+			[
+				"volum",
+				"volume_rule"
+			],
+			[
+				"nutrient",
+				"nutrient_rule"
+			],
+			[
+				"cost",
+				"cost_rule"
+			],
+			[
+				"D",
+				"Ddata_name"
+			],
+			[
+				"DAT",
+				"DataToWrite"
+			],
+			[
+				"dat",
+				"DataImport"
+			],
+			[
+				"Da",
+				"DataImport"
+			],
+			[
+				"DAta",
+				"DataImport"
+			],
+			[
+				"Cv",
+				"CVValues"
+			],
+			[
+				"Pvt",
+				"PVTValues"
+			],
+			[
+				"PV",
+				"PVTValues"
+			],
+			[
+				"Al",
+				"ALOMOoptions"
+			],
+			[
+				"ra",
+				"raw_file"
+			],
+			[
+				"Dt",
+				"DTcalc"
+			],
+			[
+				"ALAMO",
+				"ALAMODataWrite"
+			],
+			[
+				"DT",
+				"DT"
+			],
+			[
+				"foi",
+				"fontsize"
+			],
+			[
+				"ax",
+				"ax"
+			],
+			[
+				"font",
+				"fontsize"
+			],
+			[
+				"mu",
+				"multiVar"
+			],
+			[
+				"Gam",
+				"GAMSDataWrite"
+			],
+			[
+				"sse",
+				"ssePlotCV"
+			],
+			[
+				"gAMS",
+				"GAMSDataWrite"
+			],
+			[
+				"writeGams",
+				"writeGamsFooter"
+			],
+			[
+				"writeG",
+				"writeGamsHeader"
+			],
+			[
+				"drd",
+				"drd_vals"
+			],
+			[
+				"s",
+				"staticmethod"
+			],
+			[
+				"AL",
+				"ALOMOoptions"
+			],
+			[
+				"m",
+				"molecule"
+			],
+			[
+				"max",
+				"max"
+			],
+			[
+				"parse",
+				"parsefirst"
+			],
+			[
+				"resD",
+				"resDnum"
+			],
+			[
+				"rThetaD",
+				"resThetaD"
+			],
+			[
+				"resTheta",
+				"resThetaTD"
+			],
+			[
+				"resT",
+				"resTexp"
+			],
+			[
+				"res",
+				"resDexp"
+			],
+			[
+				"iT",
+				"iThetaTT"
+			],
+			[
+				"ideal",
+				"idealThetaTT"
+			],
+			[
+				"plt",
+				"plt"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "shared.py",
+			"settings":
+			{
+				"buffer_size": 3474,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "almwriter.py",
+			"settings":
+			{
+				"buffer_size": 5341,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "__init__.py",
+			"settings":
+			{
+				"buffer_size": 1016,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mengle/ResearchIDAES/ddm-learning/alamo_python/examples/ConcentrationConstraint.py",
+			"settings":
+			{
+				"buffer_size": 2791,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mengle/ResearchIDAES/ddm-learning/alamo_python/examples/CamelAnalysis.py",
+			"settings":
+			{
+				"buffer_size": 2811,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "multos.py",
+			"settings":
+			{
+				"buffer_size": 1923,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mengle/ResearchIDAES/ddm-learning/alamo_python/examples/constrainedCamel6.py",
+			"settings":
+			{
+				"buffer_size": 2394,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "almpywriter.py",
+			"settings":
+			{
+				"buffer_size": 5013,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "allcard.py",
+			"settings":
+			{
+				"buffer_size": 9177,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mengle/ResearchIDAES/ddm-learning/alamo_python/requirements.txt",
+			"settings":
+			{
+				"buffer_size": 126,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tests/test_basics.py",
+			"settings":
+			{
+				"buffer_size": 2659,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mengle/ResearchIDAES/ddm-learning/alamo_python/examples/examples.py",
+			"settings":
+			{
+				"buffer_size": 1766,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mengle/ResearchIDAES/ddm-learning/alamo_python/examples/camel6.py",
+			"settings":
+			{
+				"buffer_size": 1908,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mengle/ResearchIDAES/ddm-learning/alamo_python/examples/MEAAbs.py",
+			"settings":
+			{
+				"buffer_size": 3461,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mengle/ResearchIDAES/ddm-learning/alamo_python/examples/branin.py",
+			"settings":
+			{
+				"buffer_size": 2082,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tests/test_smoke.py",
+			"settings":
+			{
+				"buffer_size": 905,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "almconfidence.py",
+			"settings":
+			{
+				"buffer_size": 4511,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "almplot.py",
+			"settings":
+			{
+				"buffer_size": 2166,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/mengle/ResearchIDAES/ddm-learning/alamo_python/alamopy/doalamo.py",
+		"/home/mengle/ResearchIDAES/ddm-learning/alamo_python/alamopy/alamopy.sublime-workspace",
+		"/home/mengle/ResearchTHERMO/HELMET/Code/IdealCurves.py",
+		"/home/mengle/ResearchTHERMO/HELMET/Code/CharacteristicCurves.py",
+		"/home/mengle/ResearchTHERMO/HELMET/Code/Plotting.py",
+		"/home/mengle/ResearchTHERMO/HELMET/Code/GAMSWrite.py",
+		"/home/mengle/ResearchTHERMO/HELMET/Code/Helmet.py",
+		"/home/mengle/ResearchTHERMO/HELMET/Code/HelmetSetup.py",
+		"/home/mengle/ResearchTHERMO/HELMET/Code/PlottingSave.py",
+		"/home/mengle/ResearchTHERMO/HELMET/Code/HelmholtzEOSMixtureBackend.cpp",
+		"/home/mengle/ResearchTHERMO/HELMET/Code/DataWrite.py",
+		"/home/mengle/ResearchTHERMO/HELMET/Code/Crawl.py",
+		"/home/mengle/ResearchTHERMO/HELMET/Code/ALAMODataWrite.pyc",
+		"/home/mengle/ResearchTHERMO/HELMET/Code/Certainty.pyc",
+		"/home/mengle/ResearchTHERMO/HELMET/Code/DataImport.pyc",
+		"/home/mengle/ResearchTHERMO/HELMET/Code/Helmet.sublime-project",
+		"/home/mengle/ResearchTHERMO/HELMET/Code/Helmet.sublime-workspace",
+		"/home/mengle/ResearchTHERMO/HELMET/Code/SoaveDensity.pyc",
+		"/home/mengle/ResearchTHERMO/HELMET/Code/FlashRoutines.cpp",
+		"/home/mengle/ResearchTHERMO/HELMET/Code/DataManipulation.pyc",
+		"/home/mengle/ResearchTHERMO/HELMET/Code/FuncEval.pyc",
+		"/home/mengle/ResearchTHERMO/HELMET/Code/GAMSDataWrite.pyc",
+		"/home/mengle/ResearchTHERMO/HELMET/Code/GAMSWrite.pyc",
+		"/home/mengle/ResearchTHERMO/HELMET/Code/GAMSTerms.pyc",
+		"/home/mengle/ResearchTHERMO/HELMET/Code/parseGAMS.pyc",
+		"/home/mengle/ResearchTHERMO/HELMET/Code/Plotting.pyc",
+		"/home/mengle/ResearchTHERMO/HELMET/GAMSTermsMixture",
+		"/home/mengle/ResearchTHERMO/HELMET/GAMSTerms.py",
+		"/home/mengle/ResearchTHERMO/HELMET/Plotting.py",
+		"/home/mengle/ResearchTHERMO/HELMET/DataImport.py",
+		"/home/mengle/ResearchTHERMO/HELMET/MPEOS.py",
+		"/home/mengle/ResearchTHERMO/HELMET/DataManipulation.py",
+		"/home/mengle/PyomoCodes/MEA/MEAPropertyRegression.py",
+		"/home/mengle/ResearchTHERMO/HELMET/GAMSWrite.py",
+		"/home/mengle/ResearchTHERMO/HELMET/GAMSDataWrite.py",
+		"/home/mengle/Desktop/EOSPR/HelmholtzSimulator.py",
+		"/home/mengle/ResearchTHERMO/HELMET/parseGAMS.py",
+		"/home/mengle/ResearchTHERMO/HELMET/HelmetSetup.py",
+		"/home/mengle/ResearchTHERMO/HELMET/Helmet.py",
+		"/home/mengle/ResearchTHERMO/HELMET/Crawl.py",
+		"/home/mengle/ResearchTHERMO/HELMET/SoaveDensity.py",
+		"/home/mengle/ResearchTHERMO/HELMET/FuncEval.py",
+		"/home/mengle/HELMET/Certainty.py",
+		"/home/mengle/HELMET/PlottingSave.py",
+		"/home/mengle/HELMET/Plotting.py",
+		"/home/mengle/HELMET/animation.py",
+		"/home/mengle/HELMET/FuncEval.py",
+		"/home/mengle/HELMET/SoaveDensity.py",
+		"/home/mengle/HELMET/MPEOS.py",
+		"/home/mengle/HELMET/GAMSTerms.py",
+		"/home/mengle/HELMET/Helmet.py",
+		"/home/mengle/ddm-learning/alamo_python/alamopy/almpywriter.py",
+		"/home/mengle/ddm-learning/alamo_python/alamopy/doalamo.py",
+		"/home/mengle/ddm-learning/alamo_python/examples/lim.py",
+		"/home/mengle/ddm-learning/alamo_python/examples/sixhumpcamel.py",
+		"/home/mengle/HELMET/TOLTrial4_18.gms",
+		"/home/mengle/HELMET/vanDerWaals.py",
+		"/home/mengle/HELMET/CEOS/CEOSPropertyRegression.py",
+		"/home/mengle/HELMET/PatelTeja.py",
+		"/home/mengle/HELMET/PengRobinson.py",
+		"/home/mengle/HELMET/SoaveRedlichKwong.py",
+		"/home/mengle/HELMET/RedlichKwong.py",
+		"/home/mengle/HELMET/MPEOSDeveloperModule.py",
+		"/home/mengle/HELMET/FlashRoutines.cpp",
+		"/home/mengle/HELMET/PengRobinxon",
+		"/home/mengle/HELMET/OldCode.py",
+		"/home/mengle/PyomoCodes/MEA/prop.py",
+		"/home/mengle/HELMET/GAMSWrite.py",
+		"/home/mengle/Desktop/properties_PR4.py",
+		"/home/mengle/PyomoCodes/MEA/models.json",
+		"/home/mengle/HELMET/Crawl.py",
+		"/home/mengle/PyomoCodes/MEA/alamopy.py",
+		"/home/mengle/HELMET/DataImport.py",
+		"/home/mengle/PyomoCodes/MEA/sixhumpcamel.py",
+		"/home/mengle/.config/sublime-text-2/Packages/User/Python.sublime-settings",
+		"/home/mengle/HELMET/ALAMODataWrite.py",
+		"/home/mengle/HELMET/HELMET.sublime-workspace",
+		"/home/mengle/HELMET/DataWrite.py",
+		"/home/mengle/PyomoCodes/MEA/alamopy1.py",
+		"/home/mengle/PyomoCodes/MEA/propTrial.py",
+		"/home/mengle/IDAES/model_contrib/idaes_model_contrib/mea_simple/flowsheet/properties/propEslick.py",
+		"/home/mengle/PyomoCodes/MEA/prop1.py",
+		"/home/mengle/HELMET/MPEOSDeveloper.py",
+		"/home/mengle/IDAES/model_contrib/idaes_model_contrib/mea_simple/flowsheet/properties/prop.py",
+		"/home/mengle/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/mengle/PyomoCodes/MEA/phys_prop_trial.c",
+		"/home/mengle/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/mengle/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+		"/home/mengle/HELMET/GAMSDataWrite.py",
+		"/home/mengle/HELMET/DataManipulation.py",
+		"/home/mengle/HELMET/HelmholtzEOSMixtureBackend.cpp",
+		"/home/mengle/HELMET/TOLCombo16_22.lst",
+		"/home/mengle/HELMET/MPEOSGams",
+		"/home/mengle/IDAESmodels/models/idaes_models/properties/physical/1_30_Property_Package_Discussion.pptx",
+		"/home/mengle/IDAESmodels/models/idaes_models/unit/standard/holdup.py",
+		"/home/mengle/IDAESmodels/models/idaes_models/unit/standard/phys_prop.c",
+		"/home/mengle/IDAESmodels/models/idaes_models/unit/standard/test_prop.py",
+		"/home/mengle/IDAESmodels/models/idaes_models/unit/standard/unit_test.py",
+		"/home/mengle/HELMET/parseGAMS.py",
+		"/home/mengle/IDAES/idaes_dmf/propdb/types.py",
+		"/home/mengle/PyomoCodes/MEA/DensityMEA1DMF.py",
+		"/home/mengle/PyomoCodes/MEA/ViscosityMEAAlm.py",
+		"/home/mengle/PyomoCodes/MEA/ViscosityMEADMFTrial.py",
+		"/home/mengle/HELMET/IdealCurves.py",
+		"/home/mengle/IDAES/idaes_dmf/propdb/db.py",
+		"/home/mengle/IDAES/idaes_dmf/propdb/util.py",
+		"/home/mengle/PyomoCodes/MEA/SurfaceTensionMEADMF.py",
+		"/home/mengle/PyomoCodes/MEA/SurfaceTensionMEA.py",
+		"/home/mengle/ct.alm",
+		"/home/mengle/PyomoCodes/MEA/SurfaceTensionMEAAlm.py",
+		"/home/mengle/PyomoCodes/MEA/DensityModelFit2.py",
+		"/home/mengle/PyomoCodes/MEA/DensityModelFit1.py",
+		"/home/mengle/PyomoCodes/MEA/ViscosityModelAlm.py",
+		"/home/mengle/PyomoCodes/MEA/ViscosityModel.py",
+		"/home/mengle/PyomoCodes/MEA/ViscosityModelFit.py",
+		"/home/mengle/PyomoCodes/MEA/SurfaceTensionModelConcrete.py",
+		"/home/mengle/PyomoCodes/MEA/SurfaceTensionModelAlm.py",
+		"/home/mengle/PyomoCodes/MEA/SurfaceTensionModel.alm",
+		"/home/mengle/PyomoCodes/MEA/SurfaceTensionModelFit.py",
+		"/home/mengle/PyomoCodes/MEA/DensityModelAlm.py",
+		"/home/mengle/PyomoCodes/MEA/DensityModel.alm",
+		"/home/mengle/PyomoCodes/MEA/ViscosityModel.alm",
+		"/home/mengle/PyomoCodes/MEA/DensityModelFit1.pyc",
+		"/home/mengle/Desktop/MEA/Regression_Surface_Tension.py",
+		"/home/mengle/PyomoCodes/MEA/Data_Surface_Tension.tab",
+		"/home/mengle/PyomoCodes/iterative2.py",
+		"/home/mengle/PyomoCodes/MEA/Data_Viscosity.tab",
+		"/home/mengle/PyomoCodes/DietPyomo.py"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"expandoutput",
+			"import sympy",
+			"scipy",
+			"show",
+			"custom",
+			"Xbounds",
+			"residual",
+			"split",
+			"kaiwen",
+			"Kaiwen",
+			"split",
+			"almopt",
+			"cvxbic",
+			"cvx",
+			"cvxbic",
+			"convpen",
+			"solvemip",
+			"savescratch",
+			"savescracth",
+			"enum",
+			"print",
+			"sim",
+			"ccon",
+			"mapminmax",
+			"reminmax",
+			"minmax",
+			"()\n",
+			"remapmin",
+			"mapmin",
+			"getKFolds",
+			"import",
+			"H2O",
+			"'H2O'",
+			"\"H2O\"",
+			"if(molecule == \"H2O\"",
+			"TOL",
+			"])",
+			"CP:",
+			"var",
+			"variance",
+			"square",
+			"Rsquare",
+			"R2",
+			"t",
+			"print",
+			");\n",
+			"Concrete",
+			"print",
+			"pring",
+			"itt",
+			"PIP",
+			"SaveCalcIsobars",
+			"Vapor_Phase",
+			"plotCV",
+			"my_dmf",
+			"staticmethod",
+			"\n	",
+			"Xmin",
+			"split",
+			"debug",
+			"enumerate_datasets",
+			"build_alamo_model",
+			"doalamo",
+			"do_alamo",
+			"RedBin",
+			"d4rd",
+			"Sat_Liq_Density",
+			"drdRes",
+			"150",
+			")\n",
+			")]",
+			"gdxin",
+			"unload",
+			"confidence",
+			"YLemmon",
+			"YLem",
+			"YLemmon",
+			"R2",
+			"xmin",
+			"xlabels",
+			")\n",
+			"ind",
+			"in",
+			"enumerate",
+			"^",
+			"_V_liq",
+			"_visc_liq",
+			"_visq_liq",
+			"bookmark",
+			"def _surf_tens",
+			"def surf_tens",
+			"update",
+			"7_10",
+			"sseString",
+			"gSND",
+			"1800",
+			"writeSND",
+			")]",
+			"proc_Z_vap",
+			"phys_prop.so",
+			"proc_Z_vap",
+			"proc_Z_vap ",
+			"ceos_z_vap",
+			"c_eos_vap",
+			"phys_prop.so",
+			"__file",
+			"ceos_z_vap",
+			"phys_prop",
+			"73094441",
+			"PVTSamples",
+			"parse",
+			")\n",
+			":\n",
+			"sseminlp1",
+			");\n",
+			"data = prop_types.PropertyData.from_csv(\"/home/mengle/IDAES/examples/amundsen-data.csv\", 2)\n# metadata = prop_types.PropertyMetadata.from_csv(\"/home/mengle/IDAES/examples/amundsen-meta.csv\", \"MEA\")\n\n# print \"Alamo Models\"\n# Alamo = ALAMOModel(data, metadata)",
+			"issues",
+			"print",
+			"add_csv",
+			"keys",
+			"-478.64575811196385757285 * X**(2)\n	# + 5515.1342679951330865151 * X**(3)\n	# -37526.587391966946597677 * X**(4)\n	# + 158477.39820627312292345 * X**(5)\n	# -427355.45491787482751533 * X**(6)\n	# + 736859.28930252173449844 * X**(7)\n	# -786188.12076019600499421 * X**(8)\n	# + 472843.31603601045208052 * X**(9)\n	# -122584.49532037785684224 * X**(10)\n	# + 1.1780271036143130647389;",
+			"):\n",
+			"^",
+			"DataImport",
+			"7",
+			"c_co2",
+			"model",
+			"eq4"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 13,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "shared.py",
+					"settings":
+					{
+						"buffer_size": 3474,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1197,
+								1197
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "almwriter.py",
+					"settings":
+					{
+						"buffer_size": 5341,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5341,
+								5341
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 363.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "__init__.py",
+					"settings":
+					{
+						"buffer_size": 1016,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								256,
+								256
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/mengle/ResearchIDAES/ddm-learning/alamo_python/examples/ConcentrationConstraint.py",
+					"settings":
+					{
+						"buffer_size": 2791,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2791,
+								2791
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 259.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/mengle/ResearchIDAES/ddm-learning/alamo_python/examples/CamelAnalysis.py",
+					"settings":
+					{
+						"buffer_size": 2811,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1605,
+								1605
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 473.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "multos.py",
+					"settings":
+					{
+						"buffer_size": 1923,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1177,
+								939
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/home/mengle/ResearchIDAES/ddm-learning/alamo_python/examples/constrainedCamel6.py",
+					"settings":
+					{
+						"buffer_size": 2394,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 63.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "almpywriter.py",
+					"settings":
+					{
+						"buffer_size": 5013,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "allcard.py",
+					"settings":
+					{
+						"buffer_size": 9177,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2009,
+								2009
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/home/mengle/ResearchIDAES/ddm-learning/alamo_python/requirements.txt",
+					"settings":
+					{
+						"buffer_size": 126,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "tests/test_basics.py",
+					"settings":
+					{
+						"buffer_size": 2659,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 42.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/home/mengle/ResearchIDAES/ddm-learning/alamo_python/examples/examples.py",
+					"settings":
+					{
+						"buffer_size": 1766,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1465,
+								1465
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/home/mengle/ResearchIDAES/ddm-learning/alamo_python/examples/camel6.py",
+					"settings":
+					{
+						"buffer_size": 1908,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1663,
+								1663
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/home/mengle/ResearchIDAES/ddm-learning/alamo_python/examples/MEAAbs.py",
+					"settings":
+					{
+						"buffer_size": 3461,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3213,
+								3213
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 588.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "/home/mengle/ResearchIDAES/ddm-learning/alamo_python/examples/branin.py",
+					"settings":
+					{
+						"buffer_size": 2082,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1769,
+								1769
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "tests/test_smoke.py",
+					"settings":
+					{
+						"buffer_size": 905,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "almconfidence.py",
+					"settings":
+					{
+						"buffer_size": 4511,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4240,
+								4240
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 651.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "almplot.py",
+					"settings":
+					{
+						"buffer_size": 2166,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								900,
+								900
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 42.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 63.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 88.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/home/mengle/ResearchIDAES/ddm-learning/alamo_python/alamopy/alamopy.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 158.0,
+	"status_bar_visible": true
+}

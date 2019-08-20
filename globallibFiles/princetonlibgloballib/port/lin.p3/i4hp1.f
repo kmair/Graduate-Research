@@ -1,0 +1,38 @@
+        SUBROUTINE I4HP1(A,N,J,I,II,JJ)
+C
+C THIS SUBROUTINE INTERCHANGES ROW AND COLUMN I AND J,WHERE J IS
+C GREATER THAN I OF THE (N-I+1) SUBMATRIX OF A SYMMETRIC MATRIX
+C STORED IN THE VECTOR A
+C
+        COMPLEX A(1),TEMP
+        NMI=N-I
+        JI=II+J-I
+        JIM1=JI-1
+        IF(I+1.GT.J-1) GO TO 21
+        IIP1=II+1
+        JDISP=NMI+IIP1
+        DO 20 KI =IIP1,JIM1
+           JI=JI+JDISP-KI
+           TEMP=A(KI)
+           A(KI)=CONJG(A(JI))
+           A(JI)=CONJG(TEMP)
+ 20     CONTINUE
+C INTERCHANGE THE DIAGONAL ELEMENTS
+ 21     TEMP=A(II)
+        A(II)=A(JJ)
+        A(JJ)=TEMP
+        JI=II+J-I
+        A(JI)=CONJG(A(JI))
+        IF (J+1.GT.N) RETURN
+C INTERCHANGE THE ELEMENTS BELOW BOTH DIAGONALS
+        JIP1=JIM1+2
+        IN=II+NMI
+        KJ=JJ
+        DO 30 KI=JIP1,IN
+           KJ=KJ+1
+           TEMP=A(KJ)
+           A(KJ)=A(KI)
+           A(KI)=TEMP
+ 30     CONTINUE
+        RETURN
+        END

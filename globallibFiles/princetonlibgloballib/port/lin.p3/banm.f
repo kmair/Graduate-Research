@@ -1,0 +1,30 @@
+        REAL FUNCTION  BANM(N,ML,M,G,IG)
+        REAL G(IG,1),SUM
+C THIS SUBROUTINE COMPUTES THE INFINITY NORM OF A BAND MATRIX
+C STORED IN BAND FORM
+C/6S
+C       IF (N.LT.1) CALL SETERR(12H BANM-N.LT.1,12,1,2)
+C       IF (ML.LT.1) CALL SETERR(13H BANM-ML.LT.1,13,2,2)
+C       IF (M.LT.ML) CALL SETERR(13H BANM-M.LT.ML,13,3,2)
+C       IF (IG.LT.M) CALL SETERR(13H BANM-IG.LT.M,13,4,2)
+C/7S
+        IF (N.LT.1) CALL SETERR(' BANM-N.LT.1',12,1,2)
+        IF (ML.LT.1) CALL SETERR(' BANM-ML.LT.1',13,2,2)
+        IF (M.LT.ML) CALL SETERR(' BANM-M.LT.ML',13,3,2)
+        IF (IG.LT.M) CALL SETERR(' BANM-IG.LT.M',13,4,2)
+C/
+        JB=ML+1
+        JE=M
+        JEND=N-(M-ML)
+         BANM=0.0D0
+        DO 10 I=1,N
+           SUM=0.0
+           JB=MAX0(1,JB-1)
+           DO 5 J=JB,JE
+              SUM=SUM+ABS(G(J,I))
+ 5         CONTINUE
+           IF(I.GE.JEND)JE=JE-1
+           IF(SUM.GT.BANM) BANM=SUM
+ 10      CONTINUE
+         RETURN
+         END

@@ -1,0 +1,31 @@
+       SUBROUTINE DL4AGS(A,M,N,IA,AMAN,AS,U1,U2,C,ISIMP,AGPE,IPTS,
+     1   IPTG,TEMP)
+C
+C THIS SUBROUTINE COMPUTES THE LAGRANGE MULTIPLIERS
+C FOR SIMPLE ACTIVE CONSTRAINTS
+C
+       INTEGER N,IA(1),AS,ISIMP(1),AGPE,IPTS(1),IPTG(1),J,M
+       DOUBLE PRECISION U1(1),U2(1),C(1),A(1),TEMP(N),T
+       EXTERNAL AMAN
+       DO 10 II=1,AS
+          I=IPTS(II)
+          U2(II)=C(I)
+ 10       CONTINUE
+       IF (AGPE .EQ.0) GOTO 40
+       DO 30 II = 1, AGPE
+            I = IPTG(II)
+            CALL AMAN (.FALSE.,A,IA,N,I,TEMP,T)
+            DO 20 JJ=1,AS
+               J=IPTS(JJ)
+               U2(JJ) =  U2(JJ) -U1(II) * TEMP(J)
+ 20            CONTINUE
+ 30         CONTINUE
+ 40    CONTINUE
+C
+C ADJUST SIGNS FOR UPPER BOUNDS
+C
+       DO 50 II=1,AS
+          IF (ISIMP(II).LT.0)U2(II)=-U2(II)
+ 50    CONTINUE
+       RETURN
+       END

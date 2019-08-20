@@ -1,0 +1,39 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage{import}
+\usepackage{example}
+\usepackage{makeidx}
+\usepackage{natbib}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\input{toc.tex}
+\makeindex
+
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\makeindex
+\begin{document}
+\import{./}{title.tex}
+\newpage
+\thispagestyle{empty}
+\tableofcontents\vspace{30pt}
+
+\include{chapters/Introduction}
+\include{chapters/background}
+\include{chapters/algorithm}
+
+\bibliographystyle{plainnat} % or try abbrvnat or unsrtnat
+\bibliography{reference} % refers to example.bib
+\addcontentsline{toc}{chapter}{Bibliography}
+
+\end{document}

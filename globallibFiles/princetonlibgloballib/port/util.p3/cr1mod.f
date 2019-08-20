@@ -1,0 +1,14 @@
+      REAL FUNCTION CR1MOD(R,I)
+C MODULUS OF A COMPLEX NUMBER AVOIDING OVERFLOW.
+      REAL R,I,AR,AI,ABS,SQRT
+      AR = ABS(R)
+      AI = ABS(I)
+      IF (AR .GE. AI) GO TO 10
+          CR1MOD = AI*SQRT(1.0E0+(AR/AI)**2)
+          RETURN
+   10 IF (AR .LE. AI) GO TO 20
+          CR1MOD = AR*SQRT(1.0E0+(AI/AR)**2)
+          RETURN
+   20 CR1MOD = AR*SQRT(2.0E0)
+      RETURN
+      END

@@ -1,0 +1,7 @@
+      SUBROUTINE C6LCR(N,P,X,NF,R,IU,UR,UF)
+      INTEGER N,P,IU
+      REAL X(P),R(N),UR
+      EXTERNAL UF
+      CALL UF(N,P,X,NF,R)
+      RETURN
+      END

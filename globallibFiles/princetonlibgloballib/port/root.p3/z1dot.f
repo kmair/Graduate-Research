@@ -1,0 +1,11 @@
+      REAL FUNCTION Z1DOT(N, X, X2, Y, Y2)
+      INTEGER N
+      REAL X(N), X2, Y(N), Y2
+      INTEGER J
+C FIND DOT PRODUCT OF UNIT VECTORS IN X AND Y DIRECTIONS
+      Z1DOT = 0.0E0
+      DO  1 J = 1, N
+         Z1DOT = Z1DOT+(X(J)/X2)*(Y(J)/Y2)
+   1     CONTINUE
+      RETURN
+      END

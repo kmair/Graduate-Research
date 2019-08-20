@@ -1,0 +1,22 @@
+C source code for Princetonlib and Globallib models
+ Collected by Luis M Rios lmrios@gmail.com, September 2009
+
+The following C source files were produced from AMPL models using the
+'nlc' program from AMPL/solvers/nlc.
+
+The source files require linking to files and libraries included in the AMPL
+distribution.
+AMPL can be obtained at http://www.ampl.com/
+
+The model standalone executable compiles issuing the following command from the
+AMPL directory:
+
+gcc -o $model solvers/nlc/$model.c solvers/nlc/nlcmisc.o solvers/examples/rvmsg.o solvers/examples/keywds.o solvers/funcadd0.o solvers/amplsolver.a -lm -ldl
+
+where:
+$model is the model's name
+solvers, solvers/nlc and solvers/examples are subdirectories of the AMPL directory
+
+The resulting executable reads the input from the file 'input.in' and returns the
+objective function value in the file 'output.out'.
+The input file must have each variable's value in each line. 

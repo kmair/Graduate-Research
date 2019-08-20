@@ -1,0 +1,216 @@
+      SUBROUTINE S4FLU(N, IA, JA, A, IAMAX, IU, IROW, Z, IC, R, C,
+     1   IERR, THRESH, EPS, JLU, GETA, GROWTH, BEFOR)
+      INTEGER N
+      EXTERNAL GETA
+      INTEGER IA(1), JA(1), IAMAX, IU(N), IROW(N), IC(N)
+      INTEGER R(N), C(N), IERR, JLU
+      REAL A(1), Z(1), THRESH, EPS, GROWTH, BEFOR
+      INTEGER ICC, JUJ, NUM, I, J, K
+      INTEGER M, JMIN, IMAX, JMAX, CK, II
+      INTEGER JJ, IJ, RI, RK, NU, JAMAX
+      INTEGER IUEND, NP1, NP2
+      REAL AKI, ABS, AFT, PVT, BEFO, PMAX
+      REAL AMAX1, DK
+      LOGICAL TEMP, SING
+C THIS IS LOWER LEVEL LU DECOMPOSITION WITH THRESHHOLD PIVOTING
+C WITH FUNCTION INPUT
+C INPUT PARAMETERS
+C N INTEGER NUMBER OF ROWS
+C IAMAX DECLARED SIZE OF THE A ARRAY.
+C IC INTEGER N-VECTOR GIVING INVERSE COLUMN PERMUTATION
+C R INTEGER N-VECTOR GIVING ROW PERMUTATION
+C C INTEGER N-VECTOR GIVING COLUMN PERMUTATION
+C THRESH REAL SCALAR GIVING THRESHHOLD FOR PIVOTING
+C EPS   REAL SCALAR GIVING THREHHOLD FOR SINGULARITY
+C GETA  SUBROUTINE WHICH RETURNS THE NONZERO ELEMENTS AND
+C  THEIR CORRESPONDING COLUMN INDICES WHEN ASKED FOR A
+C  GIVEN ROW
+C OUTPUT PARAMETERS
+C IA INTEGER N+1 VECTOR GIVING BEGINNING OF ITH ROW
+C    OF L IN SPARSE LU DECOMPOSITION IN JA AND A
+C JA COLUMN INDICES OF LU DECOMPOSITION
+C A LU DECOMPOSITION
+C IU INTEGER N VECTOR GIVING BEGINNING OF U ROWS IN IA AND JA
+C IC INVERSE COLUMN PERMUTATION AFTER PIUVOTING FOR STABILITY
+C C  COLUMN PERMUTATION AFTER PIVOTING FOR STABILITY
+C IERR- ERROR FLAG
+C     10 .LT. IERR .LT. 11+N   NULL ROW
+C     10+N .LT. IERR .LT. 11+2N   INVALID COLUMN INDEX
+C     10+2N .LT. IERR .LT. 11+3N  NOT ENOUGH SPACE
+C     10+3N .LT. IERR .LT. 11+4N   SINGULAR MATRIX OF RANK IERR-3N-10
+C JLU INTEGER SCALAR GIVING SIZE OF DECOMPOSITION
+C GROWTH SCALAR GIVING ELEMENT GROWTH
+C BEFOR SCALR GIVING NORM OF ORIGINAL MATRIX
+C SCRATCH SPACE
+C IROW -INTEGER LENGTH N+1
+C Z-REAL LENGTH N
+C INITIALIZATION
+      IA(1) = 1
+      BEFOR = 0.0E0
+      AFT = 0.0E0
+      NP1 = N+1
+      IERR = 0
+      NP2 = N+2
+      JLU = 1
+      DO  1 I = 1, N
+         IROW(I) = 0
+   1     CONTINUE
+C DETERMINE NEXT ROW OF L AND U
+      DO  23 K = 1, N
+         RK = R(K)
+         SING=.FALSE.
+         M = NP1
+C CALL GETA TO GET ROW RK
+         CALL GETA(RK, A(JLU), JA(JLU), NUM)
+         Z(K) = 0.0
+         JAMAX = JLU+NUM-1
+C CHECK IF ENOUGH SPACE
+         IF (JAMAX .GT. IAMAX) GOTO  24
+         IROW(NP1) = NP1
+         IUEND = NP2
+         BEFO = 0.0
+C CHECK FOR NULL ROW
+         IF (NUM .LE. 0) GOTO  25
+         DO  6 J = JLU, JAMAX
+            JJ = JA(J)
+C CHECK FOR INVLAID INDEX
+            TEMP = JJ .LE. 0
+            IF (.NOT. TEMP) TEMP = JJ .GT. N
+            IF (TEMP) GOTO  29
+C GET INVERSE COLUMN INDEX
+            ICC = IC(JJ)
+            Z(ICC) = A(J)
+            BEFO = BEFO+ABS(A(J))
+C CHECK IF IN L OR U PORTION OF ROW
+            IF (ICC .LT. K) GOTO 2
+               IROW(ICC) = IUEND
+C IF IT IS U PORTION-SO JUST ADD TO LINKED LIST
+               IUEND = ICC
+               GOTO  5
+   2           IF (M .GT. ICC) M = NP1
+C NEW ELEMENT IS IN L PART OF THE ROW
+C THUS ONE MUST INSERT IN ORDERED LIST
+   3              II = IROW(M)
+                  IF (II .GE. ICC) GOTO  4
+                  M = II
+                  GOTO  3
+   4           IROW(M) = ICC
+               IROW(ICC) = II
+   5        CONTINUE
+   6        CONTINUE
+         BEFOR = AMAX1(BEFO, BEFOR)
+C
+C ELIMINATE ROW
+         I = NP1
+   7        J = I
+            I = IROW(I)
+            IROW(J) = 0
+            IF (I .EQ. NP1) GOTO  15
+            JMIN = IU(I)
+            RI = R(I)
+            JMAX = IA(I+1)-1
+C AKI WILL HAVE MULTIPLIER
+            AKI = -Z(I)
+            AFT = AMAX1(AFT, ABS(AKI))
+C CHECK IF SUFFICIENT SPACE
+C TO STORE ELEMENT OF L
+            IF (JLU .GT. IAMAX) GOTO  26
+C STORE ELEMENT OF L
+            A(JLU) = AKI
+            JA(JLU) = I
+            JLU = JLU+1
+            IF (JMAX .LT. JMIN) GOTO 14
+               DO  13 J = JMIN, JMAX
+C ELIMINATE ITH ELEMENT
+                  JUJ = JA(J)
+                  ICC = IC(JUJ)
+C IF IROW(ICC) IS 0 THEN FILL IN WILL OCCUR
+                  IF (IROW(ICC) .NE. 0) GOTO 12
+                     IF (ICC .LT. K) GOTO 8
+                        IROW(ICC) = IUEND
+C SINCE FILLIN IS IN U PORITION JSUT ADD TO END OF LINKED LIST
+                        IUEND = ICC
+                        GOTO  11
+   8                    TEMP = M .GT. ICC
+                        IF (.NOT. TEMP) TEMP = M .LT. I
+                        IF (TEMP) M = I
+C FILL IN IS IN L PORTION SO ONE MUST INSERT IN ORDERED LIST
+   9                       IJ = IROW(M)
+                           IF (IJ .GE. ICC) GOTO  10
+                           M = IJ
+                           GOTO  9
+  10                    IROW(M) = ICC
+                        IROW(ICC) = IJ
+  11                 Z(ICC) = 0.E0
+  12              Z(ICC) = Z(ICC)+AKI*A(J)
+  13              CONTINUE
+  14        CONTINUE
+C FIND PIVOT
+            GOTO  7
+  15     I = IUEND
+         PMAX = 0.E0
+         NU = 0
+  16     IF (I .EQ. NP2) GOTO  18
+            PVT = ABS(Z(I))
+            NU = NU+1
+            IF (PVT .LE. PMAX) GOTO 17
+               IMAX = I
+               PMAX = PVT
+  17        I = IROW(I)
+            GOTO  16
+C DO THRESHHOLD PIVOTING
+  18     IF (ABS(Z(K)) .GE. THRESH*PMAX) IMAX = K
+C CHECK FOR SINGULARITY
+         IF (ABS(Z(IMAX)) .GT. EPS) GOTO  27
+            IF(IERR.EQ.0)IERR=K+10+3*N
+            SING=.TRUE.
+   27       CONTINUE
+         IF (.NOT.SING)DK = 1.E0/Z(IMAX)
+         IF (SING)DK = R1MACH(2)
+         AFT = AMAX1(AFT, PMAX)
+         I = IUEND
+         NU = JLU+NU
+C CHECK IF SUFFICIENT SPACE TO STORE U PORTION
+         IF (NU .GT. IAMAX) GOTO  28
+C STORE DIAGONAL ELEMENT
+         A(JLU) = DK
+         JA(JLU) = C(IMAX)
+         IU(K) = JLU+1
+         JLU = NU
+  19     IF (I .EQ. NP2) GOTO  21
+C CHECK IF DIAGONAL ELEMENT WHICH HAS ALREADY BEEN STORED
+            IF (I .EQ. IMAX) GOTO 20
+               NU = NU-1
+C STORE ELEMENT OF U
+               A(NU) = Z(I)*DK
+               JA(NU) = C(I)
+  20        II = I
+            I = IROW(I)
+            IROW(II) = 0
+            GOTO  19
+  21     IA(K+1) = JLU
+C INTERCHANGE THE COLUMN INDICES
+         IF (K .EQ. IMAX) GOTO 22
+            JJ = C(K)
+            C(K) = C(IMAX)
+            C(IMAX) = JJ
+            CK = C(K)
+            IC(CK) = K
+            IC(JJ) = IMAX
+  22     CONTINUE
+  23     CONTINUE
+      GROWTH = 1.0E0
+      IF (BEFOR.NE.0.0E0) GROWTH = AMAX1(1.0E0, AFT/BEFOR)
+      JA(JLU) = JLU
+      RETURN
+  24  IERR = 2*N+K+10
+      RETURN
+  25  IERR = K+10
+      RETURN
+  26  IERR = 2*N+K+10
+      RETURN
+  28  IERR = 2*N+K+10
+      RETURN
+  29  IERR = K+10+N
+      RETURN
+      END

@@ -1,0 +1,71 @@
+ ***************************************************************************
+ ALAMO version 2019.1.26. Built: WIN-64 Sat Jan 26 22:11:34 EST 2019
+
+ If you use this software, please cite:
+ Cozad, A., N. V. Sahinidis and D. C. Miller,
+ Automatic Learning of Algebraic Models for Optimization,
+ AIChE Journal, 60, 2211-2227, 2014.
+
+ ALAMO is powered by the BARON software from http://www.minlp.com/
+ ***************************************************************************
+ Licensee: Muyi Song at Carnegie Mellon University, muyis@andrew.cmu.edu.
+ ***************************************************************************
+ Reading input data
+ Checking input consistency and initializing data structures
+ Warning: powers of 1 will be discarded from the set of basis functions.
+ 
+ Step 0: Initializing data set
+ User provided an initial data set of 1600 data points
+ We will sample no more data points at this stage
+ ***************************************************************************
+ Iteration 1 (Approx. elapsed time 0.11 s)
+ 
+ Step 1: Model building using BIC
+ 
+ Model building for variable z1
+ ----
+ BIC = -0.537E+04 with z1 = 1.1 * x1
+ ----
+ BIC = -0.628E+04 with z1 = 1.1 * x1^2 + 0.48 * x2^2
+ ----
+ BIC = -0.676E+04 with z1 = 1.1 * x1 - 0.26 * x3 + 0.40 * x2^2
+ ----
+ BIC = -0.771E+04 with z1 =  - 0.33 * x3 + 0.99 * x1^2 + 0.37 * x2^2 + 0.27
+ ----
+ BIC = -0.961E+04 with z1 =  - 1.3 * x3 + 1.0 * x1^2 + 0.37 * x2^2 + 1.0 * x3^2 + 0.43
+ ----
+ BIC = -0.112E+06 with z1 =  - 0.67 * x2 - 1.3 * x3 + 1.0 * x1^2 + x2^2 + 1.0 * x3^2 + 0.56
+ 
+ Calculating quality metrics on observed and validation data set.
+ 
+ Quality metrics for output z1
+ -----------------------------
+ SSE OLR:                      0.455E-27
+ SSE:                          0.455E-27
+ SSE for validation dataset:   0.112E-27
+ RMSE:                         0.533E-15
+ RMSE for validation dataset:  0.529E-15
+ R2:                           1.00
+ R2 adjusted:                  1.00
+ R2 for validation dataset:    1.00
+ R2 adjusted for this set:     1.00
+ Model size:                   6
+ BIC:                          -0.112E+06
+ Cp:                           -0.159E+04
+ AICc:                         -0.113E+06
+ HQC:                          -0.113E+06
+ MSE:                          0.286E-30
+ SSEp:                         0.455E-27
+ RIC:                          23.4
+ MADp:                         0.141E-10
+ MAD for validation dataset:   0.135E-10
+ 
+ Total execution time 0.19 s
+ Times breakdown
+     OLR time:        0.16E-01 s in 128 ordinary linear regression problem(s)
+     MIP time:        0.0 s in 0 quadratic integer problem(s)
+     Simulation time: 0.0 s to simulate 0 point(s)
+     All other time:  0.17 s in 1 iteration(s)
+ 
+ Normal termination
+ ***************************************************************************

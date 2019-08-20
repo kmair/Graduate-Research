@@ -1,0 +1,70 @@
+      SUBROUTINE DPOST3(U, NU, K, X, NX, V, NV, TSTART, TSTOP, DT,
+     1   AF, BC, D, THETA, KEEJAC, MINIT, MAXIT, MGQ, KMAX, XPOLY,
+     2   KINIT, ERROR, ERRPAR, ERPUTS, INMI, SCALE, HANDLE)
+      EXTERNAL AF, BC, D, ERROR, INMI, SCALE
+      EXTERNAL HANDLE
+      INTEGER NU, K, NX, NV, KEEJAC, MINIT
+      INTEGER MAXIT, MGQ, KMAX, KINIT
+      REAL ERRPAR(2)
+      LOGICAL XPOLY, ERPUTS
+      DOUBLE PRECISION U(1), X(1), V(1), TSTART, TSTOP, DT
+      DOUBLE PRECISION THETA
+      COMMON /CSTAK/ DS
+      DOUBLE PRECISION DS(500)
+      INTEGER ISTKGT, I, MMAX, IN, IS(1000), SAVEB
+      REAL HFRACT, EGIVE, RS(1000)
+      LOGICAL LS(1000)
+      DOUBLE PRECISION BETA, GAMMA, DELTA, WS(500)
+      INTEGER TEMP, TEMP1
+      EQUIVALENCE (DS(1), WS(1), RS(1), IS(1), LS(1))
+C THE FOURTH LEVEL OF POSTS.
+C SCRATCH SPACE ALLOCATED -
+C     S(DPOST3) = 10*NU**2 + 8*NU + 2*NU*(NV+1) + S(D9OSTS) +
+C                 IF ( KEEPJAC > 0 ) { 2*K*MGQ*(NX-2*K+1) }
+C LONG REAL WORDS +
+C                 MMAX
+C INTEGER WORDS.
+C U(NX-K,NU),X(NX),V(NV).
+C THE PORT LIBRARY STACK AND ITS ALIASES.
+      CALL ENTER(1)
+      MMAX = KMAX+5
+      BETA = 1
+      IF (THETA .EQ. 0.5) GOTO 1
+         GAMMA = 1
+         GOTO  2
+   1     GAMMA = 2
+   2  IF (.NOT. ERPUTS) GOTO 3
+         DELTA = 1
+         GOTO  4
+   3     DELTA = 0
+C GET N.
+   4  IN = ISTKGT(MMAX, 2)
+      IS(IN) = 1
+      IS(IN+1) = 2
+      IS(IN+2) = 3
+      I = 4
+         GOTO  6
+   5     I = I+1
+   6     IF (I .GT. MMAX) GOTO  7
+         TEMP1 = IN+I
+         TEMP = IN+I
+         IS(TEMP1-1) = 2*IS(TEMP-3)
+         GOTO  5
+C DEFAULT.
+   7  SAVEB = 0
+      IF (THETA .NE. 0.5) GOTO 9
+         HFRACT = 0.5
+         DO  8 I = 1, MMAX
+            TEMP = IN+I
+            IS(TEMP-1) = 2*IS(TEMP-1)
+   8        CONTINUE
+         GOTO  10
+   9     HFRACT = 1
+  10  EGIVE = 1E+2
+      CALL DPOST4(U, NU, K, X, NX, V, NV, TSTART, TSTOP, DT, AF, BC, D
+     1   , THETA, KEEJAC, MINIT, MAXIT, MGQ, BETA, GAMMA, DELTA, IS(IN),
+     2   MMAX, HFRACT, EGIVE, SAVEB, KMAX, XPOLY, KINIT, ERROR, ERRPAR
+     3   , ERPUTS, INMI, SCALE, HANDLE)
+      CALL LEAVE
+      RETURN
+      END

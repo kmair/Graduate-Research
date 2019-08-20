@@ -1,0 +1,22 @@
+       SUBROUTINE I4NTL(N,Q,IQ,IPTG,M,IPTS,A,IA,AMAN,SCALE,T)
+C
+C THIS SUBROUTINE INITIALIZES Q,IPTG,AND IPTS AND SCALE
+C
+       INTEGER N,M
+       INTEGER IPTS(1),IPTG(1),IA(1)
+       REAL Q(IQ,N),A(1),SCALE(1),T(N)
+       REAL SNRM2, TEMP1
+       EXTERNAL AMAN
+       CALL SETR(N*N,0.0E0,Q)
+       DO 10 I=1,N
+          Q(I,I)=1.0
+          IPTS(I)=I
+ 10    CONTINUE
+       IF (M.EQ.0) RETURN
+       DO 20 I=1,M
+          IPTG(I)=I
+          CALL AMAN(.FALSE.,A,IA,N,I,T,TEMP1)
+          SCALE(I)=SNRM2(N,T,1)
+ 20    CONTINUE
+       RETURN
+       END

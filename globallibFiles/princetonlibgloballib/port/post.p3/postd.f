@@ -1,0 +1,12 @@
+      SUBROUTINE POSTD(T, K, X, NX, U, UT, NU, NXMK, V, VT, NV, D,
+     1   DU, DUT, DV, DVT)
+      INTEGER NXMK, NV, NX
+      INTEGER K, NU
+      REAL T, X(NX), U(NXMK, 1), UT(NXMK, 1), V(NV), VT(NV)
+      REAL D(NV), DU(NV, NXMK, 1), DUT(NV, NXMK, 1), DV(NV, NV), DVT(NV,
+     1   NV)
+C SCRATCH SPACE ALLOCATED - NONE.
+C (U,UT)(NXMK,NU).
+C (DU,DUT)(NV,NXMK,NU).
+      RETURN
+      END

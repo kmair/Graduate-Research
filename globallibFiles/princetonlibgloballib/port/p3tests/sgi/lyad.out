@@ -1,0 +1,307 @@
+1PORT TESTER,DSY** DBP**
+ THIS VERSION DATED 09/21/78.
+
+ EPSILON     =    2.22045E-16
+ 
+ KASE  1   HILBERT         
+ N =   5
+ NORM(A)     =    2.28333E+00
+ M  = 4
+ RCOND =    6.92326E+05    6.94087E+05
+ ACTUAL COND =    9.43656E+05
+ ERROR NORM  =    5.15454E-12    5.15410E-12
+ RESID NORM  =    3.05311E-16
+ NORM(A-RT*R)=    4.16334E-17
+ NORM(A*AI-I)=    1.45519E-11    1.45519E-11
+ 
+ TEST RATIOS.. E = EPSILON
+ 
+    COND  COND(B)  ACTUAL  ACTUAL  ERROR  ERROR(B)  RESID  A-RT*R A*AI-I A*AI-I(B)
+   -----   -----   -----   -----   -----   -----   -----   -----   -----   -----
+    ACTUAL ACTUAL   COND  COND(B) E*COND*X E*COND*X E*A*X    E*A   E*COND  E*COND 
+ 
+     .73     .74    1.36    1.36     .01     .01     .20     .08     .09     .09
+ 
+ NO SUSPICIOUS RATIOS
+ 
+
+ *************
+
+ KASE  2   HILBERT         
+ N =  10
+ NORM(A)     =    2.92897E+00
+ M  = 9
+ RCOND =    2.68247E+13    2.67876E+13
+ ACTUAL COND =    3.53533E+13
+ ERROR NORM  =    1.11517E-04    2.48027E-04
+ RESID NORM  =    5.71293E-16
+ NORM(A-RT*R)=    4.16334E-17
+ NORM(A*AI-I)=    2.51770E-04    2.97546E-04
+ 
+ TEST RATIOS.. E = EPSILON
+ 
+    COND  COND(B)  ACTUAL  ACTUAL  ERROR  ERROR(B)  RESID  A-RT*R A*AI-I A*AI-I(B)
+   -----   -----   -----   -----   -----   -----   -----   -----   -----   -----
+    ACTUAL ACTUAL   COND  COND(B) E*COND*X E*COND*X E*A*X    E*A   E*COND  E*COND 
+ 
+     .76     .76    1.32    1.32     .00     .01     .18     .06     .04     .05
+ 
+ NO SUSPICIOUS RATIOS
+ 
+
+ *************
+
+ KASE  3   HILBERT         
+ N =  15
+ NORM(A)     =    3.31823E+00
+ M  =14
+ NOT POSITIVE DEFINITE, INFO =39
+ OFFENDING DIAGONAL    -.2042508E-14
+
+ *************
+
+ KASE  4   MONOELEMENTAL   
+ N =   1
+ NORM(A)     =    3.00000E+00
+ 
+      .30000E+01
+ 
+ M  = 0
+ RCOND =    1.00000E+00    1.00000E+00
+ ACTUAL COND =    1.00000E+00
+
+ X =
+       .100000E+01       .100000E+01
+ 
+ ERROR NORM  =     .00000E+00     .00000E+00
+ RESID NORM  =     .00000E+00
+ NORM(A-RT*R)=     .00000E+00
+ NORM(A*AI-I)=     .00000E+00     .00000E+00
+ 
+ TEST RATIOS.. E = EPSILON
+ 
+    COND  COND(B)  ACTUAL  ACTUAL  ERROR  ERROR(B)  RESID  A-RT*R A*AI-I A*AI-I(B)
+   -----   -----   -----   -----   -----   -----   -----   -----   -----   -----
+    ACTUAL ACTUAL   COND  COND(B) E*COND*X E*COND*X E*A*X    E*A   E*COND  E*COND 
+ 
+    1.00    1.00    1.00    1.00     .00     .00     .00     .00     .00     .00
+ 
+ NO SUSPICIOUS RATIOS
+ 
+
+ *************
+
+ KASE  5   MONOELEMENTAL   
+ N =   1
+ NORM(A)     =     .00000E+00
+ 
+      .00000E+00
+ 
+ M  = 0
+
+ MAYBE SINGULAR.
+
+ RCOND =    1.79769+308    1.79769+308
+
+ *************
+
+ KASE  6   TRIDIAGONAL     
+ N =  15
+ NORM(A)     =    6.00000E+00
+ M  = 1
+ RCOND =    2.87861E+00    2.87861E+00
+ ACTUAL COND =    2.99984E+00
+ ERROR NORM  =     .00000E+00     .00000E+00
+ RESID NORM  =     .00000E+00
+ NORM(A-RT*R)=    1.11022E-16
+ NORM(A*AI-I)=    2.50020E-16    2.50020E-16
+ 
+ TEST RATIOS.. E = EPSILON
+ 
+    COND  COND(B)  ACTUAL  ACTUAL  ERROR  ERROR(B)  RESID  A-RT*R A*AI-I A*AI-I(B)
+   -----   -----   -----   -----   -----   -----   -----   -----   -----   -----
+    ACTUAL ACTUAL   COND  COND(B) E*COND*X E*COND*X E*A*X    E*A   E*COND  E*COND 
+ 
+     .96     .96    1.04    1.04     .00     .00     .00     .08     .39     .39
+ 
+ NO SUSPICIOUS RATIOS
+ 
+
+ *************
+
+ KASE  7   TRIDIAGONAL     
+ N =  15
+ NORM(A)     =    8.00000E+00
+ M  = 1
+ RCOND =    1.02800E+02    1.02800E+02
+ ACTUAL COND =    1.28000E+02
+ ERROR NORM  =     .00000E+00     .00000E+00
+ RESID NORM  =     .00000E+00
+ NORM(A-RT*R)=     .00000E+00
+ NORM(A*AI-I)=    3.71925E-15    3.71925E-15
+ 
+ TEST RATIOS.. E = EPSILON
+ 
+    COND  COND(B)  ACTUAL  ACTUAL  ERROR  ERROR(B)  RESID  A-RT*R A*AI-I A*AI-I(B)
+   -----   -----   -----   -----   -----   -----   -----   -----   -----   -----
+    ACTUAL ACTUAL   COND  COND(B) E*COND*X E*COND*X E*A*X    E*A   E*COND  E*COND 
+ 
+     .80     .80    1.25    1.25     .00     .00     .00     .00     .16     .16
+ 
+ NO SUSPICIOUS RATIOS
+ 
+
+ *************
+
+ KASE  8   DIAGONAL        
+ N =  15
+ NORM(A)     =    4.00000E+00
+ M  = 0
+ RCOND =    1.00000E+00    1.00000E+00
+ ACTUAL COND =    1.00000E+00
+ ERROR NORM  =     .00000E+00     .00000E+00
+ RESID NORM  =     .00000E+00
+ NORM(A-RT*R)=     .00000E+00
+ NORM(A*AI-I)=     .00000E+00     .00000E+00
+ 
+ TEST RATIOS.. E = EPSILON
+ 
+    COND  COND(B)  ACTUAL  ACTUAL  ERROR  ERROR(B)  RESID  A-RT*R A*AI-I A*AI-I(B)
+   -----   -----   -----   -----   -----   -----   -----   -----   -----   -----
+    ACTUAL ACTUAL   COND  COND(B) E*COND*X E*COND*X E*A*X    E*A   E*COND  E*COND 
+ 
+    1.00    1.00    1.00    1.00     .00     .00     .00     .00     .00     .00
+ 
+ NO SUSPICIOUS RATIOS
+ 
+
+ *************
+
+ KASE  9   PENTADIAGONAL   
+ N =   5
+ NORM(A)     =    4.07738E+05
+ M  = 2
+ RCOND =    1.19114E+06    1.19114E+06
+ ACTUAL COND =    1.36928E+06
+ ERROR NORM  =    5.84511E-15    5.84511E-15
+ RESID NORM  =    1.08599E-12
+ NORM(A-RT*R)=     .00000E+00
+ NORM(A*AI-I)=    7.10543E-15    7.10543E-15
+ 
+ TEST RATIOS.. E = EPSILON
+ 
+    COND  COND(B)  ACTUAL  ACTUAL  ERROR  ERROR(B)  RESID  A-RT*R A*AI-I A*AI-I(B)
+   -----   -----   -----   -----   -----   -----   -----   -----   -----   -----
+    ACTUAL ACTUAL   COND  COND(B) E*COND*X E*COND*X E*A*X    E*A   E*COND  E*COND 
+ 
+     .87     .87    1.15    1.15     .00     .00     .00     .00     .00     .00
+ 
+ NO SUSPICIOUS RATIOS
+ 
+
+ *************
+
+ KASE 10   TRIDIAG INVERSE 
+ N =   6
+ NORM(A)     =    2.10000E+01
+ M  = 5
+ RCOND =    7.70000E+01    7.70000E+01
+ ACTUAL COND =    8.40000E+01
+ ERROR NORM  =    2.16493E-15    2.16493E-15
+ RESID NORM  =    1.99840E-15
+ NORM(A-RT*R)=    7.77156E-16
+ NORM(A*AI-I)=    2.55351E-15    2.55351E-15
+ 
+ TEST RATIOS.. E = EPSILON
+ 
+    COND  COND(B)  ACTUAL  ACTUAL  ERROR  ERROR(B)  RESID  A-RT*R A*AI-I A*AI-I(B)
+   -----   -----   -----   -----   -----   -----   -----   -----   -----   -----
+    ACTUAL ACTUAL   COND  COND(B) E*COND*X E*COND*X E*A*X    E*A   E*COND  E*COND 
+ 
+     .92     .92    1.09    1.09     .04     .04     .14     .17     .15     .15
+ 
+ NO SUSPICIOUS RATIOS
+ 
+
+ *************
+
+ KASE 11   TEST COND       
+ N =  15
+ NORM(A)     =    9.40000E+01
+ M  =14
+ RCOND =    1.12146E+10    1.12146E+10
+ ACTUAL COND =    1.68220E+10
+ ERROR NORM  =     .00000E+00     .00000E+00
+ RESID NORM  =     .00000E+00
+ NORM(A-RT*R)=     .00000E+00
+ NORM(A*AI-I)=     .00000E+00     .00000E+00
+ 
+ TEST RATIOS.. E = EPSILON
+ 
+    COND  COND(B)  ACTUAL  ACTUAL  ERROR  ERROR(B)  RESID  A-RT*R A*AI-I A*AI-I(B)
+   -----   -----   -----   -----   -----   -----   -----   -----   -----   -----
+    ACTUAL ACTUAL   COND  COND(B) E*COND*X E*COND*X E*A*X    E*A   E*COND  E*COND 
+ 
+     .67     .67    1.50    1.50     .00     .00     .00     .00     .00     .00
+ 
+ NO SUSPICIOUS RATIOS
+ 
+
+ *************
+
+ KASE 12   NEAR UNDERFLOW  
+ N =   5
+ TINY        =    5.56268-305
+ NORM(A)     =    1.86350-304
+ M  = 4
+ RCOND =    1.94300E+01    1.94300E+01
+ ACTUAL COND =    2.68000E+01
+ ERROR NORM  =    2.77556E-16    2.77556E-16
+ RESID NORM  =    5.05923-321
+ NORM(A-RT*R)=    2.52962-321
+ NORM(A*AI-I)=    6.10623E-16    6.10623E-16
+ 
+ TEST RATIOS.. E = EPSILON
+ 
+    COND  COND(B)  ACTUAL  ACTUAL  ERROR  ERROR(B)  RESID  A-RT*R A*AI-I A*AI-I(B)
+   -----   -----   -----   -----   -----   -----   -----   -----   -----   -----
+    ACTUAL ACTUAL   COND  COND(B) E*COND*X E*COND*X E*A*X    E*A   E*COND  E*COND 
+ 
+     .73     .73    1.38    1.38     .02     .02     .00     .00     .14     .14
+ 
+ NO SUSPICIOUS RATIOS
+ 
+
+ *************
+
+ KASE 13   NEAR OVERFLOW   
+ N =   5
+ HUGE        =    7.19077+306
+ NORM(A)     =    2.40891+307
+ M  = 4
+ RCOND =    1.94300E+01    1.94300E+01
+ ACTUAL COND =    2.68000E+01
+ ERROR NORM  =    2.77556E-16    2.77556E-16
+ RESID NORM  =    1.55925+291
+ NORM(A-RT*R)=    6.23700+290
+ NORM(A*AI-I)=    1.44329E-15    1.44329E-15
+ 
+ TEST RATIOS.. E = EPSILON
+ 
+    COND  COND(B)  ACTUAL  ACTUAL  ERROR  ERROR(B)  RESID  A-RT*R A*AI-I A*AI-I(B)
+   -----   -----   -----   -----   -----   -----   -----   -----   -----   -----
+    ACTUAL ACTUAL   COND  COND(B) E*COND*X E*COND*X E*A*X    E*A   E*COND  E*COND 
+ 
+     .73     .73    1.38    1.38     .02     .02     .10     .12     .33     .33
+ 
+ NO SUSPICIOUS RATIOS
+ 
+
+ *************
+
+1SUMMARY
+ NUMBER OF TESTS =  13
+
+ NUMBER OF SUSPICIOUS RATIOS =   0   0   0   0   0   0   0   0   0   0
+
+ END OF TEST

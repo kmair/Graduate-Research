@@ -1,0 +1,32 @@
+problemdata files for test problems
+Luis Miguel Rios  --- lmrios@gmail.com
+September 2009
+--------------------------------------------------------------------------
+
+The problemdata files contain information about the test problems
+and are expected to be used along with 'mydfo' interface to derivative-free
+algorithms.
+Test problems are used in the working paper:
+
+Derivative-free optimization: A review of algorithms and comparison of software implementations by Luis Miguel Rios and Nikolaos V. Sahinidis
+
+
+[problemdata]
+The file [problemdata] contains various problem features in the following format:
+
+number of variables (integer)
+lower bounds        (float array)
+upper bounds        (float array)
+starting point      (float array)
+
+the following is an example for a 2-variable problem, where the first variable
+has bounds [-10,15] and starting value 0, and the second variable has bounds
+[-20,30] and starting value 5.
+
+::::::::::::::
+problemdata
+::::::::::::::
+2
+-10  -20
+ 15   30
+  0    5

@@ -1,0 +1,103 @@
+      LOGICAL FUNCTION A90STC(U, UT, NU, V, VT, NV, T, DT, K, X,
+     1   NX, AF, AF1, BC, BC1, D, D1234, SCALE, DU, DV)
+      INTEGER NX
+      EXTERNAL AF, AF1, BC, BC1, D, D1234
+      EXTERNAL SCALE
+      INTEGER NU, NV, K
+      REAL U(1), UT(1), V(1), VT(1), T, DT
+      REAL X(NX), DU(1), DV(1)
+      COMMON /CSTAK/ DS
+      DOUBLE PRECISION DS(500)
+      COMMON /A9OSTM/ THETA, EGIVE, MINIT, MAXIT, KEEJAC
+      INTEGER MINIT, MAXIT, KEEJAC
+      REAL THETA, EGIVE
+      COMMON /A9OSTJ/ IJP, IB, IAFB, IALFA, IBETA, IGAMMA, ID4, ID5,
+     1   IORDER, IBC, IEQS, IAA, IBB, ICC, ISGMAD, ISGMAM, IL, IPPVOT,
+     2   IDMAT, IDIAG, IDPVOT
+      INTEGER IJP(3), IB(3), IAFB(3), IALFA(3), IBETA(3), IGAMMA(3)
+      INTEGER ID4(3), ID5(3), IORDER, IBC, IEQS, IAA
+      INTEGER IBB, ICC, ISGMAD, ISGMAM, IL, IPPVOT
+      INTEGER IDMAT, IDIAG, IDPVOT
+      COMMON /A9OSTG/ TJ, DTJ, GETJAC, SEPATE
+      REAL TJ, DTJ
+      LOGICAL GETJAC, SEPATE
+      COMMON /A90STV/ IEU
+      INTEGER IEU
+      COMMON /A90STR/ NJS, NFS, NTSS, NSSS, NNITS, NNDS, NNFS, NRS
+      INTEGER NJS, NFS, NTSS, NSSS, NNITS, NNDS
+      INTEGER NNFS, NRS
+      COMMON /A90STQ/ IXGQ, IWGQ, MGQ
+      INTEGER IXGQ, IWGQ, MGQ
+      INTEGER IEXCHG, ISTKGT, MAX0, IS(1000)
+      REAL RS(1000), WS(500)
+      LOGICAL FAILED, LS(1000), A90STA, A90STD
+      INTEGER TEMP, TEMP1, TEMP2, TEMP3, TEMP4, TEMP5
+      INTEGER TEMP6
+      LOGICAL TEMP7
+      EQUIVALENCE (DS(1), WS(1), RS(1), IS(1), LS(1))
+C TO COMPUTE DU AND DV FOR EACH TIME-STEP.
+C SCRATCH SPACE ALLOCATED - S(A90STC) =
+C     2*NU*(3*NU+2*(NV+1)) + NU*(NX-K)*(NV+2) +
+C     IF ( NU > 0 )
+C       MAX ( 4*NU*(NU+NV+2) + S(BC), S( GLSSB), S( GLSIN),
+C             2*NU*(NV+1) + S( GLSBT), S( GLSBC),
+C             S( GLSBP), NU*(NX-K)*(K*NU-1) + NU*(NX-K) INTEGER ) +
+C     IF ( NV > 0 ) S(A90STD)
+C REAL WORDS.
+C (U,UT)(NX-K,NU).
+C (V,VT)(NV).
+C DU(NX-K,NU),DV(NV).
+      CALL ENTER(1)
+      IF (GETJAC) DTJ = 0
+      IF (KEEJAC .NE. 0) GOTO 5
+         IF (NU .LE. 0) GOTO 1
+            IJP(1) = ISTKGT(NU*(NX-K)*(2*K*NU-1), 3)
+            GOTO  2
+   1        IJP(1) = 1
+   2     IJP(3) = IJP(1)
+         IF (NU .LE. 0) GOTO 3
+            IB(1) = ISTKGT(NU*(NX-K)*(NV+1), 3)
+            GOTO  4
+   3        IB(1) = 1
+   4     IB(3) = IB(1)
+   5  IEXCHG = ISTKGT((NX-K)*NU, 3)
+      TEMP7 = DT .NE. DTJ
+      IF (TEMP7) TEMP7 = SEPATE
+      IF (.NOT. TEMP7) TEMP7 = GETJAC
+      IF (TEMP7) NFS = NFS+1
+      IF (NU .LE. 0) GOTO 7
+         IEU = ISTKGT(4*MAX0(MGQ, 2)*NU, 3)
+         TEMP6 = IALFA(3)
+         TEMP5 = IBETA(3)
+         TEMP4 = IGAMMA(1)
+         TEMP3 = IGAMMA(2)
+         TEMP2 = IGAMMA(3)
+         TEMP = IB(3)
+         TEMP1 = IB(3)
+         FAILED = A90STA(U, UT, NU, V, VT, NV, T, DT, K, X, NX, AF, AF1,
+     1      BC, BC1, D, D1234, SCALE, DU, WS(TEMP6), WS(TEMP5), WS(
+     2      TEMP4), WS(TEMP3), WS(TEMP2), WS(IAA), WS(IBB), WS(ICC), WS(
+     3      ISGMAD), WS(ISGMAM), IS(IBC), IS(IEQS), IS(IORDER), WS(TEMP)
+     4      , WS(IEXCHG), WS(TEMP1), NX-K, NV+1)
+         IF (.NOT. FAILED) GOTO 6
+            CALL LEAVE
+            A90STC = FAILED
+            RETURN
+   6     CONTINUE
+   7  IF (NV .LE. 0) GOTO 9
+         TEMP1 = IB(3)
+         TEMP = IB(3)
+         FAILED = A90STD(K, X, NX, U, UT, NU, V, VT, NV, T, DT, WS(
+     1      TEMP1), WS(TEMP), MAX0(1, NU*(NX-K)), D, D1234, SCALE, DU,
+     2      DV)
+         IF (.NOT. FAILED) GOTO 8
+            CALL LEAVE
+            A90STC = .TRUE.
+            RETURN
+   8     CONTINUE
+   9  CALL LEAVE
+      GETJAC = .FALSE.
+      DTJ = DT
+      A90STC = FAILED
+      RETURN
+      END

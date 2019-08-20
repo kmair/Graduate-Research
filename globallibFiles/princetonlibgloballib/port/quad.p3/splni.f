@@ -1,0 +1,136 @@
+      SUBROUTINE SPLNI(K,T,N,A,
+     1                  X,NX,
+     2                  FIX)
+C
+C  TO EVALUATE THE B-SPLINE INTEGRAL
+C
+C            FIX(IX) = INTEGRAL ( T(1) TO X(IX) ) F(ZETA) DZETA
+C
+C  FOR IX=1,...,NX, WHERE
+C
+C        F(X)=SUM(I=1,...,N-K)(A(I)*B(I)(X)).
+C
+C  INPUT -
+C
+C    K   - THE ORDER OF THE B-SPLINES TO BE USED.
+C          2.LE.K IS ASSUMED.
+C    T   - THE B-SPLINE MESH.
+C    N   - THE NUMBER OF POINTS IN THE MESH T.
+C    A   - THE B-SPLINE COEFFICIENTS, N-K OF THEM.
+C    X   - POINTS OF EVALUATION FOR THE INTEGRAL OF THE B-SPLINE.
+C          X MUST BE MONOTONE INCREASING.
+C    NX  - THE NUMBER OF POINTS IN X.
+C
+C  OUTPUT -
+C
+C    FIX - THE VALUES OF OF THE INTEGRAL OF F.
+C
+C  SCRATCH SPACE ALLOCATED - 4*K REAL WORDS.
+C
+C  ERROR STATES -
+C
+C    1 - K.LT.2.
+C    2 - N.LE.K.
+C    3 - NX.LT.1.
+C    4 - T IS NOT MONOTONE INCREASING.
+C    5 - X IS NOT MONOTONE INCREASING.
+C
+      REAL T(N),A(1),X(NX),FIX(NX)
+C     REAL A(N-K)
+C
+      REAL SUM,XX(1)
+      LOGICAL A3PLNI
+C
+      COMMON /CSTAK/DS
+      DOUBLE PRECISION DS(500)
+      REAL WS(1)
+      EQUIVALENCE (DS(1),WS(1))
+C
+C ... CHECK THE INPUT.
+C
+C/6S
+C     IF (K.LT.2)
+C    1   CALL SETERR(15H SPLNI - K.LT.2,15,1,2)
+C     IF (N.LE.K)
+C    1   CALL SETERR(15H SPLNI - N.LE.K,15,2,2)
+C     IF (NX.LT.1)
+C    1   CALL SETERR(16H SPLNI - NX.LT.1,16,3,2)
+C     IF (T(1).GE.T(N)) CALL SETERR
+C    1   (37H SPLNI - T IS NOT MONOTONE INCREASING,37,4,2)
+C/7S
+      IF (K.LT.2)
+     1   CALL SETERR(' SPLNI - K.LT.2',15,1,2)
+      IF (N.LE.K)
+     1   CALL SETERR(' SPLNI - N.LE.K',15,2,2)
+      IF (NX.LT.1)
+     1   CALL SETERR(' SPLNI - NX.LT.1',16,3,2)
+      IF (T(1).GE.T(N)) CALL SETERR
+     1   (' SPLNI - T IS NOT MONOTONE INCREASING',37,4,2)
+C/
+C
+C ... ALLOCATE SCRATCH SPACE.
+C
+      IBIX=ISTKGT(4*K,3)
+      ICOL=IBIX+K
+      IDM=ICOL+K
+      IDP=IDM+K
+C
+      CALL SETR(NX,0.0E0,FIX)
+C
+      ILEFTP=0
+      SUM=0
+C
+      DO 50 IX=1,NX
+         XX(1)=AMIN1(X(IX),T(N))
+C
+         IF (X(IX).LE.T(1)) GO TO 50
+C
+         IF (IX.EQ.1) GO TO 10
+C/6S
+C        IF (X(IX).LT.X(IX-1)) CALL SETERR
+C    1     (37H SPLNI - X IS NOT MONOTONE INCREASING,37,5,2)
+C/7S
+         IF (X(IX).LT.X(IX-1)) CALL SETERR
+     1     (' SPLNI - X IS NOT MONOTONE INCREASING',37,5,2)
+C/
+C
+ 10      ILEFT=INTRVR(N,T,XX(1))
+C
+         I=MAX0(ILEFTP-K,0)
+C
+ 20         I=I+1
+            IF (I.GT.ILEFT-K) GO TO 30
+            IDX1=I+K
+            SUM=SUM+A(I)*(T(IDX1)-T(I))/FLOAT(K)
+C
+            GO TO 20
+C
+C/6S
+C30      IF (.NOT.A3PLNI(K,T,N,
+C    1                   XX,1,ILEFT,
+C    2                   WS(IBIX),WS(ICOL),WS(IDM),WS(IDP)))
+C    3     CALL SETERR
+C    4        (37H SPLNI - T IS NOT MONOTONE INCREASING,37,4,2)
+C/7S
+ 30      IF (.NOT.A3PLNI(K,T,N,
+     1                   XX,1,ILEFT,
+     2                   WS(IBIX),WS(ICOL),WS(IDM),WS(IDP)))
+     3     CALL SETERR
+     4        (' SPLNI - T IS NOT MONOTONE INCREASING',37,4,2)
+C/
+C
+         LLO=MAX0(1,K+1-ILEFT)
+         LHI=MIN0(K,N-ILEFT)
+         FIX(IX)=SUM
+         DO 40 L=LLO,LHI
+            IDX1=ILEFT+L-K
+            IDX2=IBIX+L-1
+ 40         FIX(IX)=FIX(IX)+A(IDX1)*WS(IDX2)
+         ILEFTP=ILEFT
+ 50      CONTINUE
+C
+      CALL ISTKRL(1)
+C
+      RETURN
+C
+      END

@@ -1,0 +1,28 @@
+
+     I     INITIAL X(I)        D(I)
+
+     1      .100000E-01      .903E+01
+     2      .300000E-01      .188E+01
+
+    IT   NF      F       RELDF   PRELDF   RELDX  MODEL  STPPAR  D*STEP  NPRELDF
+
+     0    1  .142E-03
+     1    2  .134E-03  .54E-01  .55E-01  .8E-02    G    .0E+00  .2E-02  .55E-01
+     2    3  .134E-03  .25E-04  .38E-04  .2E-03    G    .0E+00  .4E-04  .38E-04
+
+ ***** X-CONVERGENCE *****
+
+ FUNCTION      .134425E-03   RELDX         .212E-03
+ FUNC. EVALS       3         GRAD. EVALS       3
+ PRELDF        .378E-04      NPRELDF       .378E-04
+
+     I      FINAL X(I)        D(I)          G(I)
+
+     1     .101644E-01      .903E+01     -.643E-04
+     2     .300000E-01      .190E+01      .294E-01
+
+ LINEAR PARAMETERS...
+
+     1     .356415E+00
+     2     .117273E+01
+     3    -.688089E+00
