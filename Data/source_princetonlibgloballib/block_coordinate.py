@@ -123,9 +123,44 @@ class BCD():
             self.fnCalls += 1
             print('# of compilations done = ', self.fnCalls)
         
-        # print(y_data)
-
         return block_pts, y_data
+
+    def nextSP(self, up, low, scalingFactor, x_block, Numpoints, Evalpoint=None, err_tol = 0.1):
+        block_pts, y_data = self.modelData(up, low, scalingFactor, x_block, Numpoints, Evalpoint)
+        
+        '''Minimizing the data to get best point along selected axis'''
+        
+        minimizer = alamo_train.Minimizing(block_pts, y_data, up, low)
+        minimizing_model = minimizer.alamo_fn()
+        x_results = minimizer.Model_min(minimizing_model)
+        print('x_results', x_results)
+        
+        '''Now, we have to assign new x_sp and scaling factor'''
+        "1. x_sp"
+        # First, let's check if the new point returned is actually better
+        x_temp = self.x_sp[0]
+        for k in range(len(self.var_order[self.Present_iter])): # Selecting the var_order of the specific iteration
+            x_var = self.var_order[self.Present_iter][k]     # The variable being modified
+            x_temp[x_var] = x_results.x[k]
+        
+        y_actual = Sampling.fn_call(x_temp, self.data.compileFile)
+        self.fnCalls += 1
+        
+        if y_actual >= x_results.fun * (1 + err_tol):
+            Evalpoint = Numpoints
+            newNumpoints = Numpoints * 2
+            print('Entered if loop')
+            return self.nextSP(up, low, scalingFactor, x_block, newNumpoints, Evalpoint)
+
+        else:
+            self.x_sp = np.array([x_temp])                    # UPDATED the starting point
+        print('new_sp', self.x_sp)
+
+        print('# of compilations = ', self.fnCalls)
+        print(y_actual, x_results.fun)
+        op_writer(self.data.compileFile, self.fnCalls, y_actual)
+        
+        return y_actual
 
     def Call_BCD(self):
         self.Present_iter += 1
@@ -152,33 +187,8 @@ class BCD():
         scalingFactor = np.array(scalingFactor)
         x_block = np.array([x_block])      # Part of x_sp with concerned axes having a shape of (1,n_attr)
         print('x_block', x_block)
-        # x_new = np.repeat(self.x_sp, self.Numpoints, axis=0)
 
-        block_pts, y_data = self.modelData(up, low, scalingFactor, x_block, self.Numpoints)
-
-        '''Minimizing the data to get best point along selected axis'''
-        
-        minimizer = alamo_train.Minimizing(block_pts, y_data, up, low)
-        minimizing_model = minimizer.alamo_fn()
-        x_results = minimizer.Model_min(minimizing_model)
-        print('x_results', x_results)
-        
-        '''Now, we have to assign new x_sp and scaling factor'''
-        "1. x_sp"
-
-        x_new_sp = self.x_sp[0]
-        for k in range(len(self.var_order[self.Present_iter])): # Selecting the var_order of the specific iteration
-            x_var = self.var_order[self.Present_iter][k]     # The variable being modified
-            x_new_sp[x_var] = x_results.x[k]
-
-        self.x_sp = np.array([x_new_sp])                    # UPDATED the starting point
-        print('new_sp', self.x_sp)
-
-        y_actual = Sampling.fn_call(self.x_sp, self.data.compileFile)
-        self.fnCalls += 1
-        print('# of compilations = ', self.fnCalls)
-        print(y_actual, x_results.fun)
-        op_writer(self.data.compileFile, self.fnCalls, y_actual)
+        y_actual = self.nextSP(up, low, scalingFactor, x_block, self.Numpoints)
         
         "2. scaling factor"
         scaling_fact = self.scaling(scalingFactor, y_actual, self.y_old, 1e-2)      # scaling_fact is the complete scaling factor before completion of the alamo train
@@ -318,12 +328,11 @@ class BCD():
         
         os.chdir(path)
 
-    
 import Sampling
 
 compileFile = "box3"
 numofVar, Upper, Lower, StartPt = Sampling.Variable_Data(compileFile)
 data = Sampling.Trust_Region_method(compileFile, numofVar, Upper, Lower, n_points = 1, method = 'SOBOL', StartPt =StartPt) # Scaling_factor = 1,
 # Scaling_factor = [1,1, ...numofVar times]
-blockCoordDescent = BCD(data.StartPt, 2, data, Numpoints = 50, max_epochs = 20)
+blockCoordDescent = BCD(data.StartPt, 2, data, Numpoints = 10, max_epochs = 20)
 blockCoordDescent.Call_BCD()
