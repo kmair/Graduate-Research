@@ -253,9 +253,10 @@ class BCD():
             print("|  \ | |            \  /\  /        |         |         \     /   \        |     |")
             print("|   \| |______       \/  \/         |______   |          \___/     \____   |     |")
 
-            if self.Epochs > 1:
-                # In the first epoch, we don't have any xt_1
-                self.Lambda = self.xt - self.xt_1
+            # CHANGES:
+            # This loop entered for first time when self.Epochs = 2.
+            self.Lambda = self.xt - self.xt_1
+            
             self.xt_1 = self.xt     # setting xt to xt_1 as next epoch starts
 
             new_BCD = BCD(self.xt.flatten(), self.n_attr, self.data, fnCalls = self.fnCalls, Epochs = self.Epochs,
