@@ -72,7 +72,7 @@ class Minimizing():
         ind = np.argmin(self.ydata)
         x0 = self.xdata[ind]
         print(bnds.shape)
-        min_result = minimize(model['f(model)'], x0, method='TNC', tol=1e-6, bounds = bnds)
+        min_result = minimize(model['f(model)'], x0, method='L-BFGS-B', tol=1e-6, bounds = bnds) # L-BFGS-B
         
         return min_result   # use min_result.y, min_result.x etc....
 #%%

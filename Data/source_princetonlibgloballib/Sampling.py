@@ -131,12 +131,6 @@ class Trust_Region_method():
 
         return points
 
-# compileFile = "3pk"
-# numofVar, Upper, Lower, StartPt = Variable_Data(compileFile)
-# print(numofVar, Upper, Lower, StartPt)
-
-# data = Trust_Region_method(compileFile, numofVar, Upper, Lower, Scaling_factor = 1, n_points = 1, method = 'RANDOM', StartPt =StartPt)
-
 compileFile = "ex8_1_1"     
 numofVar, Upper, Lower, StartPt = Variable_Data(compileFile)
 # print(numofVar, Upper, Lower, StartPt)
