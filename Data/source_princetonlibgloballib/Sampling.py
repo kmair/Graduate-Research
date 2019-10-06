@@ -11,7 +11,6 @@ def Variable_Data(compileFile):
     # os.chdir(folder_path)
     probdata_path = os.path.join(folder_path, 'problemdata')
     os.chdir(probdata_path)
-    print(os.getcwd())
     data_file = compileFile + '.problem.data'
     with open(data_file, 'r') as f:
     # with open('3pk.problem.data', 'r') as f:
@@ -53,7 +52,7 @@ def fn_call(X, compileFile, compileFlag=0):                         # X is a (1,
     X = X.flatten()                     # Convert X to (m,) for using in input.in
 
     create_input("input.in", X)         
-    print("Compiling")
+    # print("Compiling")
     if compileFlag == 1:
         os.system('gcc '+compileFile+'.c -o '+compileFile)
     
@@ -68,7 +67,7 @@ class Trust_Region_method():
     def __init__(self, compileFile, numofVar, Upper, Lower, n_points, Scaling_factor = None, Up_bounds = None, Low_bounds = None, StartPt = None, method = 'SOBOL', sf = 0.5):
         self.compileFile = compileFile      # "3pk" or "aircrftb" or ...
         self.numofVar = numofVar
-        print('# var', self.numofVar)
+        # print('# var', self.numofVar)
         self.Upper = Upper                  # From problem data
         self.Lower = Lower                  # From problem data
         self.StartPt = StartPt              # From problem data
@@ -107,18 +106,18 @@ class Trust_Region_method():
         
         if self.StartPt is not None:     # If is called when we already have a starting optimal point
             self.Space_generator()
-            print('Scaling_factor', self.Scaling_factor)
+            # print('Scaling_factor', self.Scaling_factor)
         
         else:                            # Else called in absence of a starting optimal point i.e. start of First iteration
             self.Up_bounds = self.Upper
             self.Low_bounds = self.Lower
             self.Scaling_factor = np.ones(len(self.Low_bounds)) # Create ones for the number of axes
 
-        print(self.Low_bounds)
-        print(self.Up_bounds)
-        print('Scaling_factor', self.Scaling_factor)
+        # print(self.Low_bounds)
+        # print(self.Up_bounds)
+        # print('Scaling_factor', self.Scaling_factor)
 
-        print('pts', pts)
+        # print('pts', pts)
 
         for i in range(self.n_points):
             
@@ -131,14 +130,14 @@ class Trust_Region_method():
 
         return points
 
-compileFile = "ex8_1_1"     
-numofVar, Upper, Lower, StartPt = Variable_Data(compileFile)
+# compileFile = "ex8_1_1"     
+# numofVar, Upper, Lower, StartPt = Variable_Data(compileFile)
 # print(numofVar, Upper, Lower, StartPt)
 
-x0 = np.reshape(StartPt, (1,numofVar))
-print(x0)
+# x0 = np.reshape(StartPt, (1,numofVar))
+# print(x0)
 # create_input("input.in", x0.flatten())
 # os.system('gcc '+compileFile+'.c -o '+compileFile)
 # os.system('.\\'+compileFile)
-y0_ = fn_call(x0, compileFile)
-print(y0_)
+# y0_ = fn_call(x0, compileFile)
+# print(y0_)
