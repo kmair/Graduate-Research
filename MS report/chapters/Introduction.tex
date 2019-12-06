@@ -1,1 +1,25 @@
 \chapter{Introduction}
+Black–box optimization is one of the most common and important problems in the engineering industry that are expensive to evaluate. The term “black–box” arises from the fact that while we can have input output pairs of $x$ and $f(x)$ there is no other information about $f(\cdot)$, such as the Hessian matrix or the constraints acting within the model. These functions usually have a limited budget for the number of evaluations allowed \cite{Mller2013}. These problems are generally NP-hard and hence become difficult to solve. 
+The unavailability of this information means that we have to carry out Derivative-free optimization (DFO). The two main approaches to solve DFO problems are direct or model-based. In direct methods, the algorithm finds the direction to reach the optimal value by using only the function values. Pattern search, Nelder-Mead simplex algorithm, and adaptive search are few of the methods using direct search. On the other hand, model-based algorithms fit the black-box functions evaluated with a surrogated model that guide the model towards the optimal solution. The model-based approach are designed to work locally, like in implicit filtering and trust-region methods or globally, like in Response surface models, Branch and Bound search, Lipschitzian based partitioning techniques. In recent years, Evolutionary methods \cite{Vikhar2016} are gaining prominence owing to their ability to fit on increasingly complex functions by using mutation of the points. The adaption of better individual points to the environment is obtained by assigning higher probability to fitter individuals. 
+% \vspace{5mm} %5mm vertical space
+
+\bigskip
+\noindent
+In this work, we write the optimization algorithm in a block coordinate descent (BCD) approach (i.e. optimize over a coordinate hyperplane) using a surrogate model. In order to find out the global solution, the BCD search using three different methods to fit create the surrogate model was examined. 
+
+\bigskip
+\noindent
+The first model optimizes the response surface model created by the radial basis functions (RBF) \cite{McDonald2007}. The response surfaces are interpolated using low order polynomials for the RBF.
+
+\bigskip
+\noindent
+The second option used to fit the model was ALAMO (Automated Learning of Algebraic Models for Optimization), which is an adaptive-sampling based algebraic modeling framework built specifically for black-box modeling. It utilizes derivative-free optimization techniques for minimizing various error criteria to come up with the simplest model.
+
+\bigskip
+\noindent
+Lastly, in order to create a simplistic model to fit the sampled points, a simple multi-layer perceptron (MLP) was used to fit a model. Since MLPs act as universal function approximators \cite{TaehwanKim2001}, they can be used to fit the objective with high precision. \cite{Olden2002}
+
+\bigskip
+\noindent
+The subsequent sections describe these models and a case study of a problem on a  chemical engineering system modeled on ASPEN HYSYS.
+

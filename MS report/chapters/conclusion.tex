@@ -1,1 +1,10 @@
 \chapter{Conclusion}
+The optimization of Black-box class of functions is a crucial issue in the engineering world, however, the difficulty in solving these problems can be drawn from the fact that several commercial solvers cannot achieve the global optima within the evaluation budget. The algorithm discussed relies on quasi-random sampling to not only provide good initial point but also modeling simple and accurate Response Surface Models. Also, to build more representative models, the variables are sorted based on their gradients. For optimizing, it tries to improve upon the vanilla block coordinate descent approach by incorporation of the first moment term to apply the Nesterov Accelerated Gradient.
+
+\bigskip
+\noindent
+This algorithm's convergence rate is much better than several other algorithms, but algorithms like the TOMLAB/GLCCLUSTER are able to achieve higher accuracy except in convex non-smooth problems where the present algorithm has better accuracy. To make the algorithm more robust, the second moment term should also be included that is needed to implement the ADAM optimizer. The main objective would be to combine these two optimizers to implement the Nadam (Nesterov-accelerated Adaptive Moment Estimation) \cite{ruder2016overview} which improves upon the convergence of both the algorithms. Another advantage of the algorithm is that it is designed to be easily parallelized that can reduce the evaluation time. 
+
+\bigskip
+\noindent
+While solving the hidden constraint problem, the algorithm wasn't able to avoid the infeasible search domain; instead, it got stuck on a local minima. So, for any general black-box function, if the search domain can be restricted to feasible space which can have global optima, the convergence steps will decrease and it will increase the convergence. A comparison of various ways for handling these hidden constraints exceeds the scope of this work and must be looked at for future research.

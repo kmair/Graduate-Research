@@ -14,26 +14,65 @@
 
 \usepackage{graphicx}
 \graphicspath{ {./img/} }
+\usepackage{subfig}
+\usepackage{setspace}
 
-\usepackage{algorithm}
+% \usepackage{algorithm}
 \usepackage{algorithmicx}
 \usepackage{algpseudocode}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+% Algorithm indent
+\usepackage{amsmath,algorithm,tabularx}
+\usepackage[noend]{algpseudocode}
+
+% Table text centering
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+\makeatletter
+\newcommand{\multiline}[1]{%
+  \begin{tabularx}{\dimexpr\linewidth-\ALG@thistlm}[t]{@{}X@{}}
+    #1
+  \end{tabularx}
+}
+\makeatother
+
 
 \makeindex
+\doublespacing
 \begin{document}
 \import{./}{title.tex}
 \newpage
 \thispagestyle{empty}
 \tableofcontents\vspace{30pt}
+\thispagestyle{empty}
 
+\listoffigures
+\begingroup
+\let\clearpage\relax
+\listoftables
+\endgroup
+
+\thispagestyle{empty}
+\clearpage
+
+\pagenumbering{arabic}
+\include{chapters/abstract}
 \include{chapters/Introduction}
-\include{chapters/background}
+% \include{chapters/background}
 \include{chapters/algorithm}
+\include{chapters/result_discuss}
+\include{chapters/conclusion}
 
-\bibliographystyle{plainnat} % or try abbrvnat or unsrtnat
-\bibliography{reference} % refers to example.bib
+\bibliographystyle{abbrv}
+\bibliography{reference.bib}  % bibfile
+%\bibliographystyle{plainnat} % or try abbrvnat or unsrtnat
+%\bibliography{reference} % refers to example.bib
+
+
 \addcontentsline{toc}{chapter}{Bibliography}
 
 \end{document}
