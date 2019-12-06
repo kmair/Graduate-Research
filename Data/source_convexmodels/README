@@ -1,0 +1,46 @@
+Convex Test Problems collected by Luis M Rios lmrios@gmail.com, July 2009
+
+The following files provide source to compile standalone executable programs
+of the random instances generated with varying sizes from 4 families of convex
+problems.
+Sizes include 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 100, 200, and 300 variables.
+For each of different problem size, five random instances were generated for
+Richtarik's, Powell's and both variants of Nesterov's problems.
+
+The script 'generate.convex' compile all models.
+The compiler used is 'gcc'. 
+
+The resulting 208 executable programs read the input from the file 'input.in'
+and returns the objective function value in the file 'output.out'.
+The input file must have each variable's value in each line. 
+
+The executable programs are named:
+convex<family>_<size>_<instance>
+
+The families of problems are described below:
+
+Family 1
+Richtarik's piece-wise linear problems:
+\min_x \max_i \{ | \langle a_i,x \rangle | : i = 1,2,\ldots,m \},
+
+Family 2
+Nesterov's quadratic test problems:
+Y. Nesterov: "Gradient methods for minimizing composite objective function"
+Optimization Online Digest, September 2007
+
+\min_x \frac{1}{2} \|Ax-b\|^2_2 + \|x\|_1,
+
+Family 3
+a variant of Nesterov's test problems without the nonsmooth term:
+Y. Nesterov: "Gradient methods for minimizing composite objective function"
+Optimization Online Digest, September 2007
+
+\min_x \frac{1}{2} \|Ax-b\|^2_2,
+
+Family 4
+Powell's \cite{p06} ARWHEAD quadratic test problem:
+M. J. D. Powell: "The NEWUOA software for unconstrained optimization without derivatives"
+In G. Di Pillo and M. Roma (eds.), Large-Scale Nonlinear Optimization,
+Springer, New York, NY; 2006 ; pp 255--297
+
+\min_x \sum_{i=1}^{n-1} (x_i^2 + x_n^2)^2 - 4x_i + 3,

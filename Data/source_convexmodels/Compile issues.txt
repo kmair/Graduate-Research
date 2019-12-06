@@ -1,0 +1,12 @@
+Files which didn't compile:
+fconvex1_300_1
+Error msg: fconvex1_300_1.c: line 6: syntax error near unexpected token `int'
+fconvex1_300_1.c: line 6: `main(int argc, char **argv)'
+
+fconvex1_300_2
+
+fconvex1_300_3
+
+fconvex1_300_4
+
+fconvex1_300_5

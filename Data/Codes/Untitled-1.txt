@@ -1,0 +1,205 @@
+# 3 Var
+475	s333	smooth	nonconvex	3	2	4.3270354E-02	princetonlib
+493	st_cqpjk2	smooth	nonconvex	3	2	-1.2500000E+01	globallib
+500	yfit	smooth	nonconvex	3	2	0.0000000E+00	princetonlib
+501	yfitu	smooth	nonconvex	3	2	0.0000000E+00	princetonlib
+427	s240	smooth	nonconvex	3	2	0.0000000E+00	princetonlib
+428	s242	smooth	nonconvex	3	2	0.0000000E+00	princetonlib
+429	s243	smooth	nonconvex	3	2	6.0575195E-01	princetonlib
+430	s244	smooth	nonconvex	3	2	0.0000000E+00	princetonlib
+431	s245	smooth	nonconvex	3	2	0.0000000E+00	princetonlib
+432	s246	smooth	nonconvex	3	2	0.0000000E+00	princetonlib
+279	growthls	smooth	nonconvex	3	2	1.0040406E+00	princetonlib
+287	hatfldd	smooth	nonconvex	3	2	0.0000000E+00	princetonlib
+278	growth	smooth	nonconvex	3	2	1.0040406E+00	princetonlib
+250	engval2	smooth	nonconvex	3	2	0.0000000E+00	princetonlib
+242	eg1	smooth	nonconvex	3	2	-1.4293070E+00	princetonlib
+13	box3	smooth	nonconvex	3	2	0.0000000E+00	princetonlib
+3	allinit	smooth	nonconvex	3	2	1.6705968E+01	princetonlib
+9	biggs3	smooth	nonconvex	3	2	0.0000000E+00	princetonlib
+271	fermat_vareps	smooth	nonconvex	3	2	7.4641016E+00	princetonlib
+272	fermat2_vareps	smooth	nonconvex	3	2	4.4721360E+00	princetonlib
+310	least	smooth	nonconvex	3	2	1.4085140E+04	globallib
+
+# 4 Var
+445	s275	smooth	nonconvex	4	2	0.0000000E+00	princetonlib
+476	s350	smooth	nonconvex	4	2	3.0750737E-04	princetonlib
+477	s351	smooth	nonconvex	4	2	3.1857175E+02	princetonlib
+478	s352	smooth	nonconvex	4	2	9.0323433E+02	princetonlib
+486	shekel	smooth	nonconvex	4	2	-1.0153200E+01	princetonlib
+326	palmer1	smooth	nonconvex	4	2	1.1754600E+04	princetonlib
+342	palmer5d	smooth	nonconvex	4	2	8.7339400E+01	princetonlib
+336	palmer4	smooth	nonconvex	4	2	2.2853830E+03	princetonlib
+333	palmer3	smooth	nonconvex	4	2	2.2659582E+03	princetonlib
+433	s256	smooth	nonconvex	4	2	0.0000000E+00	princetonlib
+434	s257	smooth	nonconvex	4	2	2.6850730E-27	princetonlib
+435	s258	smooth	nonconvex	4	2	0.0000000E+00	princetonlib
+436	s259	smooth	nonconvex	4	2	-8.5446210E+00	princetonlib
+437	s260	smooth	nonconvex	4	2	2.4225570E-23	princetonlib
+438	s261	smooth	nonconvex	4	2	0.0000000E+00	princetonlib
+4	allinitu	smooth	nonconvex	4	2	5.7443849E+00	princetonlib
+18	brownden	smooth	nonconvex	4	2	8.5822200E+04	princetonlib
+284	hatflda	smooth	nonconvex	4	2	0.0000000E+00	princetonlib
+285	hatfldb	smooth	nonconvex	4	2	5.5728090E-03	princetonlib
+286	hatfldc	smooth	nonconvex	4	2	0.0000000E+00	princetonlib
+293	himmelbf	smooth	nonconvex	4	2	3.1857175E+02	princetonlib
+301	hs038	smooth	nonconvex	4	2	0.0000000E+00	princetonlib
+308	kowalik	smooth	nonconvex	4	2	3.0748599E-04	princetonlib
+309	kowosb	smooth	nonconvex	4	2	3.0750737E-04	princetonlib
+354	powell	smooth	nonconvex	4	2	0.0000000E+00	princetonlib
+405	pspdoc	smooth	nonconvex	4	2	2.4142000E+00	princetonlib
+
+# 5 Var
+10	biggs5	smooth	nonconvex	5	2	0.0000000E+00	princetonlib
+2	aircrftb	smooth	nonconvex	5	2	0.0000000E+00	princetonlib
+275	genhumps	smooth	nonconvex	5	2	0.0000000E+00	princetonlib
+302	hs045	smooth	nonconvex	5	2	1.0000000E+00	princetonlib
+322	osborne1	smooth	nonconvex	5	2	5.4648947E-05	princetonlib
+323	osbornea	smooth	nonconvex	5	2	5.4649034E-05	princetonlib
+439	s266	smooth	nonconvex	5	2	1.0000002E+00	princetonlib
+440	s267	smooth	nonconvex	5	2	2.5184868E-03	princetonlib
+479	s358	smooth	nonconvex	5	2	5.4648947E-05	princetonlib
+485	schwefel	smooth	nonconvex	5	2	0.0000000E+00	princetonlib
+
+# 6 Var
+11	biggs6	smooth	nonconvex	6	2	0.0000000E+00	princetonlib
+283	hart6	smooth	nonconvex	6	2	-3.3228869E+00	princetonlib
+288	heart6ls	smooth	nonconvex	6	2	0.0000000E+00	princetonlib
+330	palmer2a	smooth	nonconvex	6	2	1.7160739E-02	princetonlib
+441	s271	smooth	nonconvex	6	2	0.0000000E+00	princetonlib
+442	s272	smooth	nonconvex	6	2	4.8393171E-18	princetonlib
+443	s273	smooth	nonconvex	6	2	0.0000000E+00	princetonlib
+344	palmer6a	smooth	nonconvex	6	2	5.5900000E-02	princetonlib
+349	palmer8a	smooth	nonconvex	6	2	7.4000000E-02	princetonlib
+458	s294	smooth	nonconvex	6	2	4.6811343E-22	princetonlib
+446	s276	smooth	nonconvex	6	2	0.0000000E+00	princetonlib
+481	s370	smooth	nonconvex	6	2	2.2876701E-03	princetonlib
+492	st_bsj3	smooth	nonconvex	6	2	-8.6768550E+04	globallib
+341	palmer5c	smooth	nonconvex	6	2	2.1280867E+00	princetonlib
+
+# 7 Var
+328	palmer1d	smooth	nonconvex	7	2	6.5268294E-01	princetonlib
+
+# 8 Var
+7	arglinc	smooth	nonconvex	8	2	6.1351351E+00	princetonlib
+289	heart8ls	smooth	nonconvex	8	2	0.0000000E+00	princetonlib
+327	palmer1c	smooth	nonconvex	8	2	9.7597991E-02	princetonlib
+329	palmer1e	smooth	nonconvex	8	2	8.0000000E-04	princetonlib
+331	palmer2c	smooth	nonconvex	8	2	1.4400000E-02	princetonlib
+332	palmer2e	smooth	nonconvex	8	2	2.0000000E-04	princetonlib
+334	palmer3c	smooth	nonconvex	8	2	1.9500000E-02	princetonlib
+335	palmer3e	smooth	nonconvex	8	2	5.0740840E-05	princetonlib
+337	palmer4c	smooth	nonconvex	8	2	5.0300000E-02	princetonlib
+338	palmer4e	smooth	nonconvex	8	2	1.0000000E-04	princetonlib
+339	palmer5a	smooth	nonconvex	8	2	2.3993090E-02	princetonlib
+343	palmer5e	smooth	nonconvex	8	2	2.0713394E-02	princetonlib
+345	palmer6c	smooth	nonconvex	8	2	1.6387422E-02	princetonlib
+346	palmer6e	smooth	nonconvex	8	2	2.0000000E-04	princetonlib
+347	palmer7c	smooth	nonconvex	8	2	6.0198567E-01	princetonlib
+348	palmer7e	smooth	nonconvex	8	2	4.2469240E+00	princetonlib
+350	palmer8c	smooth	nonconvex	8	2	1.5976806E-01	princetonlib
+351	palmer8e	smooth	nonconvex	8	2	6.3000000E-03	princetonlib
+325	oslbqp	smooth	nonconvex	8	2	6.2500000E+00	princetonlib
+480	s368	smooth	nonconvex	8	2	-1.0000000E+00	princetonlib
+
+# 9 Var
+482	s371	smooth	nonconvex	9	2	1.3997601E-06	princetonlib
+321	nonmsqrt	smooth	nonconvex	9	2	7.5180000E-01	princetonlib
+340	palmer5b	smooth	nonconvex	9	2	9.7524926E-03	princetonlib
+
+# 10 Var
+6	arglinb	smooth	nonconvex	10	3	4.6341463E+00	princetonlib
+16	brownal	smooth	nonconvex	10	3	0.0000000E+00	princetonlib
+240	dixon3dq	smooth	nonconvex	10	3	0.0000000E+00	princetonlib
+270	extrosnb	smooth	nonconvex	10	3	0.0000000E+00	princetonlib
+447	s281	smooth	nonconvex	10	3	1.4462448E-05	princetonlib
+448	s282	smooth	nonconvex	10	3	1.1615113E-20	princetonlib
+449	s283	smooth	nonconvex	10	3	0.0000000E+00	princetonlib
+455	s291	smooth	nonconvex	10	3	0.0000000E+00	princetonlib
+459	s295	smooth	nonconvex	10	3	2.4445305E-21	princetonlib
+290	hilberta	smooth	nonconvex	10	3	0.0000000E+00	princetonlib
+303	hs110	smooth	nonconvex	10	3	-4.5778470E+01	princetonlib
+324	osborneb	smooth	nonconvex	11	3	4.0138000E-02	princetonlib
+483	s379	smooth	nonconvex	11	3	4.3285000E-02	princetonlib
+410	qudlin	smooth	nonconvex	12	3	-7.2000000E+03	princetonlib
+460	s296	smooth	nonconvex	16	3	1.2202571E-20	princetonlib
+495	princetonlib_vareps	smooth	nonconvex	17	3	2.5356068E+01	princetonlib  <- Don't have both .C and .exe file for this
+
+# 20 Var
+353	polygon	smooth	nonconvex	19	3	-9.9999998E+00	princetonlib
+450	s286	smooth	nonconvex	20	3	8.3275182E-19	princetonlib
+451	s287	smooth	nonconvex	20	3	2.1252122E-19	princetonlib
+452	s288	smooth	nonconvex	20	3	0.0000000E+00	princetonlib
+489	sineali	smooth	nonconvex	20	3	-1.9009616E+03	princetonlib
+464	s300	smooth	nonconvex	20	3	-2.0000000E+01	princetonlib
+467	s303	smooth	nonconvex	20	3	0.0000000E+00	princetonlib
+
+# 30 Var
+499	watson	smooth	nonconvex	31	4	0.0000000E+00	princetonlib
+1	3pk	smooth	nonconvex	30	3	1.7201000E+00	princetonlib
+453	s289	smooth	nonconvex	30	3	0.0000000E+00	princetonlib
+456	s292	smooth	nonconvex	30	3	0.0000000E+00	princetonlib
+461	s297	smooth	nonconvex	30	3	3.5959773E-18	princetonlib
+
+# 50 Var
+21	chebyqad	smooth	nonconvex	50	4	5.3863548E-03	princetonlib
+23	chnrosnb	smooth	nonconvex	50	4	0.0000000E+00	princetonlib
+248	emfl_eps	smooth	nonconvex	50	4	4.6417906E+01	princetonlib
+249	emfl_vareps	smooth	nonconvex	51	4	4.6417704E+01	princetonlib
+247	emfl	smooth	nonconvex	50	4	4.6417698E+01	princetonlib
+251	errinros	smooth	nonconvex	50	4	3.9904154E+01	princetonlib
+291	hilbertb	smooth	nonconvex	50	4	0.0000000E+00	princetonlib
+457	s293	smooth	nonconvex	50	4	0.0000000E+00	princetonlib
+462	s298	smooth	nonconvex	50	4	0.0000000E+00	princetonlib
+465	s301	smooth	nonconvex	50	4	-5.0000000E+01	princetonlib
+468	s304	smooth	nonconvex	50	4	0.0000000E+00	princetonlib
+496	tointqor	smooth	nonconvex	50	4	1.1754722E+03	princetonlib
+
+# 90 Var
+280	hadamals	smooth	nonconvex	90	4	2.5316416E+01	princetonlib
+
+# 100 Var
+5	arglina	smooth	nonconvex	100	4	1.0000000E+02	princetonlib
+466	s302	smooth	nonconvex	100	4	-1.0000000E+02	princetonlib
+273	fletcbv2	smooth	nonconvex	100	4	-5.1400678E-01	princetonlib
+274	fletchcr	smooth	nonconvex	100	4	0.0000000E+00	princetonlib
+282	harkerp2	smooth	nonconvex	100	4	-5.0000000E-01	princetonlib
+352	penalty2	smooth	nonconvex	100	4	9.7096084E+04	princetonlib
+463	s299	smooth	nonconvex	100	4	0.0000000E+00	princetonlib
+498	vardim	smooth	nonconvex	100	4	0.0000000E+00	princetonlib
+469	s305	smooth	nonconvex	100	4	0.0000000E+00	princetonlib
+
+# 110 Var
+243	eigena	smooth	nonconvex	110	4	1.9296325E+00	princetonlib
+244	eigenals	smooth	nonconvex	110	4	0.0000000E+00	princetonlib
+245	eigenb	smooth	nonconvex	110	4	0.0000000E+00	princetonlib
+246	eigenbls	smooth	nonconvex	110	4	0.0000000E+00	princetonlib
+
+# 120 Var
+267	explin	smooth	nonconvex	120	4	-7.2375627E+05	princetonlib
+268	explin2	smooth	nonconvex	120	4	-7.2445914E+05	princetonlib
+269	expquad	smooth	nonconvex	120	4	-3.6245999E+06	princetonlib
+
+
+320	nnls	smooth	nonconvex	300	4	6.3378545E+05	princetonlib
+406	qr3d	smooth	nonconvex	155	4	1.0695399E-01	princetonlib
+407	qr3dbd	smooth	nonconvex	127	4	5.1988940E-02	princetonlib
+408	qr3dls	smooth	nonconvex	155	4	0.0000000E+00	princetonlib
+409	qrtquad	smooth	nonconvex	120	4	-3.6480884E+06	princetonlib
+
+
+360	problem2.13	nonsmooth	nonconvex	4	2	1.2041887E-07	Luksan and Vlcek
+361	problem2.14	nonsmooth	nonconvex	5	2	1.2237125E-04	Luksan and Vlcek
+362	problem2.15	nonsmooth	nonconvex	5	2	2.2340496E-02	Luksan and Vlcek
+363	problem2.16	nonsmooth	nonconvex	6	2	5.2034400E-02	Luksan and Vlcek
+364	problem2.17	nonsmooth	nonconvex	6	2	1.9729063E-01	Luksan and Vlcek
+365	problem2.18	nonsmooth	nonconvex	9	2	6.1852848E-03	Luksan and Vlcek
+378	problem2.7	nonsmooth	nonconvex	3	2	4.2021427E-03	Luksan and Vlcek
+379	problem2.8	nonsmooth	nonconvex	3	2	5.1111200E-02	Luksan and Vlcek
+380	problem2.9	nonsmooth	nonconvex	4	2	8.0843684E-03	Luksan and Vlcek
+385	problem3.13	nonsmooth	nonconvex	5	2	-3.2348500E+01	Luksan and Vlcek
+386	problem3.15	nonsmooth	nonconvex	6	2	5.5981310E-01	Luksan and Vlcek
+387	problem3.16	nonsmooth	nonconvex	10	3	-8.4140830E-01	Luksan and Vlcek
+389	problem3.18	nonsmooth	nonconvex	12	3	1.6703838E+01	Luksan and Vlcek
+397	problem3.25	nonsmooth	nonconvex	15	3	3.2348679E+01	Luksan and Vlcek
+

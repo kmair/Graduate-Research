@@ -1,0 +1,503 @@
+problem,smoothness,convexity,variables,type,solution,collection
+3pk,smooth,nonconvex,30,3,1.72E+00,princetonlib
+aircrftb,smooth,nonconvex,5,2,0.00E+00,princetonlib
+allinit,smooth,nonconvex,3,2,1.67E+01,princetonlib
+allinitu,smooth,nonconvex,4,2,5.74E+00,princetonlib
+arglina,smooth,nonconvex,100,4,1.00E+02,princetonlib
+arglinb,smooth,nonconvex,10,3,4.63E+00,princetonlib
+arglinc,smooth,nonconvex,8,2,6.14E+00,princetonlib
+beale,smooth,nonconvex,2,1,0.00E+00,princetonlib
+biggs3,smooth,nonconvex,3,2,0.00E+00,princetonlib
+biggs5,smooth,nonconvex,5,2,0.00E+00,princetonlib
+biggs6,smooth,nonconvex,6,2,0.00E+00,princetonlib
+box2,smooth,nonconvex,2,1,0.00E+00,princetonlib
+box3,smooth,nonconvex,3,2,0.00E+00,princetonlib
+bqp1var,smooth,nonconvex,1,1,0.00E+00,princetonlib
+branin,smooth,nonconvex,2,1,3.98E-01,princetonlib
+brownal,smooth,nonconvex,10,3,0.00E+00,princetonlib
+brownbs,smooth,nonconvex,2,1,0.00E+00,princetonlib
+brownden,smooth,nonconvex,4,2,8.58E+04,princetonlib
+camel1,smooth,nonconvex,2,1,-1.03E+00,princetonlib
+camel6,smooth,nonconvex,2,1,-1.03E+00,princetonlib
+chebyqad,smooth,nonconvex,50,4,5.39E-03,princetonlib
+chi,smooth,nonconvex,2,1,-4.33E+01,princetonlib
+chnrosnb,smooth,nonconvex,50,4,0.00E+00,princetonlib
+cliff,smooth,nonconvex,2,1,2.00E-01,princetonlib
+convex1_10_1,nonsmooth,convex,10,3,0.00E+00,Richtarik
+convex1_10_2,nonsmooth,convex,10,3,0.00E+00,Richtarik
+convex1_10_3,nonsmooth,convex,10,3,0.00E+00,Richtarik
+convex1_10_4,nonsmooth,convex,10,3,0.00E+00,Richtarik
+convex1_10_5,nonsmooth,convex,10,3,0.00E+00,Richtarik
+convex1_100_1,nonsmooth,convex,100,4,0.00E+00,Richtarik
+convex1_100_2,nonsmooth,convex,100,4,0.00E+00,Richtarik
+convex1_100_3,nonsmooth,convex,100,4,0.00E+00,Richtarik
+convex1_100_4,nonsmooth,convex,100,4,0.00E+00,Richtarik
+convex1_100_5,nonsmooth,convex,100,4,0.00E+00,Richtarik
+convex1_15_1,nonsmooth,convex,15,3,0.00E+00,Richtarik
+convex1_15_2,nonsmooth,convex,15,3,0.00E+00,Richtarik
+convex1_15_3,nonsmooth,convex,15,3,0.00E+00,Richtarik
+convex1_15_4,nonsmooth,convex,15,3,0.00E+00,Richtarik
+convex1_15_5,nonsmooth,convex,15,3,0.00E+00,Richtarik
+convex1_20_1,nonsmooth,convex,20,3,0.00E+00,Richtarik
+convex1_20_2,nonsmooth,convex,20,3,0.00E+00,Richtarik
+convex1_20_3,nonsmooth,convex,20,3,0.00E+00,Richtarik
+convex1_20_4,nonsmooth,convex,20,3,0.00E+00,Richtarik
+convex1_20_5,nonsmooth,convex,20,3,0.00E+00,Richtarik
+convex1_200_1,nonsmooth,convex,200,4,0.00E+00,Richtarik
+convex1_200_2,nonsmooth,convex,200,4,0.00E+00,Richtarik
+convex1_200_3,nonsmooth,convex,200,4,0.00E+00,Richtarik
+convex1_200_4,nonsmooth,convex,200,4,0.00E+00,Richtarik
+convex1_200_5,nonsmooth,convex,200,4,0.00E+00,Richtarik
+convex1_25_1,nonsmooth,convex,25,3,0.00E+00,Richtarik
+convex1_25_2,nonsmooth,convex,25,3,0.00E+00,Richtarik
+convex1_25_3,nonsmooth,convex,25,3,0.00E+00,Richtarik
+convex1_25_4,nonsmooth,convex,25,3,0.00E+00,Richtarik
+convex1_25_5,nonsmooth,convex,25,3,0.00E+00,Richtarik
+convex1_30_1,nonsmooth,convex,30,3,0.00E+00,Richtarik
+convex1_30_2,nonsmooth,convex,30,3,0.00E+00,Richtarik
+convex1_30_3,nonsmooth,convex,30,3,0.00E+00,Richtarik
+convex1_30_4,nonsmooth,convex,30,3,0.00E+00,Richtarik
+convex1_30_5,nonsmooth,convex,30,3,0.00E+00,Richtarik
+convex1_300_1,nonsmooth,convex,300,4,0.00E+00,Richtarik
+convex1_300_2,nonsmooth,convex,300,4,0.00E+00,Richtarik
+convex1_300_3,nonsmooth,convex,300,4,0.00E+00,Richtarik
+convex1_300_4,nonsmooth,convex,300,4,0.00E+00,Richtarik
+convex1_300_5,nonsmooth,convex,300,4,0.00E+00,Richtarik
+convex1_35_1,nonsmooth,convex,35,4,0.00E+00,Richtarik
+convex1_35_2,nonsmooth,convex,35,4,0.00E+00,Richtarik
+convex1_35_3,nonsmooth,convex,35,4,0.00E+00,Richtarik
+convex1_35_4,nonsmooth,convex,35,4,0.00E+00,Richtarik
+convex1_35_5,nonsmooth,convex,35,4,0.00E+00,Richtarik
+convex1_40_1,nonsmooth,convex,40,4,0.00E+00,Richtarik
+convex1_40_2,nonsmooth,convex,40,4,0.00E+00,Richtarik
+convex1_40_3,nonsmooth,convex,40,4,0.00E+00,Richtarik
+convex1_40_4,nonsmooth,convex,40,4,0.00E+00,Richtarik
+convex1_40_5,nonsmooth,convex,40,4,0.00E+00,Richtarik
+convex1_45_1,nonsmooth,convex,45,4,0.00E+00,Richtarik
+convex1_45_2,nonsmooth,convex,45,4,0.00E+00,Richtarik
+convex1_45_3,nonsmooth,convex,45,4,0.00E+00,Richtarik
+convex1_45_4,nonsmooth,convex,45,4,0.00E+00,Richtarik
+convex1_45_5,nonsmooth,convex,45,4,0.00E+00,Richtarik
+convex1_5_1,nonsmooth,convex,5,2,0.00E+00,Richtarik
+convex1_5_2,nonsmooth,convex,5,2,0.00E+00,Richtarik
+convex1_5_3,nonsmooth,convex,5,2,0.00E+00,Richtarik
+convex1_5_4,nonsmooth,convex,5,2,0.00E+00,Richtarik
+convex1_5_5,nonsmooth,convex,5,2,0.00E+00,Richtarik
+convex1_50_1,nonsmooth,convex,50,4,0.00E+00,Richtarik
+convex1_50_2,nonsmooth,convex,50,4,0.00E+00,Richtarik
+convex1_50_3,nonsmooth,convex,50,4,0.00E+00,Richtarik
+convex1_50_4,nonsmooth,convex,50,4,0.00E+00,Richtarik
+convex1_50_5,nonsmooth,convex,50,4,0.00E+00,Richtarik
+convex2_10_1,nonsmooth,convex,10,3,2.84E+00,Nesterov
+convex2_10_2,nonsmooth,convex,10,3,3.44E+00,Nesterov
+convex2_10_3,nonsmooth,convex,10,3,3.36E+00,Nesterov
+convex2_10_4,nonsmooth,convex,10,3,5.41E+00,Nesterov
+convex2_10_5,nonsmooth,convex,10,3,4.24E+00,Nesterov
+convex2_100_1,nonsmooth,convex,100,4,3.62E+01,Nesterov
+convex2_100_2,nonsmooth,convex,100,4,2.88E+01,Nesterov
+convex2_100_3,nonsmooth,convex,100,4,3.62E+01,Nesterov
+convex2_100_4,nonsmooth,convex,100,4,3.01E+01,Nesterov
+convex2_100_5,nonsmooth,convex,100,4,3.29E+01,Nesterov
+convex2_15_1,nonsmooth,convex,15,3,4.29E+00,Nesterov
+convex2_15_2,nonsmooth,convex,15,3,6.26E+00,Nesterov
+convex2_15_3,nonsmooth,convex,15,3,3.94E+00,Nesterov
+convex2_15_4,nonsmooth,convex,15,3,6.01E+00,Nesterov
+convex2_15_5,nonsmooth,convex,15,3,4.85E+00,Nesterov
+convex2_20_1,nonsmooth,convex,20,3,7.03E+00,Nesterov
+convex2_20_2,nonsmooth,convex,20,3,6.46E+00,Nesterov
+convex2_20_3,nonsmooth,convex,20,3,6.34E+00,Nesterov
+convex2_20_4,nonsmooth,convex,20,3,6.37E+00,Nesterov
+convex2_20_5,nonsmooth,convex,20,3,7.48E+00,Nesterov
+convex2_200_1,nonsmooth,convex,200,4,6.79E+01,Nesterov
+convex2_200_2,nonsmooth,convex,200,4,7.13E+01,Nesterov
+convex2_200_3,nonsmooth,convex,200,4,6.87E+01,Nesterov
+convex2_200_4,nonsmooth,convex,200,4,6.73E+01,Nesterov
+convex2_200_5,nonsmooth,convex,200,4,6.84E+01,Nesterov
+convex2_25_1,nonsmooth,convex,25,3,9.98E+00,Nesterov
+convex2_25_2,nonsmooth,convex,25,3,9.36E+00,Nesterov
+convex2_25_3,nonsmooth,convex,25,3,8.33E+00,Nesterov
+convex2_25_4,nonsmooth,convex,25,3,8.66E+00,Nesterov
+convex2_25_5,nonsmooth,convex,25,3,6.63E+00,Nesterov
+convex2_30_1,nonsmooth,convex,30,3,9.84E+00,Nesterov
+convex2_30_2,nonsmooth,convex,30,3,1.16E+01,Nesterov
+convex2_30_3,nonsmooth,convex,30,3,1.15E+01,Nesterov
+convex2_30_4,nonsmooth,convex,30,3,1.06E+01,Nesterov
+convex2_30_5,nonsmooth,convex,30,3,1.18E+01,Nesterov
+convex2_300_1,nonsmooth,convex,300,4,9.62E+01,Nesterov
+convex2_300_2,nonsmooth,convex,300,4,9.82E+01,Nesterov
+convex2_300_3,nonsmooth,convex,300,4,9.79E+01,Nesterov
+convex2_300_4,nonsmooth,convex,300,4,1.01E+02,Nesterov
+convex2_300_5,nonsmooth,convex,300,4,1.07E+02,Nesterov
+convex2_35_1,nonsmooth,convex,35,4,1.21E+01,Nesterov
+convex2_35_2,nonsmooth,convex,35,4,1.11E+01,Nesterov
+convex2_35_3,nonsmooth,convex,35,4,1.31E+01,Nesterov
+convex2_35_4,nonsmooth,convex,35,4,1.52E+01,Nesterov
+convex2_35_5,nonsmooth,convex,35,4,1.54E+01,Nesterov
+convex2_40_1,nonsmooth,convex,40,4,1.20E+01,Nesterov
+convex2_40_2,nonsmooth,convex,40,4,1.24E+01,Nesterov
+convex2_40_3,nonsmooth,convex,40,4,1.13E+01,Nesterov
+convex2_40_4,nonsmooth,convex,40,4,1.26E+01,Nesterov
+convex2_40_5,nonsmooth,convex,40,4,1.25E+01,Nesterov
+convex2_45_1,nonsmooth,convex,45,4,1.44E+01,Nesterov
+convex2_45_2,nonsmooth,convex,45,4,1.35E+01,Nesterov
+convex2_45_3,nonsmooth,convex,45,4,1.72E+01,Nesterov
+convex2_45_4,nonsmooth,convex,45,4,1.42E+01,Nesterov
+convex2_45_5,nonsmooth,convex,45,4,1.58E+01,Nesterov
+convex2_5_1,nonsmooth,convex,5,2,2.35E+00,Nesterov
+convex2_5_2,nonsmooth,convex,5,2,8.53E-01,Nesterov
+convex2_5_3,nonsmooth,convex,5,2,1.15E+00,Nesterov
+convex2_5_4,nonsmooth,convex,5,2,1.58E+00,Nesterov
+convex2_5_5,nonsmooth,convex,5,2,1.84E+00,Nesterov
+convex2_50_1,nonsmooth,convex,50,4,1.85E+01,Nesterov
+convex2_50_2,nonsmooth,convex,50,4,1.66E+01,Nesterov
+convex2_50_3,nonsmooth,convex,50,4,1.71E+01,Nesterov
+convex2_50_4,nonsmooth,convex,50,4,2.10E+01,Nesterov
+convex2_50_5,nonsmooth,convex,50,4,1.97E+01,Nesterov
+convex3_10_1,smooth,convex,10,3,0.00E+00,Nesterov
+convex3_100_1,smooth,convex,100,4,0.00E+00,Nesterov
+convex3_15_1,smooth,convex,15,3,0.00E+00,Nesterov
+convex3_20_1,smooth,convex,20,3,0.00E+00,Nesterov
+convex3_200_1,smooth,convex,200,4,0.00E+00,Nesterov
+convex3_25_1,smooth,convex,25,3,0.00E+00,Nesterov
+convex3_30_1,smooth,convex,30,3,0.00E+00,Nesterov
+convex3_300_1,smooth,convex,300,4,0.00E+00,Nesterov
+convex3_35_1,smooth,convex,35,4,0.00E+00,Nesterov
+convex3_40_1,smooth,convex,40,4,0.00E+00,Nesterov
+convex3_45_1,smooth,convex,45,4,0.00E+00,Nesterov
+convex3_5_1,smooth,convex,5,2,0.00E+00,Nesterov
+convex3_50_1,smooth,convex,50,4,0.00E+00,Nesterov
+convex4_10_1,smooth,convex,10,3,8.21E-31,Conn et al.
+convex4_10_2,smooth,convex,10,3,5.34E-29,Conn et al.
+convex4_10_3,smooth,convex,10,3,3.30E-27,Conn et al.
+convex4_10_4,smooth,convex,10,3,2.49E-27,Conn et al.
+convex4_10_5,smooth,convex,10,3,4.24E-21,Conn et al.
+convex4_100_1,smooth,convex,100,4,4.16E-28,Conn et al.
+convex4_100_2,smooth,convex,100,4,2.60E-27,Conn et al.
+convex4_100_3,smooth,convex,100,4,3.62E-24,Conn et al.
+convex4_100_4,smooth,convex,100,4,2.15E-22,Conn et al.
+convex4_100_5,smooth,convex,100,4,8.99E-23,Conn et al.
+convex4_15_1,smooth,convex,15,3,2.11E-24,Conn et al.
+convex4_15_2,smooth,convex,15,3,1.30E-29,Conn et al.
+convex4_15_3,smooth,convex,15,3,4.59E-24,Conn et al.
+convex4_15_4,smooth,convex,15,3,9.74E-30,Conn et al.
+convex4_15_5,smooth,convex,15,3,1.27E-30,Conn et al.
+convex4_20_1,smooth,convex,20,3,7.43E-26,Conn et al.
+convex4_20_2,smooth,convex,20,3,2.31E-24,Conn et al.
+convex4_20_3,smooth,convex,20,3,8.92E-19,Conn et al.
+convex4_20_4,smooth,convex,20,3,1.45E-24,Conn et al.
+convex4_20_5,smooth,convex,20,3,3.45E-27,Conn et al.
+convex4_200_1,smooth,convex,200,4,3.55E-23,Conn et al.
+convex4_200_2,smooth,convex,200,4,3.30E-24,Conn et al.
+convex4_200_3,smooth,convex,200,4,1.76E-20,Conn et al.
+convex4_200_4,smooth,convex,200,4,3.28E-18,Conn et al.
+convex4_200_5,smooth,convex,200,4,6.45E-27,Conn et al.
+convex4_25_1,smooth,convex,25,3,6.01E-25,Conn et al.
+convex4_25_2,smooth,convex,25,3,2.08E-29,Conn et al.
+convex4_25_3,smooth,convex,25,3,1.84E-17,Conn et al.
+convex4_25_4,smooth,convex,25,3,7.26E-30,Conn et al.
+convex4_25_5,smooth,convex,25,3,3.25E-26,Conn et al.
+convex4_30_1,smooth,convex,30,3,2.20E-26,Conn et al.
+convex4_30_2,smooth,convex,30,3,3.18E-21,Conn et al.
+convex4_30_3,smooth,convex,30,3,2.88E-27,Conn et al.
+convex4_30_4,smooth,convex,30,3,2.72E-29,Conn et al.
+convex4_30_5,smooth,convex,30,3,5.23E-22,Conn et al.
+convex4_300_1,smooth,convex,300,4,1.83E-24,Conn et al.
+convex4_300_2,smooth,convex,300,4,2.27E-26,Conn et al.
+convex4_300_3,smooth,convex,300,4,5.04E-26,Conn et al.
+convex4_300_4,smooth,convex,300,4,1.52E-26,Conn et al.
+convex4_300_5,smooth,convex,300,4,1.12E-26,Conn et al.
+convex4_35_1,smooth,convex,35,4,2.01E-29,Conn et al.
+convex4_35_2,smooth,convex,35,4,1.59E-26,Conn et al.
+convex4_35_3,smooth,convex,35,4,9.50E-22,Conn et al.
+convex4_35_4,smooth,convex,35,4,3.09E-23,Conn et al.
+convex4_35_5,smooth,convex,35,4,1.50E-20,Conn et al.
+convex4_40_1,smooth,convex,40,4,1.01E-25,Conn et al.
+convex4_40_2,smooth,convex,40,4,3.35E-25,Conn et al.
+convex4_40_3,smooth,convex,40,4,6.04E-26,Conn et al.
+convex4_40_4,smooth,convex,40,4,1.98E-26,Conn et al.
+convex4_40_5,smooth,convex,40,4,5.04E-27,Conn et al.
+convex4_45_1,smooth,convex,45,4,8.40E-25,Conn et al.
+convex4_45_2,smooth,convex,45,4,2.14E-25,Conn et al.
+convex4_45_3,smooth,convex,45,4,3.59E-22,Conn et al.
+convex4_45_4,smooth,convex,45,4,5.86E-26,Conn et al.
+convex4_45_5,smooth,convex,45,4,6.95E-28,Conn et al.
+convex4_5_1,smooth,convex,5,2,9.43E-31,Conn et al.
+convex4_5_2,smooth,convex,5,2,1.02E-30,Conn et al.
+convex4_5_3,smooth,convex,5,2,8.73E-23,Conn et al.
+convex4_5_4,smooth,convex,5,2,1.33E-31,Conn et al.
+convex4_5_5,smooth,convex,5,2,8.04E-19,Conn et al.
+convex4_50_1,smooth,convex,50,4,4.93E-26,Conn et al.
+convex4_50_2,smooth,convex,50,4,3.71E-21,Conn et al.
+convex4_50_3,smooth,convex,50,4,3.24E-17,Conn et al.
+convex4_50_4,smooth,convex,50,4,3.76E-24,Conn et al.
+convex4_50_5,smooth,convex,50,4,3.00E-25,Conn et al.
+cube,smooth,nonconvex,2,1,0.00E+00,princetonlib
+denschna,smooth,nonconvex,2,1,0.00E+00,princetonlib
+denschnb,smooth,nonconvex,2,1,0.00E+00,princetonlib
+denschnc,smooth,nonconvex,2,1,0.00E+00,princetonlib
+denschnd,smooth,nonconvex,3,2,0.00E+00,princetonlib
+denschne,smooth,nonconvex,3,2,0.00E+00,princetonlib
+denschnf,smooth,nonconvex,2,1,0.00E+00,princetonlib
+dixon3dq,smooth,nonconvex,10,3,0.00E+00,princetonlib
+djtl,smooth,nonconvex,2,1,-8.95E+03,princetonlib
+eg1,smooth,nonconvex,3,2,-1.43E+00,princetonlib
+eigena,smooth,nonconvex,110,4,1.93E+00,princetonlib
+eigenals,smooth,nonconvex,110,4,0.00E+00,princetonlib
+eigenb,smooth,nonconvex,110,4,0.00E+00,princetonlib
+eigenbls,smooth,nonconvex,110,4,0.00E+00,princetonlib
+emfl,smooth,nonconvex,50,4,4.64E+01,princetonlib
+emfl_eps,smooth,nonconvex,50,4,4.64E+01,princetonlib
+emfl_vareps,smooth,nonconvex,51,4,4.64E+01,princetonlib
+engval2,smooth,nonconvex,3,2,0.00E+00,princetonlib
+errinros,smooth,nonconvex,50,4,3.99E+01,princetonlib
+esfl,smooth,nonconvex,2,1,1.91E+02,princetonlib
+ex4_1_1,smooth,nonconvex,1,1,-7.49E+00,globallib
+ex4_1_2,smooth,nonconvex,1,1,-6.64E+02,globallib
+ex4_1_3,smooth,nonconvex,1,1,-4.44E+02,globallib
+ex4_1_4,smooth,nonconvex,1,1,0.00E+00,globallib
+ex4_1_5,smooth,nonconvex,2,1,0.00E+00,globallib
+ex4_1_6,smooth,nonconvex,1,1,7.00E+00,globallib
+ex4_1_7,smooth,nonconvex,1,1,-7.50E+00,globallib
+ex8_1_1,smooth,nonconvex,2,1,-2.02E+00,globallib
+ex8_1_2,smooth,nonconvex,1,1,-1.07E+00,globallib
+ex8_1_3,smooth,nonconvex,2,1,3.00E+00,globallib
+ex8_1_4,smooth,nonconvex,2,1,0.00E+00,globallib
+ex8_1_5,smooth,nonconvex,2,1,-1.03E+00,globallib
+ex8_1_6,smooth,nonconvex,2,1,-1.01E+01,globallib
+expfit,smooth,nonconvex,2,1,2.41E-01,princetonlib
+explin,smooth,nonconvex,120,4,-7.24E+05,princetonlib
+explin2,smooth,nonconvex,120,4,-7.24E+05,princetonlib
+expquad,smooth,nonconvex,120,4,-3.62E+06,princetonlib
+extrosnb,smooth,nonconvex,10,3,0.00E+00,princetonlib
+fermat_vareps,smooth,nonconvex,3,2,7.46E+00,princetonlib
+fermat2_vareps,smooth,nonconvex,3,2,4.47E+00,princetonlib
+fletcbv2,smooth,nonconvex,100,4,-5.14E-01,princetonlib
+fletchcr,smooth,nonconvex,100,4,0.00E+00,princetonlib
+genhumps,smooth,nonconvex,5,2,0.00E+00,princetonlib
+gold,smooth,nonconvex,2,1,3.00E+00,princetonlib
+griewank,smooth,nonconvex,2,1,0.00E+00,princetonlib
+growth,smooth,nonconvex,3,2,1.00E+00,princetonlib
+growthls,smooth,nonconvex,3,2,1.00E+00,princetonlib
+hadamals,smooth,nonconvex,90,4,2.53E+01,princetonlib
+hairy,smooth,nonconvex,2,1,2.00E+01,princetonlib
+harkerp2,smooth,nonconvex,100,4,-5.00E-01,princetonlib
+hart6,smooth,nonconvex,6,2,-3.32E+00,princetonlib
+hatflda,smooth,nonconvex,4,2,0.00E+00,princetonlib
+hatfldb,smooth,nonconvex,4,2,5.57E-03,princetonlib
+hatfldc,smooth,nonconvex,4,2,0.00E+00,princetonlib
+hatfldd,smooth,nonconvex,3,2,0.00E+00,princetonlib
+heart6ls,smooth,nonconvex,6,2,0.00E+00,princetonlib
+heart8ls,smooth,nonconvex,8,2,0.00E+00,princetonlib
+hilberta,smooth,nonconvex,10,3,0.00E+00,princetonlib
+hilbertb,smooth,nonconvex,50,4,0.00E+00,princetonlib
+himmelbb,smooth,nonconvex,2,1,0.00E+00,princetonlib
+himmelbf,smooth,nonconvex,4,2,3.19E+02,princetonlib
+himmelbg,smooth,nonconvex,2,1,0.00E+00,princetonlib
+himmelp1,smooth,nonconvex,2,1,-6.21E+01,princetonlib
+hs001,smooth,nonconvex,2,1,0.00E+00,princetonlib
+hs002,smooth,nonconvex,2,1,3.34E-26,princetonlib
+hs003,smooth,nonconvex,2,1,0.00E+00,princetonlib
+hs004,smooth,nonconvex,2,1,2.67E+00,princetonlib
+hs005,smooth,nonconvex,2,1,-1.91E+00,princetonlib
+hs038,smooth,nonconvex,4,2,0.00E+00,princetonlib
+hs045,smooth,nonconvex,5,2,1.00E+00,princetonlib
+hs110,smooth,nonconvex,10,3,-4.58E+01,princetonlib
+hs3mod,smooth,nonconvex,2,1,0.00E+00,princetonlib
+hs5,smooth,nonconvex,2,1,-1.91E+00,princetonlib
+humps,smooth,nonconvex,2,1,0.00E+00,princetonlib
+jensmp,smooth,nonconvex,2,1,1.24E+02,princetonlib
+kowalik,smooth,nonconvex,4,2,3.07E-04,princetonlib
+kowosb,smooth,nonconvex,4,2,3.08E-04,princetonlib
+least,smooth,nonconvex,3,2,1.41E+04,globallib
+levy3,smooth,nonconvex,2,1,-2.10E+02,princetonlib
+loghairy,smooth,nonconvex,2,1,1.82E-01,princetonlib
+logros,smooth,nonconvex,2,1,0.00E+00,princetonlib
+maratosb,smooth,nonconvex,2,1,-1.00E+00,princetonlib
+mdhole,smooth,nonconvex,2,1,0.00E+00,princetonlib
+median,smooth,nonconvex,1,1,4.94E+00,princetonlinb
+median_vareps,smooth,nonconvex,2,1,4.63E+00,princetonlinb
+mexhat,smooth,nonconvex,2,1,-4.01E-02,princetonlib
+nasty,smooth,nonconvex,2,1,0.00E+00,princetonlib
+nnls,smooth,nonconvex,300,4,6.34E+05,princetonlib
+nonmsqrt,smooth,nonconvex,9,2,7.52E-01,princetonlib
+osborne1,smooth,nonconvex,5,2,5.46E-05,princetonlib
+osbornea,smooth,nonconvex,5,2,5.46E-05,princetonlib
+osborneb,smooth,nonconvex,11,3,4.01E-02,princetonlib
+oslbqp,smooth,nonconvex,8,2,6.25E+00,princetonlib
+palmer1,smooth,nonconvex,4,2,1.18E+04,princetonlib
+palmer1c,smooth,nonconvex,8,2,9.76E-02,princetonlib
+palmer1d,smooth,nonconvex,7,2,6.53E-01,princetonlib
+palmer1e,smooth,nonconvex,8,2,8.00E-04,princetonlib
+palmer2a,smooth,nonconvex,6,2,1.72E-02,princetonlib
+palmer2c,smooth,nonconvex,8,2,1.44E-02,princetonlib
+palmer2e,smooth,nonconvex,8,2,2.00E-04,princetonlib
+palmer3,smooth,nonconvex,4,2,2.27E+03,princetonlib
+palmer3c,smooth,nonconvex,8,2,1.95E-02,princetonlib
+palmer3e,smooth,nonconvex,8,2,5.07E-05,princetonlib
+palmer4,smooth,nonconvex,4,2,2.29E+03,princetonlib
+palmer4c,smooth,nonconvex,8,2,5.03E-02,princetonlib
+palmer4e,smooth,nonconvex,8,2,1.00E-04,princetonlib
+palmer5a,smooth,nonconvex,8,2,2.40E-02,princetonlib
+palmer5b,smooth,nonconvex,9,2,9.75E-03,princetonlib
+palmer5c,smooth,nonconvex,6,2,2.13E+00,princetonlib
+palmer5d,smooth,nonconvex,4,2,8.73E+01,princetonlib
+palmer5e,smooth,nonconvex,8,2,2.07E-02,princetonlib
+palmer6a,smooth,nonconvex,6,2,5.59E-02,princetonlib
+palmer6c,smooth,nonconvex,8,2,1.64E-02,princetonlib
+palmer6e,smooth,nonconvex,8,2,2.00E-04,princetonlib
+palmer7c,smooth,nonconvex,8,2,6.02E-01,princetonlib
+palmer7e,smooth,nonconvex,8,2,4.25E+00,princetonlib
+palmer8a,smooth,nonconvex,6,2,7.40E-02,princetonlib
+palmer8c,smooth,nonconvex,8,2,1.60E-01,princetonlib
+palmer8e,smooth,nonconvex,8,2,6.30E-03,princetonlib
+penalty2,smooth,nonconvex,100,4,9.71E+04,princetonlib
+polygon,smooth,nonconvex,19,3,-1.00E+01,princetonlib
+powell,smooth,nonconvex,4,2,0.00E+00,princetonlib
+price,smooth,nonconvex,2,1,0.00E+00,princetonlib
+problem2_1,nonsmooth,convex,2,1,1.95E+00,Luksan and Vlcek
+problem2_10,nonsmooth,convex,4,2,1.16E+02,Luksan and Vlcek
+problem2_11,nonsmooth,convex,4,2,2.64E-03,Luksan and Vlcek
+problem2_12,nonsmooth,convex,4,2,2.02E-03,Luksan and Vlcek
+problem2_13,nonsmooth,nonconvex,4,2,1.20E-07,Luksan and Vlcek
+problem2_14,nonsmooth,nonconvex,5,2,1.22E-04,Luksan and Vlcek
+problem2_15,nonsmooth,nonconvex,5,2,2.23E-02,Luksan and Vlcek
+problem2_16,nonsmooth,nonconvex,6,2,5.20E-02,Luksan and Vlcek
+problem2_17,nonsmooth,nonconvex,6,2,1.97E-01,Luksan and Vlcek
+problem2_18,nonsmooth,nonconvex,9,2,6.19E-03,Luksan and Vlcek
+problem2_19,nonsmooth,convex,7,2,6.81E+02,Luksan and Vlcek
+problem2_2,nonsmooth,nonconvex,2,1,0.00E+00,Luksan and Vlcek
+problem2_20,nonsmooth,convex,10,3,2.43E+01,Luksan and Vlcek
+problem2_21,nonsmooth,convex,20,3,1.34E+02,Luksan and Vlcek
+problem2_22,nonsmooth,convex,10,3,5.45E+01,Luksan and Vlcek
+problem2_23,nonsmooth,convex,11,3,2.61E+02,Luksan and Vlcek
+problem2_24,nonsmooth,convex,20,3,1.47E-08,Luksan and Vlcek
+problem2_25,nonsmooth,convex,11,3,4.80E-02,Luksan and Vlcek
+problem2_3,nonsmooth,nonconvex,2,1,0.00E+00,Luksan and Vlcek
+problem2_4,nonsmooth,convex,3,2,3.60E+00,Luksan and Vlcek
+problem2_5,nonsmooth,convex,4,2,-4.40E+01,Luksan and Vlcek
+problem2_6,nonsmooth,convex,4,2,-4.40E+01,Luksan and Vlcek
+problem2_7,nonsmooth,nonconvex,3,2,4.20E-03,Luksan and Vlcek
+problem2_8,nonsmooth,nonconvex,3,2,5.11E-02,Luksan and Vlcek
+problem2_9,nonsmooth,nonconvex,4,2,8.08E-03,Luksan and Vlcek
+problem3_1,nonsmooth,convex,2,1,0.00E+00,Luksan and Vlcek
+problem3_10,nonsmooth,nonconvex,2,1,-8.00E+00,Luksan and Vlcek
+problem3_11,nonsmooth,convex,4,2,-4.40E+01,Luksan and Vlcek
+problem3_12,nonsmooth,convex,5,2,2.26E+01,Luksan and Vlcek
+problem3_13,nonsmooth,nonconvex,5,2,-3.23E+01,Luksan and Vlcek
+problem3_15,nonsmooth,nonconvex,6,2,5.60E-01,Luksan and Vlcek
+problem3_16,nonsmooth,nonconvex,10,3,-8.41E-01,Luksan and Vlcek
+problem3_17,nonsmooth,convex,10,3,9.83E+00,Luksan and Vlcek
+problem3_18,nonsmooth,nonconvex,12,3,1.67E+01,Luksan and Vlcek
+problem3_19,nonsmooth,convex,20,3,0.00E+00,Luksan and Vlcek
+problem3_2,nonsmooth,nonconvex,2,1,0.00E+00,Luksan and Vlcek
+problem3_20,nonsmooth,convex,20,3,0.00E+00,Luksan and Vlcek
+problem3_21,nonsmooth,convex,48,4,-6.39E+05,Luksan and Vlcek
+problem3_22,nonsmooth,convex,50,4,0.00E+00,Luksan and Vlcek
+problem3_23,nonsmooth,convex,50,4,0.00E+00,Luksan and Vlcek
+problem3_24,nonsmooth,convex,50,4,0.00E+00,Luksan and Vlcek
+problem3_25,nonsmooth,nonconvex,15,3,3.23E+01,Luksan and Vlcek
+problem3_3,nonsmooth,convex,2,1,1.95E+00,Luksan and Vlcek
+problem3_4,nonsmooth,convex,2,1,2.00E+00,Luksan and Vlcek
+problem3_5,nonsmooth,convex,2,1,-3.00E+00,Luksan and Vlcek
+problem3_6,nonsmooth,convex,2,1,7.20E+00,Luksan and Vlcek
+problem3_7,nonsmooth,convex,2,1,-1.41E+00,Luksan and Vlcek
+problem3_8,nonsmooth,convex,2,1,-1.00E+00,Luksan and Vlcek
+problem3_9,nonsmooth,convex,2,1,-1.00E+00,Luksan and Vlcek
+pspdoc,smooth,nonconvex,4,2,2.41E+00,princetonlib
+qr3d,smooth,nonconvex,155,4,1.07E-01,princetonlib
+qr3dbd,smooth,nonconvex,127,4,5.20E-02,princetonlib
+qr3dls,smooth,nonconvex,155,4,0.00E+00,princetonlib
+qrtquad,smooth,nonconvex,120,4,-3.65E+06,princetonlib
+qudlin,smooth,nonconvex,12,3,-7.20E+03,princetonlib
+rbrock,smooth,nonconvex,2,1,0.00E+00,globallib
+rosenbr,smooth,nonconvex,2,1,0.00E+00,princetonlib
+s201,smooth,nonconvex,2,1,0.00E+00,princetonlib
+s202,smooth,nonconvex,2,1,2.52E-24,princetonlib
+s204,smooth,nonconvex,2,1,1.84E-01,princetonlib
+s205,smooth,nonconvex,2,1,0.00E+00,princetonlib
+s206,smooth,nonconvex,2,1,0.00E+00,princetonlib
+s207,smooth,nonconvex,2,1,0.00E+00,princetonlib
+s208,smooth,nonconvex,2,1,0.00E+00,princetonlib
+s209,smooth,nonconvex,2,1,5.49E-24,princetonlib
+s210,smooth,nonconvex,2,1,3.21E-26,princetonlib
+s211,smooth,nonconvex,2,1,1.70E-27,princetonlib
+s212,smooth,nonconvex,2,1,0.00E+00,princetonlib
+s213,smooth,nonconvex,2,1,0.00E+00,princetonlib
+s214,smooth,nonconvex,2,1,0.00E+00,princetonlib
+s229,smooth,nonconvex,2,1,0.00E+00,princetonlib
+s240,smooth,nonconvex,3,2,0.00E+00,princetonlib
+s242,smooth,nonconvex,3,2,0.00E+00,princetonlib
+s243,smooth,nonconvex,3,2,6.06E-01,princetonlib
+s244,smooth,nonconvex,3,2,0.00E+00,princetonlib
+s245,smooth,nonconvex,3,2,0.00E+00,princetonlib
+s246,smooth,nonconvex,3,2,0.00E+00,princetonlib
+s256,smooth,nonconvex,4,2,0.00E+00,princetonlib
+s257,smooth,nonconvex,4,2,2.69E-27,princetonlib
+s258,smooth,nonconvex,4,2,0.00E+00,princetonlib
+s259,smooth,nonconvex,4,2,-8.54E+00,princetonlib
+s260,smooth,nonconvex,4,2,2.42E-23,princetonlib
+s261,smooth,nonconvex,4,2,0.00E+00,princetonlib
+s266,smooth,nonconvex,5,2,1.00E+00,princetonlib
+s267,smooth,nonconvex,5,2,2.52E-03,princetonlib
+s271,smooth,nonconvex,6,2,0.00E+00,princetonlib
+s272,smooth,nonconvex,6,2,4.84E-18,princetonlib
+s273,smooth,nonconvex,6,2,0.00E+00,princetonlib
+s274,smooth,nonconvex,2,1,0.00E+00,princetonlib
+s275,smooth,nonconvex,4,2,0.00E+00,princetonlib
+s276,smooth,nonconvex,6,2,0.00E+00,princetonlib
+s281,smooth,nonconvex,10,3,1.45E-05,princetonlib
+s282,smooth,nonconvex,10,3,1.16E-20,princetonlib
+s283,smooth,nonconvex,10,3,0.00E+00,princetonlib
+s286,smooth,nonconvex,20,3,8.33E-19,princetonlib
+s287,smooth,nonconvex,20,3,2.13E-19,princetonlib
+s288,smooth,nonconvex,20,3,0.00E+00,princetonlib
+s289,smooth,nonconvex,30,3,0.00E+00,princetonlib
+s290,smooth,nonconvex,2,1,0.00E+00,princetonlib
+s291,smooth,nonconvex,10,3,0.00E+00,princetonlib
+s292,smooth,nonconvex,30,3,0.00E+00,princetonlib
+s293,smooth,nonconvex,50,4,0.00E+00,princetonlib
+s294,smooth,nonconvex,6,2,4.68E-22,princetonlib
+s295,smooth,nonconvex,10,3,2.44E-21,princetonlib
+s296,smooth,nonconvex,16,3,1.22E-20,princetonlib
+s297,smooth,nonconvex,30,3,3.60E-18,princetonlib
+s298,smooth,nonconvex,50,4,0.00E+00,princetonlib
+s299,smooth,nonconvex,100,4,0.00E+00,princetonlib
+s300,smooth,nonconvex,20,3,-2.00E+01,princetonlib
+s301,smooth,nonconvex,50,4,-5.00E+01,princetonlib
+s302,smooth,nonconvex,100,4,-1.00E+02,princetonlib
+s303,smooth,nonconvex,20,3,0.00E+00,princetonlib
+s304,smooth,nonconvex,50,4,0.00E+00,princetonlib
+s305,smooth,nonconvex,100,4,0.00E+00,princetonlib
+s308,smooth,nonconvex,2,1,7.73E-01,princetonlib
+s309,smooth,nonconvex,2,1,-3.99E+00,princetonlib
+s311,smooth,nonconvex,2,1,0.00E+00,princetonlib
+s312,smooth,nonconvex,2,1,6.93E-22,princetonlib
+s328,smooth,nonconvex,2,1,1.74E+00,princetonlib
+s333,smooth,nonconvex,3,2,4.33E-02,princetonlib
+s350,smooth,nonconvex,4,2,3.08E-04,princetonlib
+s351,smooth,nonconvex,4,2,3.19E+02,princetonlib
+s352,smooth,nonconvex,4,2,9.03E+02,princetonlib
+s358,smooth,nonconvex,5,2,5.46E-05,princetonlib
+s368,smooth,nonconvex,8,2,-1.00E+00,princetonlib
+s370,smooth,nonconvex,6,2,2.29E-03,princetonlib
+s371,smooth,nonconvex,9,2,1.40E-06,princetonlib
+s379,smooth,nonconvex,11,3,4.33E-02,princetonlib
+s386,smooth,nonconvex,2,1,0.00E+00,princetonlib
+schwefel,smooth,nonconvex,5,2,0.00E+00,princetonlib
+shekel,smooth,nonconvex,4,2,-1.02E+01,princetonlib
+sim2bqp,smooth,nonconvex,2,1,0.00E+00,princetonlib
+simbqp,smooth,nonconvex,2,1,0.00E+00,princetonlib
+sineali,smooth,nonconvex,20,3,-1.90E+03,princetonlib
+sineval,smooth,nonconvex,2,1,0.00E+00,princetonlib
+sisser,smooth,nonconvex,2,1,0.00E+00,princetonlib
+st_bsj3,smooth,nonconvex,6,2,-8.68E+04,globallib
+st_cqpjk2,smooth,nonconvex,3,2,-1.25E+01,globallib
+st_e39,smooth,nonconvex,2,1,-1.01E+01,globallib
+princetonlib_vareps,smooth,nonconvex,17,3,2.54E+01,princetonlib
+tointqor,smooth,nonconvex,50,4,1.18E+03,princetonlib
+tre,smooth,nonconvex,2,1,0.00E+00,princetonlib
+vardim,smooth,nonconvex,100,4,0.00E+00,princetonlib
+watson,smooth,nonconvex,31,4,0.00E+00,princetonlib
+yfit,smooth,nonconvex,3,2,0.00E+00,princetonlib
+yfitu,smooth,nonconvex,3,2,0.00E+00,princetonlib
+zangwil2,smooth,nonconvex,2,1,-1.82E+01,princetonlib

@@ -1,0 +1,210 @@
+ ***************************************************************************
+ ALAMO version 2019.1.26. Built: WIN-64 Sat Jan 26 22:11:34 EST 2019
+ 
+The options and data used in solving this problem are as follows:
+ 
+NINPUTS           =              1
+NOUTPUTS          =              1
+NTRANS            =              0
+NCVF              =              5
+NPENL             =            100
+NDATA             =             26
+NPREDATA          =              0
+NSAMPLE           =              0
+NVALDATA          =              0
+NVALSAMPLE        =              0
+NVALSETS          =              0
+PRFREQ            =              1
+INITIALPOINTS     =             26
+SAMPLER           =              1
+MODELER           =              1
+INITIALIZER       =              1
+BUILDER           =              1
+ENUM1             =          16384
+ENUMALL           =              0
+GREEDYBUILDER     =               T
+NDGELS            =            120
+REGULARIZER       =              0
+TOLMAXERROR       = 0.500000007451E-001 
+MAXSIM            =             10
+MINPOINTS         =              1
+MAXPOINTS         =              7
+OBJFUN            =              1
+MATSNOB           =               F
+SNOBFITP          = 0.5 
+SNOBFITRESOLUTION = 0.100000000000E-004 
+MAXTIME           = 1000 
+DATALIMITTERMS    =               T
+NUMLIMITBASIS     =               T
+CONVPEN           = 0 
+MONO              =              1
+MULTI2            =              0
+MULTI3            =              0
+RATIOS            =              0
+EXPFCNS           =               F
+LINFCNS           =               T
+LOGFCNS           =               F
+SINFCNS           =               F
+COSFCNS           =               F
+CONSTANT          =               T
+GRBFCNS           =               F
+PRBF              =               F
+LK                =               F
+NCUSTOMBAS        =              0
+OTHERBASIS        =              0
+USEGPU            =               F
+XSCALING          =               F
+SCALEZ            =               F
+MAXITER           =              1
+TOLESTERROR       = 0.999999977648E-002 
+TOLSSE            = 0 
+FUNFORM           =              5
+RBFPARAM          = 1 
+PRESET            = -111111 
+LINEARERROR       =               F
+SOLVEMIP          =               F
+DELTATERM         =               T
+SHORTCUT          =               T
+DIVE              =               T
+FIRSTFEAS         =               F
+MIPOPTCA          = 0.500000007451E-001 
+MIPOPTCR          = 0.999999974738E-004 
+CRTOL             = 0.100000000000E-002 
+CRNINITIAL        =              0
+CRMAXITER         =             10
+CRNVIOL           =              5
+CRNTRIALS         =            100
+CRNCUSTOM         =              0
+NGROUPS           =              0
+SIMULATOR         =      mysim
+SIMIN             =      input.txt
+SIMOUT            =      output.txt
+GAMS              =      gams
+GAMSSOLVER        =      baron
+GAMSNLPSOLVER     =      baron
+SNOBFITTEST       =      test.mat
+SNOBFITPATH       =      C:\SNOBFIT\
+MINQPATH          =      C:\MINQ5\
+SCRATCH           =      almscr
+===========================================================================
+
+XLABELS           XMIN                  XMAX                  XISINT
+x1        -10000.0000000         10000.0000000                          F
+ZLABELS   TOLMEANERROR          TOLRELMETRIC          TOLABSMETRIC            MAXTERMS                 ZISINT
+z1         0.00000000000        0.100000000000E-005   0.100000000000E-005            3    F
+
+XDATA and ZDATA
+  -1.89999998995 0.809999981917 
+  -1.89999998995 0.809999981917 
+  -1.89999998995 0.809999981917 
+  -1.89999998995 0.809999981917 
+  -1.89999998995 0.809999981917 
+  -1.89999998995 0.809999981917 
+  -1.89999998995 0.809999981917 
+  -1.89999998995 0.809999981917 
+  -1.89999998995 0.809999981917 
+  -1.89999998995 0.809999981917 
+  -1.89999998995 0.809999981917 
+  -1.89999998995 0.809999981917 
+  -1.89999998995 0.809999981917 
+  -1.89999998995 0.809999981917 
+  -1.89999998995 0.809999981917 
+  -1.89999998995 0.809999981917 
+  -1.89999998995 0.809999981917 
+  -1.89999998995 0.809999981917 
+  -1.89999998995 0.809999981917 
+  -1.89999998995 0.809999981917 
+  -1.89999998995 0.809999981917 
+  -1.89999998995 0.809999981917 
+  -1.89999998995 0.809999981917 
+  -1.89999998995 0.809999981917 
+  -1.89999998995 0.809999981917 
+  -1.89999998995 0.809999981917 
+
+MONOPOWERS
+2 
+===========================================================================
+Total number of bases considered =         3
+
+BASES considered
+ x1
+ x1^2
+ 1.00
+===========================================================================
+ 
+ Step 0: Initializing data set
+ User provided an initial data set of 26 data points
+ We will sample no more data points at this stage
+ ***************************************************************************
+ Iteration 1 (Approx. elapsed time 0.31E-01 s)
+ 
+ Step 1: Model building using BIC
+ 
+ Model building for variable z1
+ sigma in almsurr1 =   1.000000000000000E-010
+ ----
+ BIC = -0.191E+04 with z1 = 0.22437672866552865746925 * x1^2
+ 
+ Calculating quality metrics on observed data set.
+ Errors on observed data points 
+ (for each data point: x, z, zmodel, square error, absolute error):
+  -1.89999998995 0.809999981917 0.809999981917 0 0 
+  -1.89999998995 0.809999981917 0.809999981917 0 0 
+  -1.89999998995 0.809999981917 0.809999981917 0 0 
+  -1.89999998995 0.809999981917 0.809999981917 0 0 
+  -1.89999998995 0.809999981917 0.809999981917 0 0 
+  -1.89999998995 0.809999981917 0.809999981917 0 0 
+  -1.89999998995 0.809999981917 0.809999981917 0 0 
+  -1.89999998995 0.809999981917 0.809999981917 0 0 
+  -1.89999998995 0.809999981917 0.809999981917 0 0 
+  -1.89999998995 0.809999981917 0.809999981917 0 0 
+  -1.89999998995 0.809999981917 0.809999981917 0 0 
+  -1.89999998995 0.809999981917 0.809999981917 0 0 
+  -1.89999998995 0.809999981917 0.809999981917 0 0 
+  -1.89999998995 0.809999981917 0.809999981917 0 0 
+  -1.89999998995 0.809999981917 0.809999981917 0 0 
+  -1.89999998995 0.809999981917 0.809999981917 0 0 
+  -1.89999998995 0.809999981917 0.809999981917 0 0 
+  -1.89999998995 0.809999981917 0.809999981917 0 0 
+  -1.89999998995 0.809999981917 0.809999981917 0 0 
+  -1.89999998995 0.809999981917 0.809999981917 0 0 
+  -1.89999998995 0.809999981917 0.809999981917 0 0 
+  -1.89999998995 0.809999981917 0.809999981917 0 0 
+  -1.89999998995 0.809999981917 0.809999981917 0 0 
+  -1.89999998995 0.809999981917 0.809999981917 0 0 
+  -1.89999998995 0.809999981917 0.809999981917 0 0 
+  -1.89999998995 0.809999981917 0.809999981917 0 0 
+ Maximum absolute errors (%) on observed data points 
+  0 
+ 
+ 
+ Quality metrics for output z1
+ -----------------------------
+ SSE OLR:           0.320E-30
+ SSE:               0.320E-30
+ RMSE:              0.111E-15
+ R2:                1.00
+ R2 adjusted:       1.00
+ Model size:        1
+ BIC:               -0.191E+04
+ Cp:                -24.0
+ AICc:              -0.191E+04
+ HQC:               -0.191E+04
+ MSE:               0.134E-31
+ SSEp:              0.320E-30
+ RIC:               2.20
+ MADp:              0.137E-13
+
+ BETAS and BASES chosen for this output
+  0.224376728665529      x1^2
+ 
+ 
+ Total execution time 0.31E-01 s
+ Times breakdown
+     OLR time:        0.0 s in 4 ordinary linear regression problem(s)
+     MIP time:        0.0 s in 0 quadratic integer problem(s)
+     Simulation time: 0.0 s to simulate 0 point(s)
+     All other time:  0.31E-01 s in 1 iteration(s)
+ 
+ Normal termination
+ ***************************************************************************

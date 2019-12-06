@@ -1,0 +1,94 @@
+👍✔
+python boom.py box2 20 1        0.0000000E+00	    9.02697E-07  <-
+python boom.py branin 20 1      3.9788736E-01       0.397896516
+python boom.py bqp1var 20 1     0.0000000E+00
+python boom.py ex4_1_1 20 1     -7.4873124E+00
+python boom.py ex4_1_2 20 1     -6.6350010E+02	
+python boom.py ex4_1_3 20 1     -4.4367170E+02	
+python boom.py ex4_1_4 20 1     0.0000000E+00
+python boom.py ex4_1_6 20 1     7.0000000E+00
+python boom.py ex4_1_7 20 1     -7.5000000E+00
+python boom.py ex8_1_2 20 1     -1.0709000E+00
+python boom.py brownbs 20 1     0.0000000E+00	
+python boom.py camel1 20 1      -1.0316285E+00      -1.031603862 
+python boom.py camel6 20 1      -1.0316285E+00
+python boom.py chi 20 1         -4.3315860E+01	
+python boom.py cliff 20 1       1.9978661E-01
+python boom.py denschna 20 1    0.0000000E+00
+python boom.py denschnb 20 1    0.0000000E+00
+python boom.py esfl 20 1        1.9122391E+02	
+python boom.py ex4_1_5 20 1     0.0000000E+00	    0
+python boom.py ex8_1_4 20 1     0.0000000E+00	    0
+python boom.py ex8_1_5 20 1     -1.0316285E+00	    -1.013476213
+python boom.py gold 20 1        3.0000000E+00
+python boom.py griewank 20 1    0.0000000E+00
+python boom.py hairy 20 1       2.0000000E+01
+python boom.py himmelbb 20 1    0.0000000E+00
+python boom.py himmelbg 20 1    0.0000000E+00
+python boom.py hs003 20 1       0.0000000E+00       -10555.87539
+python boom.py hs004 20 1       2.6666667E+00	    -1.1738E+11
+python boom.py hs005 20 1       -1.9132230E+00	
+python boom.py hs3mod 20 1      0.0000000E+00	    
+python boom.py hs5 20 1         -1.9132230E+00	
+python boom.py humps 20 1       0.0000000E+00	
+python boom.py loghairy 20 1    1.8232156E-01	
+python boom.py mdhole 20 1      0.0000000E+00       -15066.79672
+python boom.py median_vareps 20 1   4.6263263E+00
+python boom.py mexhat 20 1      -4.0100000E-02      
+python boom.py nasty 20 1       0.0000000E+00
+python boom.py price 20 1       0.0000000E+00
+python boom.py s201 20 1        0.0000000E+00       
+python boom.py s204 20 1        1.8360120E-01
+python boom.py s212 20 1        0.0000000E+00       
+python boom.py s274 20 1        0.0000000E+00
+python boom.py s290 20 1        0.0000000E+00
+python boom.py s308 20 1        7.7319906E-01	    
+python boom.py s386 20 1        0.0000000E+00
+python boom.py sim2bqp 20 1     0.0000000E+00       -0.124999791
+python boom.py simbqp 20 1      0.0000000E+00
+python boom.py sineval 20 1     0.0000000E+00
+python boom.py sisser 20 1      0.0000000E+00
+python boom.py tre 20 1         0.0000000E+00
+python boom.py zangwil2 20 1    -1.8200000E+01	
+
+3
+python boom.py	st_cqpjk2 20 2
+
+❓ Compile issues
+python boom.py s328 20 1        1.7441520E+00
+python boom.py st_e39 20 1      -1.0086001E+01	
+
+👎❌
+python boom.py median 20 1      4.9424200E+00       5.299435765 
+python boom.py beale 20 1       0.0000000E+00       0.604218634
+python boom.py cube 20 1        0.0000000E+00       0.813795047
+python boom.py denschnc 20 1    0.0000000E+00       0.374688397
+python boom.py denschnf 20 1    0.0000000E+00       43.26200677
+python boom.py djtl 20 1        -8.9515447E+03	    -7973.008553
+python boom.py ex8_1_1 20 1     -2.0218068E+00	    1.32506E+17
+python boom.py ex8_1_3 20 1     3.0000000E+00	    600
+python boom.py ex8_1_6 20 1     -1.0086000E+01	    -0.022564904
+python boom.py expfit 20 1      2.4051059E-01       5.15625
+python boom.py himmelp1 20 1    -6.2053869E+01      0
+python boom.py hs001 20 1       0.0000000E+00       0.536180186
+python boom.py hs002 20 1       3.3366647E-26       0.69331838
+python boom.py jensmp 20 1      1.2436218E+02       156.8300797
+python boom.py levy3 20 1       -2.1048229E+02	    -203.2937128
+python boom.py logros 20 1      0.0000000E+00	    0.693147181
+python boom.py maratosb 20 1    -1.0000001E+00      25.51561497
+python boom.py rbrock 20 1      0.0000000E+00       0.106043249
+python boom.py rosenbr 20 1     0.0000000E+00       0.852507647
+python boom.py s202 20 1        2.5179178E-24       100.6195124
+python boom.py s205 20 1        0.0000000E+00       0.304784639
+python boom.py s206 20 1        0.0000000E+00       0.128099266
+python boom.py s207 20 1        0.0000000E+00       0.774555464
+python boom.py s208 20 1        0.0000000E+00       0.137884109
+python boom.py s209 20 1        5.4860395E-24	    0.986186348
+python boom.py s210 20 1        3.2081445E-26       0.980744697
+python boom.py s211 20 1        1.6955086E-27       0.915207288
+python boom.py s213 20 1        0.0000000E+00       0.001213129
+python boom.py s214 20 1        0.0000000E+00       0.997107733
+python boom.py s229 20 1        0.0000000E+00       0.007109691
+python boom.py s309 20 1        -3.9871708E+00	    0.289432746
+python boom.py s311 20 1        0.0000000E+00       0.119845252
+

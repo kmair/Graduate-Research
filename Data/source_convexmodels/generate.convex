@@ -1,0 +1,44 @@
+#!/bin/sh -x
+##############################################################
+# This file compiles the convex problems
+# The executables produced are of the form:
+# convex<family>_<size>_<instance>
+#
+# The input for the executables is a file 'input.in' with the
+# value of each variable in one line.
+# The value of the function is returned in the file 'output.out'
+#
+# Luis M Rios
+##############################################################
+
+#NVAR is the list of number of variables
+	for NVAR in \
+               	5\
+               	10\
+               	15\
+               	20\
+               	25\
+               	30\
+               	35\
+               	40\
+               	45\
+               	50\
+                100\
+                200\
+                300
+	do
+		for CURRAND in \
+			1\
+			2\
+			3\
+			4\
+			5
+		do	
+			gcc -o convex1_${NVAR}_$CURRAND fconvex1_${NVAR}_$CURRAND.c
+			gcc -o convex2_${NVAR}_$CURRAND fconvex2_${NVAR}_$CURRAND.c
+			gcc -o convex4_${NVAR}_$CURRAND fconvex4_${NVAR}_$CURRAND.c
+		done
+		#currand
+		gcc -o convex3_${NVAR}_1 fconvex3_${NVAR}_1.c		
+	done
+	#nvar
